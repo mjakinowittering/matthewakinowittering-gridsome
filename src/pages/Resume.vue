@@ -1,0 +1,97 @@
+<template>
+  <Layout>
+    <h1>Resume</h1>
+    <div class="education">
+      <h2>Education</h2>
+      <div class="university" v-for="university in $page.allUniversity.edges" :key="university.node.id">
+        <h3>{{ university.node.name }}</h3>
+        <p v-if="university.node.belongsTo.edges.length > 1">{{ university.node.dateFrom }} - {{ university.node.dateTo }}</p>
+        <div class="university" v-for="course in university.node.belongsTo.edges" :key="course.node.id">
+          <h4>{{ course.node.title }}</h4>
+          <p>{{ course.node.dateFrom }} - {{ course.node.dateTo }}</p>
+          <div v-html="course.node.content"></div>
+        </div>
+      </div>
+    </div>
+    <div class="employment">
+      <h2>Employment</h2>
+      <div class="company" v-for="company in $page.allCompany.edges" :key="company.node.id">
+        <h3>{{ company.node.name }}</h3>
+        <p v-if="company.node.belongsTo.edges.length > 1">{{ company.node.dateFrom }} - {{ isPresent(company.node.dateTo) }}</p>
+        <div class="role" v-for="role in company.node.belongsTo.edges" :key="role.node.id">
+          <h4>{{ role.node.title }}</h4>
+          <p>{{ role.node.dateFrom }} - {{ isPresent(role.node.dateTo) }}</p>
+          <div v-html="role.node.content"></div>
+        </div>
+      </div>
+    </div>
+  </Layout>
+</template>
+
+<page-query>
+  query {
+    allUniversity(sortBy: "dateFrom", order: DESC) {
+      edges {
+        node {
+          id
+          name
+          dateFrom(format: "YYYY-MM-DD")
+          dateTo(format: "YYYY-MM-DD")
+          belongsTo(sortBy: "dateFrom", order: DESC) {
+            edges {
+              node {
+                ... on Course {
+                  title
+                  dateFrom(format: "YYYY-MM-DD")
+                  dateTo(format: "YYYY-MM-DD")
+                  content
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allCompany(sortBy: "dateFrom", order: DESC) {
+      edges {
+        node {
+          name
+          dateFrom(format: "YYYY-MM-DD")
+          dateTo(format: "YYYY-MM-DD")
+          belongsTo(sortBy: "dateFrom", order: DESC) {
+            edges {
+              node {
+                ... on Role {
+                  title
+                  content
+                  dateFrom(format: "YYYY-MM-DD")
+                  dateTo(format: "YYYY-MM-DD")
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+</page-query>
+
+<script>
+  export default {
+    name: 'Resume',
+    metaInfo() {
+      return {
+        title: 'Resume',
+      }
+    },
+    methods: {
+      isPresent(dateTo) {
+        if (dateTo !== null) {
+          return dateTo
+        } else {
+          return 'Present'
+        }
+      }
+    }
+  }
+</script>
