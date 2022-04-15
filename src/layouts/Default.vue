@@ -5,6 +5,9 @@
         <g-link class="nav__link" to="/">Home</g-link>
       </li>
       <li>
+        <g-link class="nav__link" to="/blog">Blog</g-link>
+      </li>
+      <li>
         <g-link class="nav__link" to="/resume">Resume</g-link>
       </li>
     </ul>

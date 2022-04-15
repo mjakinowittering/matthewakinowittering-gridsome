@@ -20,7 +20,6 @@ module.exports = {
         typeName: 'Role',
         path: './content/companies/roles/*.md',
         refs: {
-          company: 'Company',
           company: {
             typeName: 'Company',
             create: false
@@ -41,7 +40,6 @@ module.exports = {
         typeName: 'Course',
         path: './content/universities/courses/*.md',
         refs: {
-          university: 'University',
           university: {
             typeName: 'University',
             create: false
@@ -53,7 +51,14 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Skill',
-        path: './content/skills/**/*.md'
+        path: './content/skills/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Blog',
+        path: './content/posts/*.md'
       }
     }
   ]
