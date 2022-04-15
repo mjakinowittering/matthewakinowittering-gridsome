@@ -10,7 +10,12 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "@gridsome/transformer-yaml": "^0.2.1",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "axios": "^0.26.1",
+    "moment-timezone": "^0.5.34",
+    "node-sass": "^6.0.1",
+    "sass": "^1.49.9",
+    "sass-loader": "^10.2.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
