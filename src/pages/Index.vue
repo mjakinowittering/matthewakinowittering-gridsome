@@ -10,7 +10,7 @@
 
 <script>
   import moment from 'moment';
-  import Skills from '~/components/Skills.vue'
+  import Skills from '~/components/Home/Skills.vue'
   export default {
     name: 'Home',
     metaInfo() {
