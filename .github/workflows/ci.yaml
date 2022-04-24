@@ -13,10 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: Installing Gridsome CLI tool
+        run: npm install --global @gridsome/cli
+
       - name: Installing packages
         run: npm install
 
       - name: Build Gridsome site
         run: |
-          npm build
+          gridsome build
           echo "Gridsome site is successfully build"
