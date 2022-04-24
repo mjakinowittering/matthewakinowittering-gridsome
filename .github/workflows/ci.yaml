@@ -27,3 +27,6 @@ jobs:
         run: |
           gridsome build
           echo "Gridsome site is successfully build"
+        env:
+          SAVEDDOTIO_KEY: ${{ secrets.SAVEDDOTIO_KEY }}
+          SAVEDDOTIO_DEVKEY: ${{ secrets.SAVEDDOTIO_DEVKEY }}
