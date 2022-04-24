@@ -8,6 +8,9 @@
         <g-link class="nav__link" to="/blog">Blog</g-link>
       </li>
       <li>
+        <g-link class="nav__link" to="/bookmarks">Bookmarks</g-link>
+      </li>
+      <li>
         <g-link class="nav__link" to="/resume">Resume</g-link>
       </li>
     </ul>
