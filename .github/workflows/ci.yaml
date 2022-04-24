@@ -12,11 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Set environment variables
-        env:
-          SAVEDDOTIO_KEY: ${{ secrets.SAVEDDOTIO_KEY }}
-          SAVEDDOTIO_DEVKEY: ${{ secrets.SAVEDDOTIO_DEVKEY }}
-
       - uses: actions/setup-node@v3
         with:
           node-version: 16
