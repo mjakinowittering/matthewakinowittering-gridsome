@@ -21,30 +21,36 @@ function getFirstDayOfMonthUnixtime(dateObj) {
 
 module.exports = function (api) {
   api.loadSource(async actions => {
-    const publishedCollection = actions.addCollection({
-      typeName: "Published"
-    })
+    const publishedAtResolver = {
+      type: "Date",
+      args: {
+        format: "String"
+      },
+      resolve(obj, args) {
+        // https://gridsome.org/docs/schema-api/#add-custom-field-resolvers
+        // https://stackoverflow.com/questions/23483787/convert-unix-timestamp-with-a-timezone-to-javascript-date
+        const tzFormat = "Europe/London"
+        const dateFormat = "YYYY-MM-DDTHH:mm:ssZ"
+
+        if (args.format) {
+          return moment.unix(obj.id).tz(tzFormat).format(args.format);
+        } else {
+          return moment.unix(obj.id).tz(tzFormat).format(dateFormat);
+        }
+      }
+    }
 
     actions.addSchemaResolvers({
-      Published: {
-        published_at: {
-          type: "Date",
-          args: {
-            format: "String"
-          },
-          resolve(obj, args) {
-            // https://gridsome.org/docs/schema-api/#add-custom-field-resolvers
-            // https://stackoverflow.com/questions/23483787/convert-unix-timestamp-with-a-timezone-to-javascript-date
-            const tzFormat = "Europe/London"
-            const dateFormat = "YYYY-MM-DDTHH:mm:ssZ"
+      PostPublished: {
+        publishedAt: publishedAtResolver
+      }
+    })
 
-            if (args.format) {
-              return moment.unix(obj.id).tz(tzFormat).format(args.format);
-            } else {
-              return moment.unix(obj.id).tz(tzFormat).format(dateFormat);
-            }
-          }
-        }
+    const bookmarkPublishedCollection = actions.addCollection("BookmarkPublished")
+
+    actions.addSchemaResolvers({
+      BookmarkPublished: {
+        publishedAt: publishedAtResolver
       }
     })
 
@@ -73,12 +79,12 @@ module.exports = function (api) {
       num_of_results = response.data.length
 
       for (let bookmark of response.data) {
-        let publishedDateObj = new Date(bookmark.bk_date)
-        let publishedId = getFirstDayOfMonthUnixtime(publishedDateObj)
+        let bookmarkPublishedDateObj = new Date(bookmark.bk_date)
+        let bookmarkPublishedId = getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj)
 
-        if(publishedCollection.getNodeById(publishedId) == null) {
-          publishedCollection.addNode({
-            id: publishedId
+        if(bookmarkPublishedCollection.getNodeById(bookmarkPublishedId) == null) {
+          bookmarkPublishedCollection.addNode({
+            id: bookmarkPublishedId
           })
         }
 
@@ -87,8 +93,8 @@ module.exports = function (api) {
           url: bookmark.bk_url,
           title: bookmark.bk_title,
           note: bookmark.bk_note,
-          created_at: publishedDateObj.toISOString(),
-          published: actions.createReference("Published", publishedId)
+          createdAt: bookmarkPublishedDateObj.toISOString(),
+          published: actions.createReference("BookmarkPublished", bookmarkPublishedId)
         })
       }
 

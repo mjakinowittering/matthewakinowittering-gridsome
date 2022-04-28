@@ -1,7 +1,9 @@
 <template>
-  <div class="layout">
+  <div>
     <Navbar />
-    <slot />
+    <main class="container">
+      <slot />
+    </main>
   </div>
 </template>
 

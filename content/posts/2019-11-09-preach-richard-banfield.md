@@ -2,11 +2,12 @@
 title: Preach!
 subtype: twitter
 img:
-  - src: /assets/img/posts/2019-11-09-preach-richard-banfield.jpg
-    alt: Your roadmap should be a sequence of problems you want to solve, not features. Your success metrics should be agreed upon while you are defining the problem, not the solution.
-    figcaption: Richard Banfield
-    figcaption_href: https://twitter.com/RMBanfield/status/1193201160481656832
-published_at: 2019-11-09T00:00:00.000Z
+  src: /assets/img/posts/2019-11-09-preach-richard-banfield.jpg
+  alt: Your roadmap should be a sequence of problems you want to solve, not features. Your success metrics should be agreed upon while you are defining the problem, not the solution.
+  figcaption: Richard Banfield
+  figcaptionHref: https://twitter.com/RMBanfield/status/1193201160481656832
+published: 1573257600
+publishedAt: 2019-11-09T00:00:00.000Z
 ---
 Always helpful to be reminded of this point. We need to focus on the problems our customers face, and identify how we'll solve them. Instead of continuously building features for those who shout loudest.
 

@@ -1,11 +1,14 @@
 <template>
-  <div class="skills">
-    <div class="skill" v-for="edge in $static.allSkill.edges" :key="edge.node.id">
-      <h2>{{ edge.node.title }}</h2>
-      <div v-html="edge.node.content"></div>
+  <div>
+    <h2>What I do</h2>
+    <div v-for="skill in $static.allSkill.edges" :key="skill.node.id">
+      <img class="mb-2" :src="skill.node.img.src" height="64" width="64" />
+      <h3>{{ skill.node.title }}</h3>
+      <p v-html="skill.node.content"></p>
     </div>
   </div>
 </template>
+
 
 <static-query>
   query {
@@ -14,6 +17,9 @@
         node {
           id
           title
+          img {
+            src
+          }
           content
         }
       }
@@ -21,12 +27,10 @@
   }
 </static-query>
 
+
 <script>
   export default {
     name: 'Skills'
   }
 </script>
 
-<style>
-
-</style>

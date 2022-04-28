@@ -57,8 +57,14 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Blog',
-        path: './content/posts/*.md'
+        typeName: 'Post',
+        path: './content/posts/*.md',
+        refs: {
+          published: {
+            typeName: 'PostPublished',
+            create: true
+          }
+        }
       }
     }
   ]
