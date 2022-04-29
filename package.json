@@ -11,6 +11,7 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "@gridsome/transformer-yaml": "^0.2.1",
     "axios": "^0.26.1",
+    "flexboxgrid": "^6.3.1",
     "gridsome": "^0.7.0",
     "moment-timezone": "^0.5.34",
     "node-sass": "^6.0.1",

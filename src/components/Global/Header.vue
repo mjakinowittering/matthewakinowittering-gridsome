@@ -1,5 +1,5 @@
 <template>
-  <header>Matthew Akino-Wittering</header>
+  <header></header>
 </template>
 
 

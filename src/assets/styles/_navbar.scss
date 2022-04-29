@@ -37,7 +37,7 @@
     flex-direction: column;
     height: 70px;
     justify-content: center;
-    margin-left: 25px;
+    margin-left: 1rem;
     pointer-events: auto;
     position: relative;
     touch-action: manipulation;
@@ -75,13 +75,14 @@
 
 #nav-content {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    background: red;
+    background: $nav-bg-color;
+    border-right: 2px solid $nav-bdr-color;
     contain: paint;
     height: calc(100% - 70px);
     left: 0;
     margin-top: 70px;
     max-width: 300px;
-    padding: 20px;
+    overflow-y: auto;
     pointer-events: auto;
     position: absolute;
     top: 0;
@@ -94,16 +95,28 @@
 #nav-content ul {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    list-style: none;
+    padding: 0.25rem 0;
+    margin: 0;
+}
+
+#nav-content li {
+    margin: 0.25rem 0;
+    line-height: 1;
 }
 
 #nav-content li a {
+    padding: 0.75rem 1rem;
     display: block;
 }
 
-#nav-content li a:hover {
-    color: #BF7497;
+#nav-content li a i {
+    float: right;
 }
+
+// #nav-content li a:hover {
+//     color: #BF7497;
+// }
 
 #nav-container:focus-within #nav-content {
     transform: none;
