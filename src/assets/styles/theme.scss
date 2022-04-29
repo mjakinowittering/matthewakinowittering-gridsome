@@ -6,13 +6,15 @@
 
 
 // Variables ------------------------------------------------------------------
-$bg-color: #ffffff;
+$primary: #5758bb;
+
+$bg-color: #f8f9f9;
 
 $header-bg-color: #ffffff;
 $header-bdr-color: #e1e3e5;
 
-$nav-bg-color: #ffffff;
-$nav-bdr-color: #e1e3e5;
+$nav-bg-color: #fdfdfd;
+$nav-bdr-color: #f8f9f9;
 
 // Theme ----------------------------------------------------------------------
 @import "header";
