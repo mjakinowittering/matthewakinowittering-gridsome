@@ -18,7 +18,7 @@
 
 <page-query>
   query($page: Int) {
-    allBookmarkPublished(filter: {} ,sortBy: "id", order: DESC, perPage: 5, page: $page) @paginate {
+    allBookmarkPublished(filter: {}, sortBy: "id", order: DESC, perPage: 5, page: $page) @paginate {
       pageInfo {
         totalPages
         currentPage

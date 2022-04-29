@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Matthew Akino-Wittering',
-  plugins: [,
+  plugins: [
     {
       use: '@gridsome/source-filesystem',
       options: {
@@ -65,6 +65,13 @@ module.exports = {
             create: true
           }
         }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'ExternalLink',
+        path: './content/external-links/*.yml'
       }
     }
   ]
