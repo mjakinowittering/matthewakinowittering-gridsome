@@ -1,21 +1,16 @@
 <template>
   <Layout>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h1>Bookmarks</h1>
-          <div class="published" v-for="(published, index) in $page.allBookmarkPublished.edges" :key="published.node.id" :id="index">
-            <h3>{{ published.node.publishedAt }}</h3>
-            <ul v-for="bookmark in published.node.bookmarks.edges" :key="bookmark.node.id">
-              <li>
-                <a :href="bookmark.node.url" target="_blank">{{ bookmark.node.title }}</a>
-              </li>
-            </ul>
-            <hr v-if="index != $page.allBookmarkPublished.edges.length - 1">
-          </div>
-          <Pager :info="$page.allBookmarkPublished.pageInfo"/>
-        </div>
+    <div>
+      <h1>Bookmarks</h1>
+      <div v-for="(published, index) in $page.allBookmarkPublished.edges" :key="published.node.id" :id="index">
+        <h3>{{ published.node.publishedAt }}</h3>
+        <ul v-for="bookmark in published.node.bookmarks.edges" :key="bookmark.node.id">
+          <li>
+            <a :href="bookmark.node.url" target="_blank">{{ bookmark.node.title }}</a>
+          </li>
+        </ul>
       </div>
+      <Pager :info="$page.allBookmarkPublished.pageInfo"/>
     </div>
   </Layout>
 </template>
