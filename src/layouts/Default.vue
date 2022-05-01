@@ -1,7 +1,12 @@
 <template>
   <div>
-    <Navbar />
-    <slot />
+    <div class="container">
+      Matthew Akino-Wittering
+      <Navbar />
+    </div>
+    <article>
+      <slot />
+    </article>
   </div>
 </template>
 

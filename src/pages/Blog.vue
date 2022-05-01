@@ -1,21 +1,25 @@
 <template>
   <Layout>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h1>Blog</h1>
-          <div class="published" v-for="published in $page.allPostPublished.edges" :key="published.node.id">
-            <h3>{{ published.node.publishedAt }}</h3>
-            <ul v-for="post in published.node.posts.edges" :key="post.node.id">
-              <li>
-                {{ post.node.title }}
-              </li>
-            </ul>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Blog</h1>
+            <div class="published" v-for="published in $page.allPostPublished.edges" :key="published.node.id">
+              <h3>{{ published.node.publishedAt }}</h3>
+              <ul v-for="post in published.node.posts.edges" :key="post.node.id">
+                <li>
+                  <g-link :to="post.node.path">
+                    {{ post.node.title }}
+                  </g-link>
+                </li>
+              </ul>
+            </div>
+            <Pager :info="$page.allPostPublished.pageInfo"/>
           </div>
-          <Pager :info="$page.allPostPublished.pageInfo"/>
         </div>
       </div>
-    </div>
+    </section>
   </Layout>
 </template>
 
@@ -52,7 +56,6 @@
 <script>
   import { Pager } from 'gridsome'
   export default {
-    name: 'Blog',
     metaInfo() {
       return {
         title: 'Blog',

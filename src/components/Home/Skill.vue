@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <img :src="skill.node.img.src">
-    <h3>{{ skill.node.title }}</h3>
-    <p v-html="skill.node.content"></p>
+  <div class="skill col col-md-4">
+    <div class="card">
+      <img :src="skill.node.img.src">
+      <h3 class="card-title">{{ skill.node.title }}</h3>
+      <div class="card-body" v-html="skill.node.content"></div>
+    </div>
   </div>
 </template>
 
@@ -14,4 +16,3 @@
     ]
   }
 </script>
-
