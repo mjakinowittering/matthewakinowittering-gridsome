@@ -74,5 +74,8 @@ module.exports = {
         path: './content/external-links/*.yml'
       }
     }
-  ]
+  ],
+  templates: {
+    Post: '/blog/:title',
+  }
 }
