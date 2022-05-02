@@ -1,8 +1,0 @@
-.navbar {
-    display: none;
-    transition: display 0s;
-}
-
-#toggle:checked + .navbar {
-    display: block;
-}

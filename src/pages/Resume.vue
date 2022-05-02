@@ -7,24 +7,16 @@
       <h2>Education</h2>
       <div v-for="university in $page.allUniversity.edges" :key="university.node.id">
         <h3>{{ university.node.name }}</h3>
-        <p v-if="university.node.belongsTo.edges.length > 1">{{ university.node.dateFrom }} - {{ university.node.dateTo }}</p>
-        <div v-for="course in university.node.belongsTo.edges" :key="course.node.id">
-          <h4>{{ course.node.title }}</h4>
-          <p>{{ course.node.dateFrom }} - {{ course.node.dateTo }}</p>
-          <div v-html="course.node.content"></div>
-        </div>
+        <Timeframe :dateFrom="university.node.dateFrom" :dateTo="university.node.dateTo" v-if="university.node.courses.edges.length > 1" />
+        <Event :event="course" v-for="course in university.node.courses.edges" :key="course.node.id" />
       </div>
     </section>
     <section>
       <h2>Employment</h2>
       <div v-for="(company, index) in $page.allCompany.edges" :key="company.node.id" :id="index">
         <h3>{{ company.node.name }}</h3>
-        <p v-if="company.node.belongsTo.edges.length > 1">{{ company.node.dateFrom }} - {{ isPresent(company.node.dateTo) }}</p>
-        <div v-for="role in company.node.belongsTo.edges" :key="role.node.id">
-          <h4>{{ role.node.title }}</h4>
-          <p>{{ role.node.dateFrom }} - {{ isPresent(role.node.dateTo) }}</p>
-          <div v-html="role.node.content"></div>
-        </div>
+        <Timeframe :dateFrom="company.node.dateFrom" :dateTo="company.node.dateTo" v-if="company.node.roles.edges.length > 1" />
+        <Event :event="role" v-for="role in company.node.roles.edges" :key="role.node.id" />
         <hr v-if="index != $page.allCompany.edges.length - 1">
       </div>
     </section>
@@ -41,7 +33,7 @@
           name
           dateFrom(format: "YYYY-MM-DD")
           dateTo(format: "YYYY-MM-DD")
-          belongsTo(sortBy: "dateFrom", order: DESC) {
+          courses: belongsTo(sortBy: "dateFrom", order: DESC) {
             edges {
               node {
                 ... on Course {
@@ -62,7 +54,7 @@
           name
           dateFrom(format: "YYYY-MM-DD")
           dateTo(format: "YYYY-MM-DD")
-          belongsTo(sortBy: "dateFrom", order: DESC) {
+          roles: belongsTo(sortBy: "dateFrom", order: DESC) {
             edges {
               node {
                 ... on Role {
@@ -82,20 +74,17 @@
 
 
 <script>
+  import Event from '~/components/Resume/Event.vue'
+  import Timeframe from '~/components/Resume/Timeframe.vue'
   export default {
     metaInfo() {
       return {
         title: 'Resume',
       }
     },
-    methods: {
-      isPresent(dateTo) {
-        if (dateTo !== null) {
-          return dateTo
-        } else {
-          return 'Present'
-        }
-      }
+    components: {
+      Event,
+      Timeframe
     }
   }
 </script>
