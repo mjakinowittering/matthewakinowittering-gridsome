@@ -1,11 +1,12 @@
 ---
 title: Why I use a theme-based roadmap
 subtype: post
-img:
-  src: /assets/img/posts/2021-06-05-why-i-use-a-theme-based-roadmap.jpg
-  alt: Winnats Pass, Hope Valley, United Kingdom
-  figcaption: Unsplash
-  figcaptionHref: https://unsplash.com/photos/x1w_Q78xNEY
+figure:
+  caption: Unsplash
+  img:
+    src: /img/posts/2021-06-05-why-i-use-a-theme-based-roadmap.jpg
+    alt: Winnats Pass, Hope Valley, United Kingdom
+  url: https://unsplash.com/photos/x1w_Q78xNEY
 published: 1622847600
 publishedAt: 2021-06-05T00:00:00.000Z
 ---
@@ -13,13 +14,11 @@ If you're a Product Manager, you've likely had requests to display your roadmap 
 
 Regardless of the catalysts, these requests come from good intentions. However, your organisation will likely be too focused on shipping features and meeting arbitrary timescales to sate customer requests instead of solving real problems. If this sounds familiar, I recommend reading Escaping the Build Trap by Melissa Perri. This approach will likely focus on delivering features that do not meet expectations causing dissatisfying for customers and stakeholders alike.
 
-<!-- more -->
-
-Instead, prefer a [theme-based roadmap](https://www.prodpad.com/blog/how-to-build-a-product-roadmap-everyone-understands/){:target="_blank"}. This roadmap style requires you to focus on customers problems we intend to solve or experiments we want to run and longer-term bets.
+Instead, prefer a [theme-based roadmap](https://www.prodpad.com/blog/how-to-build-a-product-roadmap-everyone-understands/). This roadmap style requires you to focus on customers problems we intend to solve or experiments we want to run and longer-term bets.
 
 > Themes are a Promise to Solve Problems, Not Build Features.
 >
-> <cite>[Jared M. Spool](https://articles.uie.com/themes/){:target="_blank"}</cite>
+> <cite>[Jared M. Spool](https://articles.uie.com/themes/)</cite>
 
 You then arrange these themes across different time horizons covering the Present, Near Term and Future. They're usually labelled as Now, Next and Later. Items closer to the present will be better smaller, better-understood items with more explicit scope, just like your product backlog. These time horizons are the real differentiator - as traditional roadmaps list promised features arranged across a timeline with pre-agreed specifications and delivery dates.
 
@@ -37,6 +36,6 @@ However, you can adjust the labels for each time horizon to best convene the cur
 
 ### So what's it like using a theme-based roadmap?
 
-After using this framework for the last couple of years, I honestly believe arranging initiatives in this manner changes everyone's mindset when discussing our roadmap in our [Product Council](https://svpg.com/the-product-council/){:target="_blank"} meetings. Instead of discussing the delivery of a single feature, we have conversations about our customer's problems and goals. In addition, as we release each new iteration, we collect further feedback to confirm how well we solved the problem. Our roadmap has become the communication tool that facilitates these discussions. I believe this has made the product team lean.
+After using this framework for the last couple of years, I honestly believe arranging initiatives in this manner changes everyone's mindset when discussing our roadmap in our [Product Council](https://svpg.com/the-product-council/) meetings. Instead of discussing the delivery of a single feature, we have conversations about our customer's problems and goals. In addition, as we release each new iteration, we collect further feedback to confirm how well we solved the problem. Our roadmap has become the communication tool that facilitates these discussions. I believe this has made the product team lean.
 
 Meeting and discussing the roadmap in this manner has forced us to prioritise these problems carefully. In turn, we've focused on the right opportunities and delighted our customers as we solve their challenges. I hope you try this format for your product.

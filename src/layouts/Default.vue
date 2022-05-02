@@ -1,8 +1,7 @@
 <template>
   <div>
     <div class="container">
-      Matthew Akino-Wittering
-      <Navbar />
+      <Header />
     </div>
     <article>
       <slot />
@@ -12,10 +11,10 @@
 
 
 <script>
-  import Navbar from "~/components/Global/Navbar.vue"
+  import Header from "~/components/Global/Header.vue"
   export default {
     components: {
-      Navbar
+      Header
     }
   }
 </script>

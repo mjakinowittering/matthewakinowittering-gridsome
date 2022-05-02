@@ -1,12 +1,9 @@
 // Fonts and CSS Reset
-// @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700";
-@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css";
 @import "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css";
 
-// Mustard UI
-@import "../../../node_modules/mustard-ui/dist/css/mustard-ui.min.css";
+@import "../../../node_modules/cutestrap/dist/css/cutestrap.min.css";
 
-// Customisations
-@import "navbar";
-@import "skill";
-@import "figure";
+article {
+    max-width: 68rem;
+    margin: 0 auto;
+}

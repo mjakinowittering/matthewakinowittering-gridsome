@@ -1,29 +1,28 @@
 ---
 title: Are you abusing the term, Minimum Viable Product?
 subtype: post
-img:
-  src: /assets/img/posts/2021-09-24-are-you-abusing-the-term-minimum-viable-product.jpg
-  alt: Skateboard
-  figcaption: Unsplash
-  figcaptionHref: https://unsplash.com/photos/Vbbn4xNBfnM
+figure:
+  caption: Unsplash
+  img:
+    src: /img/posts/2021-09-24-are-you-abusing-the-term-minimum-viable-product.jpg
+    alt: Skateboard
+  url: https://unsplash.com/photos/Vbbn4xNBfnM
 published: 1632438000
 publishedAt: 2021-09-24T00:00:00.000Z
 ---
 If you've worked in a software team, you'll have heard the term Minimal Viable Product and everyday vocabulary. Unfortunately, in my experience, the idea of an MVP is frequently misunderstood and abused to deliver a project within a time box. After which, the product development team would pivot to another project. Not before making some very minor changes based upon user feedback.
 
-<!-- more -->
-
 Unsurprisingly, this practice produced disappointing software and frustrated customers. Therefore, an MVP has to be more than just minimal functionality to delight our customers. Ideally, after the initial release, sustained development would satisfy all the desired outcomes and polish experiences that didn't perform as expected.
 
 > However we choose to make an MVP, we need to make it meaningful.
 >
-> <cite>[Brian Pagán](https://brianpagan.net/2015/lean-startup-mvp-how-to-make-meaningful-products/){:target="_blank"}</cite>
+> <cite>[Brian Pagán](https://brianpagan.net/2015/lean-startup-mvp-how-to-make-meaningful-products/)</cite>
 
 Sadly I believe these behaviours stem from utilising an internal technology team as an onsite software agency. Furthermore, I suspect this comes from an I.T. project mentality to procure customer solutions for the current operational problems.
 
 These behaviours are the antithesis of modern software development and prevent organisations from becoming product companies. But through transparency, careful management of expectations, and autonomy, a product development team will deliver a valuable, usable, and feasible product.
 
-While the metaphors present in Henrik Kniberg article "[Making sense of MVP (Minimum Viable Product) – and why I prefer Earliest Testable/Usable/Lovable](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp){:target="_blank"}" are perhaps a little confused. If you intended to build a car, I think you'd start with a simple automobile.
+While the metaphors present in Henrik Kniberg article "[Making sense of MVP (Minimum Viable Product) – and why I prefer Earliest Testable/Usable/Lovable](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp)" are perhaps a little confused. If you intended to build a car, I think you'd start with a simple automobile.
 
 ![Skateboard, Scooter, Bicycle, Motorcycle and Car]({{ '/assets/img/posts/2021-09-24-iterations.png' | relative_url }}){: .img-fluid .mt-5 .mb-4}
 
@@ -49,7 +48,7 @@ Therefore, I think Kniberg is correct to recommend considering this initial rele
 
 Effectively communicating this point is tricky, as most don't understand the Minimum Viable Product concept. Depending upon the audience, saying prototype may be divisive or confusing. So instead, choose to describe the collection of features as an initial release. Where appropriate, I want to talk about our software in this fashion, as I believe it prepares others to expect further releases to accomplish the desired outcomes.
 
-[![Minimal Product Timeline]({{ '/assets/img/posts/2021-09-24-minimal-viable-product-timeline.png' | relative_url }}){: .img-fluid .mt-5 .mb-4}](/assets/img/posts/2021-09-24-minimal-viable-product-timeline.png){:target="_blank"}
+[![Minimal Product Timeline]({{ '/assets/img/posts/2021-09-24-minimal-viable-product-timeline.png' | relative_url }}){: .img-fluid .mt-5 .mb-4}](/assets/img/posts/2021-09-24-minimal-viable-product-timeline.png)
 
 As the product development team includes ideas postponed from the skateboard release, you'll edge closer to the desired MVP and later on a Viable Product. By regularly and carefully factoring in feedback, we can adapt to meet the market's needs and delight our customers. But what we're doing is so much more than adding features.
 

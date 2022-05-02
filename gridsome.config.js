@@ -64,6 +64,21 @@ module.exports = {
             typeName: 'PostPublished',
             create: true
           }
+        },
+        remark: {
+          plugins: [
+            [
+              '@noxify/gridsome-plugin-remark-embed', {
+                'enabledProviders': [
+                  'Twitter'
+                ],
+                'Twitter': {
+                    align: 'center',
+                    hideConversation: true
+                }
+              }
+            ]
+          ]
         }
       }
     },

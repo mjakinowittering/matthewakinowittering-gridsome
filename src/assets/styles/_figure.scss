@@ -1,11 +1,11 @@
-.is-16-by-9 {
+figure.is-16-by-9 {
     position: relative;
 
     &:before {
         display: block;
         content: "";
+        padding-top: 56.25%;
         width: 100%;
-        padding-top: (9 / 16) * 100%;
     }
 
     > :first-child {
@@ -14,5 +14,19 @@
         right: 0;
         bottom: 0;
         left: 0;
+        object-fit: contain;
+        width: 100%;
+    }
+
+    figcaption {
+        background: rgba(0,0,0,0.5);
+        bottom: 0;
+        color: #ffffff;
+        left: 0;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        right: 0;
+        text-align: left;
+        width: auto;
     }
 }

@@ -1,51 +1,31 @@
 <template>
   <Layout>
     <section>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h1>Resume</h1>
-          </div>
+      <h1>Resume</h1>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <div v-for="university in $page.allUniversity.edges" :key="university.node.id">
+        <h3>{{ university.node.name }}</h3>
+        <p v-if="university.node.belongsTo.edges.length > 1">{{ university.node.dateFrom }} - {{ university.node.dateTo }}</p>
+        <div v-for="course in university.node.belongsTo.edges" :key="course.node.id">
+          <h4>{{ course.node.title }}</h4>
+          <p>{{ course.node.dateFrom }} - {{ course.node.dateTo }}</p>
+          <div v-html="course.node.content"></div>
         </div>
       </div>
     </section>
     <section>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="education">
-              <h2>Education</h2>
-              <div v-for="university in $page.allUniversity.edges" :key="university.node.id">
-                <h3>{{ university.node.name }}</h3>
-                <p v-if="university.node.belongsTo.edges.length > 1">{{ university.node.dateFrom }} - {{ university.node.dateTo }}</p>
-                <div v-for="course in university.node.belongsTo.edges" :key="course.node.id">
-                  <h4>{{ course.node.title }}</h4>
-                  <p>{{ course.node.dateFrom }} - {{ course.node.dateTo }}</p>
-                  <div v-html="course.node.content"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <h2>Employment</h2>
+      <div v-for="(company, index) in $page.allCompany.edges" :key="company.node.id" :id="index">
+        <h3>{{ company.node.name }}</h3>
+        <p v-if="company.node.belongsTo.edges.length > 1">{{ company.node.dateFrom }} - {{ isPresent(company.node.dateTo) }}</p>
+        <div v-for="role in company.node.belongsTo.edges" :key="role.node.id">
+          <h4>{{ role.node.title }}</h4>
+          <p>{{ role.node.dateFrom }} - {{ isPresent(role.node.dateTo) }}</p>
+          <div v-html="role.node.content"></div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="employment">
-            <h2>Employment</h2>
-            <div v-for="(company, index) in $page.allCompany.edges" :key="company.node.id" :id="index">
-              <h3>{{ company.node.name }}</h3>
-              <p v-if="company.node.belongsTo.edges.length > 1">{{ company.node.dateFrom }} - {{ isPresent(company.node.dateTo) }}</p>
-              <div v-for="role in company.node.belongsTo.edges" :key="role.node.id">
-                <h4>{{ role.node.title }}</h4>
-                <p>{{ role.node.dateFrom }} - {{ isPresent(role.node.dateTo) }}</p>
-                <div v-html="role.node.content"></div>
-              </div>
-              <hr v-if="index != $page.allCompany.edges.length - 1">
-            </div>
-          </div>
-        </div>
+        <hr v-if="index != $page.allCompany.edges.length - 1">
       </div>
     </section>
   </Layout>
