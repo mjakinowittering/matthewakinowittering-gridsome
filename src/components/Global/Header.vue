@@ -14,7 +14,7 @@
               </li>
               <li>
                 <span class="la-li">
-                  <i class="las la-paragraph"></i>
+                  <i class="las la-bullhorn"></i>
                 </span>
                 <g-link to="/blog/">Blog</g-link>
               </li>

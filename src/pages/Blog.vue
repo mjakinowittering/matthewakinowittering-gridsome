@@ -4,13 +4,11 @@
       <h1>Blog</h1>
       <div class="published" v-for="published in $page.allPostPublished.edges" :key="published.node.id">
         <h3>{{ published.node.publishedAt }}</h3>
-        <ul v-for="post in published.node.posts.edges" :key="post.node.id">
-          <li>
-            <g-link :to="post.node.path">
-              {{ post.node.title }}
-            </g-link>
-          </li>
-        </ul>
+        <p v-for="post in published.node.posts.edges" :key="post.node.id">
+          <g-link :to="post.node.path">
+            {{ post.node.title }}
+          </g-link>
+        </p>
       </div>
       <Pager :info="$page.allPostPublished.pageInfo"/>
     </section>
