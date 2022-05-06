@@ -18,7 +18,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Role',
-        path: './content/companies/roles/*.md',
+        path: './content/companies/roles/*/*.md',
         refs: {
           company: {
             typeName: 'Company',
