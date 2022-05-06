@@ -7,7 +7,7 @@
         <ul class="la-ul" v-for="bookmark in published.node.bookmarks.edges" :key="bookmark.node.id">
           <li>
             <span class="la-li">
-              <i class="las la-external-link-square-alt"></i>
+              <i class="las la-paperclip"></i>
             </span>
             <a :href="bookmark.node.url" target="_blank">{{ bookmark.node.title }}</a>
           </li>
