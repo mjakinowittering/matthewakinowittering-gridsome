@@ -2,16 +2,14 @@
   <Layout>
     <section class="post">
       <div class="container">
-        <figure class="is-16-by-9" v-if="$page.post.subtype === 'post'">
-          <img :alt="$page.post.figure.img.alt" :src="$page.post.figure.img.src">
+        <h1>{{ $page.post.title }}</h1>
+        <figure v-if="$page.post.subtype === 'post'">
+          <img class="responsive" :alt="$page.post.figure.img.alt" :src="$page.post.figure.img.src" />
           <figcaption>
             <a :href="$page.post.figure.url" target="_blank">{{ $page.post.figure.caption }}</a>
           </figcaption>
         </figure>
-        <main>
-          <h1>{{ $page.post.title }}</h1>
-          <div v-html="$page.post.content"></div>
-        </main>
+        <div v-html="$page.post.content"></div>
       </div>
     </section>
   </Layout>

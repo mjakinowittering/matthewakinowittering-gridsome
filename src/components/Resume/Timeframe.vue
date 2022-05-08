@@ -1,5 +1,5 @@
 <template>
-  <p><i class="las la-calendar"></i> {{ dateFrom }} - {{ isPresent(dateTo) }}</p>
+  <p class="timeframe"><i class="las la-calendar"></i> {{ dateFrom }} - {{ isPresent(dateTo) }}</p>
 </template>
 
 

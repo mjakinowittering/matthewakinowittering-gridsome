@@ -2,7 +2,7 @@
   <div class="skill">
     <div class="card">
       <!-- <img :src="skill.node.img.src"> -->
-      <h3 class="card-title">{{ skill.node.title }}</h3>
+      <h2>{{ skill.node.title }}</h2>
       <div class="card-body" v-html="skill.node.content"></div>
     </div>
   </div>

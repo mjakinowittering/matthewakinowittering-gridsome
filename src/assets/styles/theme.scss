@@ -1,143 +1,86 @@
-// Fonts and CSS Reset
-@import "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css";
+// Fonts ----------------------------------------------------------------------
+@import url('https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css');
 
-@import "../../../node_modules/cutestrap/dist/css/cutestrap.min.css";
+// 3rd Party Libraries --------------------------------------------------------
+@import '../../../node_modules/normalize.css/normalize.css';
 
-// Header ---------------------------------------------------------------------
-
-header {
-    background: #f9fafa;
-    height: 64px;
-    width: 100%;
+// Typography -----------------------------------------------------------------
+body {
+    font-family: system-ui, sans-serif;
 }
 
-header > hgroup {
-    display: flex;
-    height: 64px;
-    width: auto;
-}
-
-header > hgroup > h1 {
-    align-self: center;
-    font-size: 2rem;
-    margin: 0 1rem;
-}
-
-header > label {
-    align-items: center;
-    background: #f9fafa;
-    display: flex;
-    height: 64px;
-    left: calc(100vw - 74px);
-    justify-content: center;
-    position: relative;
-    text-align: center;
-    top: -64px;
-    width: 74px;
-    z-index: 1000;
-}
-
-header > label > i {
-    color: #000000;
-    font-size: 3rem;
-}
-
-header > input[type=checkbox] {
-    display: none;
-}
-
-header > section {
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-header > section > label {
-    display: block;
-    height: 100vh;
-    width: 100%;
-}
-
-header > section > nav {
-    background: #f9fafa;
-    display: none;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 74px;
-}
-
-header > section > nav > header {
-    background: #f9fafa;
-    display: flex;
-    height: 64px;
-}
-
-header > section > nav > header > h2 {
-    align-self: center;
-    font-size: 2rem;
-    margin: 0 1rem;
-}
-
-header > section > nav > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0.5rem 0;
-}
-
-header > section > nav > ul > li {
-    margin: 0;
-    padding: 0.5rem 1rem;
-}
-
-input:checked ~ label {
-    background: #f9fafa;
-}
-
-input:not(:checked) ~ label > i.la-hamburger {
-    display: block;
-}
-
-input:checked ~ label > i.la-hamburger {
-    display: none;
-}
-
-input:not(:checked) ~ label > i.la-window-close {
-    display: none;
-}
-
-input:checked ~ label > i.la-window-close {
-    display: block;
-}
-
-input:checked ~ section {
-    display: block;
-}
-
-input:checked ~ section > nav {
-    animation-name: slideout;
-    animation-duration: 2s;
-    display: block;
-    width: 100%;
-    max-width: 300px;
-}
-
-@keyframes slideout {
-    0% {
-        width: 74px;
+main {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        line-height: 1.2;
     }
-    100% {
-        width: 100%;
+
+    h1 {
+        font-size: var(--h1-fontsize);
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: var(--h2-fontsize);
+    }
+
+    h3 {
+        font-size: var(--h3-fontsize);
+    }
+
+    h4 {
+        font-size: var(--h4-fontsize);
+    }
+
+    h5 {
+        font-size: var(--h5-fontsize);
+    }
+
+    h6 {
+        font-size: var(--h6-fontsize);
+    }
+
+    p, li {
+        font-size: var(--fontsize);
+        line-height: 1.65;
     }
 }
 
-// Article --------------------------------------------------------------------
-article {
+:root {
+    --h1-fontsize: 3.00em;
+    --h2-fontsize: 2.50em;
+    --h3-fontsize: 2.25em;
+    --h4-fontsize: 2.00em;
+    --h5-fontsize: 1.80em;
+    --h6-fontsize: 1.40em;
+    --fontsize:  1.20em;
+}
+
+// Images ---------------------------------------------------------------------
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+// Theme ----------------------------------------------------------------------
+@import "header";
+@import "home/skill";
+@import "resume";
+
+
+// Main -----------------------------------------------------------------------
+main {
     max-width: 60rem;
     margin: 0 auto;
+    padding: 0 1rem;
 }
