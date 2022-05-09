@@ -3,9 +3,8 @@ title: Wireframes Aren’t Just for Designers
 subtype: post
 figure:
   caption: Unsplash
-  img:
-    src: /img/posts/2021-05-03-wireframes-arent-just-for-designers.jpg
-    alt: Wireframe drawn ben pen
+  img: ./img/2021-05-03-wireframes-arent-just-for-designers.jpg
+  alt: Wireframe drawn ben pen
   url: https://unsplash.com/photos/4UGmm3WRUoQ
 published: 1619996400
 publishedAt: 2021-05-03T00:00:00.000Z

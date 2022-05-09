@@ -3,9 +3,8 @@ title: Are you abusing the term, Minimum Viable Product?
 subtype: post
 figure:
   caption: Unsplash
-  img:
-    src: /img/posts/2021-09-24-are-you-abusing-the-term-minimum-viable-product.jpg
-    alt: Skateboard
+  img: ./img/2021-09-24-are-you-abusing-the-term-minimum-viable-product.jpg
+  alt: Skateboard
   url: https://unsplash.com/photos/Vbbn4xNBfnM
 published: 1632438000
 publishedAt: 2021-09-24T00:00:00.000Z

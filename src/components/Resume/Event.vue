@@ -18,3 +18,10 @@
     }
   }
 </script>
+
+
+<style lang="scss" scoped>
+  .event {
+    margin-bottom: 1.5em;
+  }
+</style>

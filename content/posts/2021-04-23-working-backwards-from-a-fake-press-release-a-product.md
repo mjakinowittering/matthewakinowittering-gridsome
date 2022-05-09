@@ -3,9 +3,8 @@ title: Working Backwards From A Fake Press Release
 subtype: post
 figure:
   caption: Unsplash
-  img:
-    src: /img/posts/2021-04-23-working-backwards-from-a-fake-press-release.jpg
-    alt: Designed sketching wireframes
+  img: ./img/2021-04-23-working-backwards-from-a-fake-press-release.jpg
+  alt: Designed sketching wireframes
   url: https://unsplash.com/photos/s9CC2SKySJM
 published: 1619132400
 publishedAt: 2021-04-23T00:00:00.000Z

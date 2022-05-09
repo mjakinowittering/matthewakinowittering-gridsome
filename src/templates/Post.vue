@@ -24,10 +24,8 @@
       content
       figure {
         caption
-        img {
-          src
-          alt
-        }
+        img
+        alt
         url
       }
     }

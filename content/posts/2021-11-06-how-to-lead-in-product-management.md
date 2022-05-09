@@ -3,9 +3,8 @@ title: How to Lead in Product Management
 subtype: post
 figure:
   caption: Unsplash
-  img:
-    src: /img/posts/2021-11-06-how-to-lead-in-product-management.jpg
-    alt: Open book
+  img: ./img/2021-11-06-how-to-lead-in-product-management.jpg
+  alt: Open book
   url: https://unsplash.com/photos/q_gjDWf9ths
 published: 1636156800
 publishedAt: 2021-11-06T00:00:00.000Z

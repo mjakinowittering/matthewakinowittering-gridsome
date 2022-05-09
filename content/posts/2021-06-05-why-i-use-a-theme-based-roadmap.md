@@ -3,9 +3,8 @@ title: Why I use a theme-based roadmap
 subtype: post
 figure:
   caption: Unsplash
-  img:
-    src: /img/posts/2021-06-05-why-i-use-a-theme-based-roadmap.jpg
-    alt: Winnats Pass, Hope Valley, United Kingdom
+  img: ./img/2021-06-05-why-i-use-a-theme-based-roadmap.jpg
+  alt: Winnats Pass, Hope Valley, United Kingdom
   url: https://unsplash.com/photos/x1w_Q78xNEY
 published: 1622847600
 publishedAt: 2021-06-05T00:00:00.000Z

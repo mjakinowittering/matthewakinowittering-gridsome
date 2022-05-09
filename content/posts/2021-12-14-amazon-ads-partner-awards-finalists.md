@@ -3,9 +3,8 @@ title: Acorn-i are finalist for Amazon Ads Partner Awards 2021
 subtype: post
 figure:
   caption: Unsplash
-  img:
-    src: /img/posts/2021-12-14-amazon-ads-partner-awards-finalists.jpg
-    alt: Sunflowers at sunset
+  img: ./img/2021-12-14-amazon-ads-partner-awards-finalists.jpg
+  alt: Sunflowers at sunset
   url: https://unsplash.com/photos/oUxuOQfnhZQ
 published: 1639440000
 publishedAt: 2021-12-14T00:00:00.000Z

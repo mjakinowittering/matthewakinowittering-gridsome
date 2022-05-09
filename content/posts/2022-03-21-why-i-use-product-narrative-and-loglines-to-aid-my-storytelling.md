@@ -3,9 +3,8 @@ title: Why I use Product Narrative and Loglines to aid my storytelling
 subtype: post
 figure:
   caption: Unsplash
-  img:
-    src: /img/posts/2022-03-21-why-i-use-product-narrative-and-loglines-to-aid-my-storytelling.jpg
-    alt: Fireplace in the evening. In the swiss mountains
+  img: ./img/2022-03-21-why-i-use-product-narrative-and-loglines-to-aid-my-storytelling.jpg
+  alt: Fireplace in the evening. In the swiss mountains
   url: https://unsplash.com/photos/IpaDEVMct8I
 published: 1647820800
 publishedAt: 2022-03-21T00:00:00.000Z
