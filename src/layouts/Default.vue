@@ -1,18 +1,16 @@
 <template>
   <div>
-    <Header />
-    <main>
-      <slot />
-    </main>
+    <Navbar />
+    <slot />
   </div>
 </template>
 
 
 <script>
-  import Header from "~/components/Global/Header.vue"
+  import Navbar from "~/components/Navbar.vue"
   export default {
     components: {
-      Header
+      Navbar
     }
   }
 </script>

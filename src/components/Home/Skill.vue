@@ -1,9 +1,11 @@
 <template>
-  <div class="skill">
+  <div class="column is-flex">
     <div class="card">
       <!-- <img :src="skill.node.img.src"> -->
-      <h2>{{ skill.node.title }}</h2>
-      <div class="card-body" v-html="skill.node.content"></div>
+      <div class="card-content is-flex-direction-row">
+        <h3 class="title">{{ skill.node.title }}</h3>
+        <div class="is-flex-grow-1" v-html="skill.node.content"></div>
+      </div>
     </div>
   </div>
 </template>
