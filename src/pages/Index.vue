@@ -34,10 +34,8 @@
         node {
           id
           title
-          img {
-            src
-          }
           content
+          img
         }
       }
     }
