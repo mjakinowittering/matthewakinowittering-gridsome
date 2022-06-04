@@ -106,6 +106,5 @@ src/.temp/
 # TernJS port file
 .tern-port
 
-
 # Bookmark files
 content/bookmarks/*.json
