@@ -5,7 +5,9 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 const axios = require("axios")
+const fs = require('fs')
 const moment = require("moment-timezone")
+const ogs = require('open-graph-scraper')
 
 
 function getFirstDayOfMonthUnixtime(dateObj) {
@@ -46,7 +48,7 @@ module.exports = function (api) {
       }
     })
 
-    const bookmarkPublishedCollection = actions.addCollection("BookmarkPublished")
+    actions.addCollection("BookmarkPublished")
 
     actions.addSchemaResolvers({
       BookmarkPublished: {
@@ -54,7 +56,7 @@ module.exports = function (api) {
       }
     })
 
-    const bookmarkCollection = actions.addCollection({
+    actions.addCollection({
       typeName: "Bookmark"
     })
 
@@ -79,23 +81,30 @@ module.exports = function (api) {
       num_of_results = response.data.length
 
       for (let bookmark of response.data) {
+        let ogObj = await ogs({
+          url: bookmark.bk_url
+        })
+
         let bookmarkPublishedDateObj = new Date(bookmark.bk_date)
-        let bookmarkPublishedId = getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj)
 
-        if(bookmarkPublishedCollection.getNodeById(bookmarkPublishedId) == null) {
-          bookmarkPublishedCollection.addNode({
-            id: bookmarkPublishedId
-          })
-        }
-
-        bookmarkCollection.addNode({
+        let bookmarkObj = {
           id: bookmark.bk_id,
           url: bookmark.bk_url,
           title: bookmark.bk_title,
-          note: bookmark.bk_note,
           createdAt: bookmarkPublishedDateObj.toISOString(),
-          published: actions.createReference("BookmarkPublished", bookmarkPublishedId)
-        })
+          published: getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj),
+          og: ogObj.result
+        }
+        let bookmarkPath = `./content/bookmarks/${bookmark.bk_id}.json`
+        let bookmarkSerialized = JSON.stringify(bookmarkObj, null, 4);
+
+        fs.writeFile(bookmarkPath, bookmarkSerialized, (err) => {
+          if (err) {
+            throw err;
+          } else {
+            console.log(`New Bookmark written to ${bookmarkPath}`);
+          }
+        });
       }
 
       page++

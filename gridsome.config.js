@@ -20,10 +20,7 @@ module.exports = {
         typeName: 'Role',
         path: './content/companies/roles/*/*.md',
         refs: {
-          company: {
-            typeName: 'Company',
-            create: false
-          }
+          company: 'Company'
         }
       }
     },
@@ -40,10 +37,7 @@ module.exports = {
         typeName: 'Course',
         path: './content/universities/courses/*.md',
         refs: {
-          university: {
-            typeName: 'University',
-            create: false
-          }
+          university: 'University'
         }
       }
     },
@@ -79,6 +73,19 @@ module.exports = {
               }
             ]
           ]
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Bookmark',
+        path: './content/bookmarks/*.json',
+        refs: {
+          published: {
+            typeName: 'BookmarkPublished',
+            create: true
+          }
         }
       }
     },
