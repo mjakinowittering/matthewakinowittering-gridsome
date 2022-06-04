@@ -62,8 +62,8 @@ module.exports = function (api) {
 
     let page = 1
     let limit = 10
-    let x_total_count = 0
-    let num_of_results = 0
+    let totalCount = 0
+    let numOfResults = 0
 
     do {
 
@@ -79,8 +79,10 @@ module.exports = function (api) {
         }
       )
 
-      x_total_count = response.headers['x-total-count']
-      num_of_results += response.data.length
+      totalCount = parseInt(response.headers['x-total-count'])
+      numOfResults += response.data.length
+
+      console.log(`Retrieved ${numOfResults} of ${totalCount} from page ${page} of ${Math.ceil(totalCount / limit)}`)
 
       for (let bookmark of response.data) {
         let ogObj = await ogs({
@@ -111,7 +113,7 @@ module.exports = function (api) {
 
       page++
 
-    } while (num_of_results === x_total_count)
+    } while (numOfResults !== totalCount)
 
   })
 
