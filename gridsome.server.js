@@ -62,11 +62,12 @@ module.exports = function (api) {
 
     let page = 1
     let limit = 10
+    let x_total_count = 0
     let num_of_results = 0
 
     do {
 
-      const response = await axios.get(
+      let response = await axios.get(
         "http://devapi.saved.io/bookmarks",
         {
           params:{
@@ -78,7 +79,8 @@ module.exports = function (api) {
         }
       )
 
-      num_of_results = response.data.length
+      x_total_count = response.headers['x-total-count']
+      num_of_results += response.data.length
 
       for (let bookmark of response.data) {
         let ogObj = await ogs({
@@ -109,7 +111,7 @@ module.exports = function (api) {
 
       page++
 
-    } while (num_of_results === limit)
+    } while (num_of_results === x_total_count)
 
   })
 
