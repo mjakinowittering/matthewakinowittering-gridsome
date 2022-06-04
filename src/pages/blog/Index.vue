@@ -1,12 +1,10 @@
 <template>
   <Layout>
     <div class="container">
-      <h1>Blog</h1>
-      <div class="published" v-for="published in $page.allPostPublished.edges" :key="published.node.id">
-        <h3>{{ published.node.publishedAt }}</h3>
-        <Post v-for="post in published.node.posts.edges" :post="post" :key="post.node.id" />
+      <div class="columns is-multiline">
+        <Card :post="post" v-for="post in $page.posts.edges" :key="post.node.id" />
       </div>
-      <Pager :info="$page.allPostPublished.pageInfo"/>
+      <Pager :info="$page.posts.pageInfo"/>
     </div>
   </Layout>
 </template>
@@ -14,26 +12,22 @@
 
 <page-query>
   query($page: Int) {
-    allPostPublished(filter: {}, sortBy: "id", order: DESC, perPage: 5, page: $page) @paginate {
+    posts: allPost(filter: {}, sortBy: "publishedAt", order: DESC, perPage: 8, page: $page) @paginate {
       pageInfo {
         totalPages
         currentPage
       }
       edges {
         node {
-          id
-          publishedAt(format: "MMMM YYYY")
-          posts: belongsTo(sortBy: "createdAt", order: DESC) {
-            edges {
-              node {
-                ... on Post {
-                  publishedAt
-                  title
-                  path
-                }
-              }
-            }
+          path
+          title
+          subtype
+          authors
+          figure {
+            img
           }
+          publishedAt(format: "YYYY-MM-DD")
+          excerpt
         }
       }
     }
@@ -43,7 +37,7 @@
 
 <script>
   import { Pager } from 'gridsome'
-  import Post from '~/components/Blog/Post.vue'
+  import Card from '~/components/Blog/Card.vue'
   export default {
     metaInfo() {
       return {
@@ -52,7 +46,38 @@
     },
     components: {
       Pager,
-      Post
+      Card
+    },
+    methods: {
+      breadcrumbFactory() {
+        if (this.$page.posts.pageInfo.currentPage > 1) {
+          return [
+            {
+              to: '/',
+              label: 'Home'
+            },
+            {
+              to: '/blog/',
+              label: 'Blog'
+            },
+            {
+              to: `/blog/${this.$page.posts.pageInfo.currentPage}/`,
+              label: `Page ${this.$page.posts.pageInfo.currentPage}`
+            }
+          ]
+        } else {
+          return [
+            {
+              to: '/',
+              label: 'Home'
+            },
+            {
+              to: '/blog/',
+              label: 'Blog'
+            }
+          ]
+        }
+      }
     }
   }
 </script>

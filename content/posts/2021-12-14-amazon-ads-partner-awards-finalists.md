@@ -1,6 +1,8 @@
 ---
 title: Acorn-i are finalist for Amazon Ads Partner Awards 2021
 subtype: post
+authors:
+  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
   img: ./img/2021-12-14-amazon-ads-partner-awards-finalists.jpg

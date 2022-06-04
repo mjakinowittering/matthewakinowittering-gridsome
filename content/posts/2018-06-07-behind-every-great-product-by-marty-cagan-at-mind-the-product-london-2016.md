@@ -1,6 +1,8 @@
 ---
 title: Behind Every Great Product by Marty Cagan at Mind the Product London 2016
 subtype: youtube
+authors:
+  - Matthew Akino-Wittering
 youtube:
   src: https://www.youtube.com/embed/e0KJlYe2Rjk
 published: 1527807600

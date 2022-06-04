@@ -1,6 +1,8 @@
 ---
 title: Wireframes Aren’t Just for Designers
 subtype: post
+authors:
+  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
   img: ./img/2021-05-03-wireframes-arent-just-for-designers.jpg

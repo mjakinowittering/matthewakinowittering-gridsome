@@ -1,6 +1,8 @@
 ---
 title: Preach!
 subtype: post
+authors:
+  - Matthew Akino-Wittering
 figure:
   caption: Richard Banfield
   img: ./img/2019-11-09-preach-richard-banfield.jpg

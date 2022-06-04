@@ -1,6 +1,8 @@
 ---
 title: How to Lead in Product Management
 subtype: post
+authors:
+  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
   img: ./img/2021-11-06-how-to-lead-in-product-management.jpg

@@ -1,6 +1,8 @@
 ---
 title: The Path to Becoming a Better Product Manager
 subtype: youtube
+authors:
+  - Matthew Akino-Wittering
 youtube:
   src: https://www.youtube.com/embed/kiTssZDbOoU
 published: 1623279600
