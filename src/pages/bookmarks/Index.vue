@@ -1,20 +1,21 @@
 <template>
   <Layout>
-    <section>
-      <h1>Bookmarks</h1>
-      <div v-for="(published, index) in $page.allBookmarkPublished.edges" :key="published.node.id" :id="index">
-        <h3>{{ published.node.publishedAt }}</h3>
-        <ul class="la-ul" v-for="bookmark in published.node.bookmarks.edges" :key="bookmark.node.id">
-          <li>
-            <span class="la-li">
-              <i class="las la-paperclip"></i>
-            </span>
-            <a :href="bookmark.node.url" target="_blank">{{ bookmark.node.title }}</a>
-          </li>
-        </ul>
+    <div v-for="(published, index) in $page.allBookmarkPublished.edges" :key="published.node.id" :id="index">
+      <section class="hero">
+        <div class="hero-body">
+          <p class="title">
+            {{ published.node.publishedAt }}
+          </p>
+          <p class="subtitle">
+            Hero subtitle
+          </p>
+        </div>
+      </section>
+      <div class="container">
+        <MediaObject :bookmark="bookmark" v-for="bookmark in published.node.bookmarks.edges" :key="bookmark.node.id" />
       </div>
-      <Pager :info="$page.allBookmarkPublished.pageInfo"/>
-    </section>
+    </div>
+    <Pager :info="$page.allBookmarkPublished.pageInfo"/>
   </Layout>
 </template>
 
@@ -34,9 +35,13 @@
             edges {
               node {
                 ... on Bookmark {
-                  createdAt
-                  title
+                  createdAt(format: "YYYY-MM-DD")
                   url
+                  og {
+                    ogTitle
+                    ogDescription
+                    favicon
+                  }
                 }
               }
             }
@@ -50,6 +55,7 @@
 
 <script>
   import { Pager } from 'gridsome'
+  import MediaObject from '~/components/Bookmarks/MediaObject.vue'
   export default {
     metaInfo() {
       return {
@@ -57,7 +63,8 @@
       }
     },
     components: {
-      Pager
+      Pager,
+      MediaObject
     }
   }
 </script>
