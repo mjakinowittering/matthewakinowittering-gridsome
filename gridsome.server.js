@@ -8,6 +8,7 @@ const axios = require("axios")
 const fs = require('fs')
 const moment = require("moment-timezone")
 const ogs = require('open-graph-scraper')
+const path = require("path")
 
 
 function getFirstDayOfMonthUnixtime(dateObj) {
@@ -60,6 +61,8 @@ module.exports = function (api) {
       typeName: "Bookmark"
     })
 
+    const bookmarkDirPath = './content/bookmarks'
+
     let page = 1
     let limit = 10
     let totalCount = 0
@@ -99,17 +102,29 @@ module.exports = function (api) {
           published: getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj),
           og: ogObj.result
         }
-        let bookmarkPath = `./content/bookmarks/${bookmark.bk_id}.json`
+        let bookmarkFilePath = `${bookmarkDirPath}/${bookmark.bk_id}.json`
         let bookmarkSerialized = JSON.stringify(bookmarkObj, null, 4);
 
-        fs.writeFile(bookmarkPath, bookmarkSerialized, (err) => {
+        fs.writeFile(bookmarkFilePath, bookmarkSerialized, (err) => {
           if (err) {
             throw err;
-          } else {
-            console.log(`New Bookmark written to ${bookmarkPath}`);
           }
+
+          console.log(`New Bookmark written to ${bookmarkFilePath}`);
         });
       }
+
+      fs.readdir(bookmarkDirPath, (err, files) => {
+        if (err) {
+          throw err
+        }
+
+        jsonFiles = files.filter(file => {
+          return path.extname(file).toLowerCase() === '.json'
+        })
+
+        console.log(`${jsonFiles.length} files in ${bookmarkDirPath}`)
+      })
 
       page++
 
