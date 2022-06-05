@@ -4,8 +4,8 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-const axios = require("axios")
-const moment = require("moment-timezone")
+const axios = require('axios')
+const moment = require('moment-timezone')
 const ogs = require('open-graph-scraper')
 
 
@@ -20,34 +20,45 @@ function getFirstDayOfMonthUnixtime(dateObj) {
 }
 
 
+const domainResolver = {
+  type: 'String',
+  resolve(obj) {
+    const urlObj = new URL(obj.url)
+
+    return urlObj.hostname.replace('www.', '')
+  }
+}
+
+
+const publishedAtResolver = {
+  type: 'Date',
+  args: {
+    format: 'String'
+  },
+  resolve(obj, args) {
+    // https://gridsome.org/docs/schema-api/#add-custom-field-resolvers
+    // https://stackoverflow.com/questions/23483787/convert-unix-timestamp-with-a-timezone-to-javascript-date
+    const tzFormat = 'Europe/London'
+    const dateFormat = 'YYYY-MM-DDTHH:mm:ssZ'
+
+    if (args.format) {
+      return moment.unix(obj.id).tz(tzFormat).format(args.format)
+    } else {
+      return moment.unix(obj.id).tz(tzFormat).format(dateFormat)
+    }
+  }
+}
+
+
 module.exports = function (api) {
   api.loadSource(async actions => {
-    const publishedAtResolver = {
-      type: "Date",
-      args: {
-        format: "String"
-      },
-      resolve(obj, args) {
-        // https://gridsome.org/docs/schema-api/#add-custom-field-resolvers
-        // https://stackoverflow.com/questions/23483787/convert-unix-timestamp-with-a-timezone-to-javascript-date
-        const tzFormat = "Europe/London"
-        const dateFormat = "YYYY-MM-DDTHH:mm:ssZ"
-
-        if (args.format) {
-          return moment.unix(obj.id).tz(tzFormat).format(args.format)
-        } else {
-          return moment.unix(obj.id).tz(tzFormat).format(dateFormat)
-        }
-      }
-    }
-
     actions.addSchemaResolvers({
       PostPublished: {
         publishedAt: publishedAtResolver
       }
     })
 
-    const bookmarkPublishedCollection = actions.addCollection("BookmarkPublished")
+    const bookmarkPublishedCollection = actions.addCollection('BookmarkPublished')
 
     actions.addSchemaResolvers({
       BookmarkPublished: {
@@ -56,7 +67,13 @@ module.exports = function (api) {
     })
 
     const bookmarkCollection = actions.addCollection({
-      typeName: "Bookmark"
+      typeName: 'Bookmark'
+    })
+
+    actions.addSchemaResolvers({
+      Bookmark: {
+        domain: domainResolver
+      }
     })
 
     let page = 1
@@ -67,7 +84,7 @@ module.exports = function (api) {
     do {
 
       let response = await axios.get(
-        "http://devapi.saved.io/bookmarks",
+        'http://devapi.saved.io/bookmarks',
         {
           params:{
             key: process.env.SAVEDDOTIO_KEY,
@@ -105,7 +122,7 @@ module.exports = function (api) {
           title: bookmark.bk_title,
           note: bookmark.bk_note,
           createdAt: bookmarkPublishedDateObj.toISOString(),
-          published: actions.createReference("BookmarkPublished", bookmarkPublishedId),
+          published: actions.createReference('BookmarkPublished', bookmarkPublishedId),
           og: ogObj.result
         })
       }

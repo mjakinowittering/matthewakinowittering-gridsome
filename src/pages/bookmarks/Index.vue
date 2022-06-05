@@ -6,13 +6,14 @@
           <p class="title">
             {{ published.node.publishedAt }}
           </p>
-          <p class="subtitle">
-            Hero subtitle
-          </p>
         </div>
       </section>
       <div class="container">
-        <MediaObject :bookmark="bookmark" v-for="bookmark in published.node.bookmarks.edges" :key="bookmark.node.id" />
+        <div class="columns">
+          <div class="column is-two-thirds-desktop">
+            <MediaObject :bookmark="bookmark" v-for="bookmark in published.node.bookmarks.edges" :key="bookmark.node.id" />
+          </div>
+        </div>
       </div>
     </div>
     <Pager :info="$page.allBookmarkPublished.pageInfo"/>
@@ -36,6 +37,7 @@
               node {
                 ... on Bookmark {
                   createdAt(format: "YYYY-MM-DD")
+                  domain
                   url
                   og {
                     ogTitle

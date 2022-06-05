@@ -23,9 +23,9 @@
             <p>
               <span class="icon-text">
                 <span class="icon">
-                  <i class="fa-solid fa-square-arrow-up-right"></i>
+                  <i class="fa-solid fa-link"></i>
                 </span>
-                {{ bookmark.node.url }}
+                <a :href="bookmark.node.url" target="_blank">{{ bookmark.node.domain }}</a>
               </span>
             </p>
           </div>
@@ -43,6 +43,3 @@
     ]
   }
 </script>
-
-
-<style lang="scss"></style>

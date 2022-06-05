@@ -2,7 +2,9 @@
   <Layout>
     <div class="container">
       <div class="columns is-multiline">
-        <Card :post="post" v-for="post in $page.posts.edges" :key="post.node.id" />
+        <div class="column is-one-third-desktop is-flex" v-for="post in $page.posts.edges" :key="post.node.id">
+          <Card :post="post" />
+        </div>
       </div>
       <Pager :info="$page.posts.pageInfo"/>
     </div>
@@ -12,7 +14,7 @@
 
 <page-query>
   query($page: Int) {
-    posts: allPost(filter: {}, sortBy: "publishedAt", order: DESC, perPage: 8, page: $page) @paginate {
+    posts: allPost(filter: {}, sortBy: "publishedAt", order: DESC, perPage: 9, page: $page) @paginate {
       pageInfo {
         totalPages
         currentPage
@@ -25,6 +27,9 @@
           authors
           figure {
             img
+          }
+          youtube {
+            src
           }
           publishedAt(format: "YYYY-MM-DD")
           excerpt
