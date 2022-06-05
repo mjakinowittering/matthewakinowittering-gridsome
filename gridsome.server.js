@@ -5,10 +5,8 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 const axios = require("axios")
-const fs = require('fs')
 const moment = require("moment-timezone")
 const ogs = require('open-graph-scraper')
-const path = require("path")
 
 
 function getFirstDayOfMonthUnixtime(dateObj) {
@@ -36,9 +34,9 @@ module.exports = function (api) {
         const dateFormat = "YYYY-MM-DDTHH:mm:ssZ"
 
         if (args.format) {
-          return moment.unix(obj.id).tz(tzFormat).format(args.format);
+          return moment.unix(obj.id).tz(tzFormat).format(args.format)
         } else {
-          return moment.unix(obj.id).tz(tzFormat).format(dateFormat);
+          return moment.unix(obj.id).tz(tzFormat).format(dateFormat)
         }
       }
     }
@@ -49,7 +47,7 @@ module.exports = function (api) {
       }
     })
 
-    actions.addCollection("BookmarkPublished")
+    const bookmarkPublishedCollection = actions.addCollection("BookmarkPublished")
 
     actions.addSchemaResolvers({
       BookmarkPublished: {
@@ -57,11 +55,9 @@ module.exports = function (api) {
       }
     })
 
-    actions.addCollection({
+    const bookmarkCollection = actions.addCollection({
       typeName: "Bookmark"
     })
-
-    const bookmarkDirPath = './content/bookmarks'
 
     let page = 1
     let limit = 10
@@ -88,43 +84,31 @@ module.exports = function (api) {
       console.log(`Retrieved ${numOfResults} of ${totalCount} from page ${page} of ${Math.ceil(totalCount / limit)}`)
 
       for (let bookmark of response.data) {
+        let bookmarkPublishedDateObj = new Date(bookmark.bk_date)
+        let bookmarkPublishedId = getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj)
+
+        if(bookmarkPublishedCollection.getNodeById(bookmarkPublishedId) == null) {
+          bookmarkPublishedCollection.addNode({
+            id: bookmarkPublishedId
+          })
+        }
+
+        console.log(`Get OpenGraph metadata for bk_id="${bookmark.bk_id}" at "${bookmark.bk_url}"`)
+
         let ogObj = await ogs({
           url: bookmark.bk_url
         })
 
-        let bookmarkPublishedDateObj = new Date(bookmark.bk_date)
-
-        let bookmarkObj = {
+        bookmarkCollection.addNode({
           id: bookmark.bk_id,
           url: bookmark.bk_url,
           title: bookmark.bk_title,
+          note: bookmark.bk_note,
           createdAt: bookmarkPublishedDateObj.toISOString(),
-          published: getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj),
+          published: actions.createReference("BookmarkPublished", bookmarkPublishedId),
           og: ogObj.result
-        }
-        let bookmarkFilePath = `${bookmarkDirPath}/${bookmark.bk_id}.json`
-        let bookmarkSerialized = JSON.stringify(bookmarkObj, null, 4);
-
-        fs.writeFile(bookmarkFilePath, bookmarkSerialized, (err) => {
-          if (err) {
-            throw err;
-          }
-
-          console.log(`New Bookmark written to ${bookmarkFilePath}`);
-        });
-      }
-
-      fs.readdir(bookmarkDirPath, (err, files) => {
-        if (err) {
-          throw err
-        }
-
-        jsonFiles = files.filter(file => {
-          return path.extname(file).toLowerCase() === '.json'
         })
-
-        console.log(`${jsonFiles.length} files in ${bookmarkDirPath}`)
-      })
+      }
 
       page++
 

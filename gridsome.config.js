@@ -79,19 +79,6 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Bookmark',
-        path: './content/bookmarks/*.json',
-        refs: {
-          published: {
-            typeName: 'BookmarkPublished',
-            create: true
-          }
-        }
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
         typeName: 'ExternalLink',
         path: './content/external-links/*.yml'
       }
