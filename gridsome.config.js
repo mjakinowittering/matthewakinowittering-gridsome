@@ -44,6 +44,20 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        typeName: 'ExternalLink',
+        path: './content/external-links/*.yml'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Milestone',
+        path: './content/milestones/*/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         typeName: 'Skill',
         path: './content/skills/*.md'
       }
@@ -74,13 +88,6 @@ module.exports = {
             ]
           ]
         }
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'ExternalLink',
-        path: './content/external-links/*.yml'
       }
     }
   ],

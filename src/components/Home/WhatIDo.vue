@@ -11,7 +11,7 @@
           </div>
         </div>
         <div class="columns">
-          <div class="column is-flex" v-for="skill in $static.skills.edges" :skill="skill" :key="skill.node.id">
+          <div class="column is-flex" v-for="skill in $static.skills.edges" :key="skill.node.id">
             <div class="m-skill">
               <img class="m-skill-icon" :src="skill.node.images.card.img.src" :height="skills.skill.img.height" :width="skills.skill.img.width" />
               <h3>{{ skill.node.title }}</h3>
