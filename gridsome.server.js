@@ -81,56 +81,58 @@ module.exports = function (api) {
     let totalCount = 0
     let numOfResults = 0
 
-    do {
-
-      let response = await axios.get(
-        'http://devapi.saved.io/bookmarks',
-        {
-          params:{
-            key: process.env.SAVEDDOTIO_KEY,
-            devkey: process.env.SAVEDDOTIO_DEVKEY,
-            page: page,
-            limit: limit
+    try {
+      do {
+        let response = await axios.get(
+          'http://devapi.saved.io/bookmarks',
+          {
+            params:{
+              key: process.env.SAVEDDOTIO_KEY,
+              devkey: process.env.SAVEDDOTIO_DEVKEY,
+              page: page,
+              limit: limit
+            }
           }
-        }
-      )
+        )
 
-      totalCount = parseInt(response.headers['x-total-count'])
-      numOfResults += response.data.length
+        totalCount = parseInt(response.headers['x-total-count'])
+        numOfResults += response.data.length
 
-      console.log(`Retrieved ${numOfResults} of ${totalCount} from page ${page} of ${Math.ceil(totalCount / limit)}`)
+        console.log(`Retrieved ${numOfResults} of ${totalCount} from page ${page} of ${Math.ceil(totalCount / limit)}`)
 
-      for (let bookmark of response.data) {
-        let bookmarkPublishedDateObj = new Date(bookmark.bk_date)
-        let bookmarkPublishedId = getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj)
+        for (let bookmark of response.data) {
+          let bookmarkPublishedDateObj = new Date(bookmark.bk_date)
+          let bookmarkPublishedId = getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj)
 
-        if(bookmarkPublishedCollection.getNodeById(bookmarkPublishedId) == null) {
-          bookmarkPublishedCollection.addNode({
-            id: bookmarkPublishedId
+          if(bookmarkPublishedCollection.getNodeById(bookmarkPublishedId) == null) {
+            bookmarkPublishedCollection.addNode({
+              id: bookmarkPublishedId
+            })
+          }
+
+          console.log(`Get OpenGraph metadata for bk_id="${bookmark.bk_id}" at "${bookmark.bk_url}"`)
+
+          let ogObj = await ogs({
+            url: bookmark.bk_url
+          })
+
+          bookmarkCollection.addNode({
+            id: bookmark.bk_id,
+            url: bookmark.bk_url,
+            title: bookmark.bk_title,
+            note: bookmark.bk_note,
+            createdAt: bookmarkPublishedDateObj.toISOString(),
+            published: actions.createReference('BookmarkPublished', bookmarkPublishedId),
+            og: ogObj.result
           })
         }
 
-        console.log(`Get OpenGraph metadata for bk_id="${bookmark.bk_id}" at "${bookmark.bk_url}"`)
+        page++
 
-        let ogObj = await ogs({
-          url: bookmark.bk_url
-        })
-
-        bookmarkCollection.addNode({
-          id: bookmark.bk_id,
-          url: bookmark.bk_url,
-          title: bookmark.bk_title,
-          note: bookmark.bk_note,
-          createdAt: bookmarkPublishedDateObj.toISOString(),
-          published: actions.createReference('BookmarkPublished', bookmarkPublishedId),
-          og: ogObj.result
-        })
-      }
-
-      page++
-
-    } while (numOfResults !== totalCount)
-
+      } while (numOfResults !== totalCount)
+    } catch (err) {
+      console.error(err)
+    }
   })
 
   api.createPages(({ createPage }) => {

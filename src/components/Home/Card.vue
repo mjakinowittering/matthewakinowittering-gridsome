@@ -26,23 +26,3 @@
     ]
   }
 </script>
-
-
-<style lang="scss" scoped>
-   @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-  .card {
-    .card-header {
-      box-shadow: none;
-      padding: 1.75rem 1rem 1.75rem;
-
-      .card-header-title {
-        display: block;
-        font-family: 'Permanent Marker', cursive;
-        font-size: 28px;
-        line-height: 28px;
-        text-align: center;
-      }
-    }
-  }
-</style>
