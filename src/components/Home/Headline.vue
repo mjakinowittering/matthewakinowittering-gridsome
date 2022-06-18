@@ -46,7 +46,7 @@
 
 
 <style lang="scss" scoped>
-  div.m-headline {
+  .m-headline {
     background: orange;
   }
 </style>

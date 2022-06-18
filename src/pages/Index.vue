@@ -2,7 +2,7 @@
   <Layout>
     <Headline />
     <AboutMe />
-    <Skills />
+    <WhatIDo />
   </Layout>
 </template>
 
@@ -10,7 +10,7 @@
 <script>
   import Headline from '~/components/Home/Headline.vue'
   import AboutMe from '~/components/Home/AboutMe.vue'
-  import Skills from '~/components/Home/Skills.vue'
+  import WhatIDo from '~/components/Home/WhatIDo.vue'
   export default {
     metaInfo() {
       return {
@@ -20,7 +20,7 @@
     components: {
       Headline,
       AboutMe,
-      Skills
+      WhatIDo
     }
   }
 </script>

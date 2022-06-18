@@ -98,7 +98,7 @@ module.exports = function (api) {
         totalCount = parseInt(response.headers['x-total-count'])
         numOfResults += response.data.length
 
-        console.log(`Retrieved ${numOfResults} of ${totalCount} from page ${page} of ${Math.ceil(totalCount / limit)}`)
+        console.log(`Retrieved page ${page} of ${Math.ceil(totalCount / limit)}`)
 
         for (let bookmark of response.data) {
           let bookmarkPublishedDateObj = new Date(bookmark.bk_date)

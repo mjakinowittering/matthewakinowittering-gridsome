@@ -1,3 +1,20 @@
 // Importing 3rd Party Libraries ----------------------------------------------
 @import '../../../node_modules/bulma/bulma.sass';
 @import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Rubik&display=swap');
+
+
+.content {
+  p {
+    color: #1e2425;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 0 1rem;
+  }
+
+  :last-child {
+    margin: 0;
+  }
+}
