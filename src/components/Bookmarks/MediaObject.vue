@@ -3,9 +3,8 @@
     <div class="media-content">
       <div class="content">
         <h3>
-          <a :href="bookmark.node.url" target="_blank">{{ bookmark.node.og.ogTitle }}</a>
+          <a :href="bookmark.node.url" target="_blank">{{ bookmark.node.title }}</a>
         </h3>
-        <p v-html="bookmark.node.og.ogDescription"></p>
       </div>
       <div class="level">
         <div class="level-left">

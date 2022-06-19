@@ -4,20 +4,7 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-const axios = require('axios')
 const moment = require('moment-timezone')
-const ogs = require('open-graph-scraper')
-
-
-function getFirstDayOfMonthUnixtime(dateObj) {
-  // https://bobbyhadz.com/blog/javascript-get-first-day-of-month
-  let firstDayCurrentMonth = new Date(
-    dateObj.getFullYear(),
-    dateObj.getMonth(),
-    1
-  )
-  return unixtime = firstDayCurrentMonth.getTime() / 1000
-}
 
 
 const domainResolver = {
@@ -58,7 +45,6 @@ module.exports = function (api) {
       }
     })
 
-    const bookmarkPublishedCollection = actions.addCollection('BookmarkPublished')
 
     actions.addSchemaResolvers({
       BookmarkPublished: {
@@ -66,73 +52,12 @@ module.exports = function (api) {
       }
     })
 
-    const bookmarkCollection = actions.addCollection({
-      typeName: 'Bookmark'
-    })
 
     actions.addSchemaResolvers({
       Bookmark: {
         domain: domainResolver
       }
     })
-
-    let page = 1
-    let limit = 10
-    let totalCount = 0
-    let numOfResults = 0
-
-    try {
-      do {
-        let response = await axios.get(
-          'http://devapi.saved.io/bookmarks',
-          {
-            params:{
-              key: process.env.SAVEDDOTIO_KEY,
-              devkey: process.env.SAVEDDOTIO_DEVKEY,
-              page: page,
-              limit: limit
-            }
-          }
-        )
-
-        totalCount = parseInt(response.headers['x-total-count'])
-        numOfResults += response.data.length
-
-        console.log(`Retrieved page ${page} of ${Math.ceil(totalCount / limit)}`)
-
-        for (let bookmark of response.data) {
-          let bookmarkPublishedDateObj = new Date(bookmark.bk_date)
-          let bookmarkPublishedId = getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj)
-
-          if(bookmarkPublishedCollection.getNodeById(bookmarkPublishedId) == null) {
-            bookmarkPublishedCollection.addNode({
-              id: bookmarkPublishedId
-            })
-          }
-
-          console.log(`Get OpenGraph metadata for bk_id="${bookmark.bk_id}" at "${bookmark.bk_url}"`)
-
-          let ogObj = await ogs({
-            url: bookmark.bk_url
-          })
-
-          bookmarkCollection.addNode({
-            id: bookmark.bk_id,
-            url: bookmark.bk_url,
-            title: bookmark.bk_title,
-            note: bookmark.bk_note,
-            createdAt: bookmarkPublishedDateObj.toISOString(),
-            published: actions.createReference('BookmarkPublished', bookmarkPublishedId),
-            og: ogObj.result
-          })
-        }
-
-        page++
-
-      } while (numOfResults !== totalCount)
-    } catch (err) {
-      console.error(err)
-    }
   })
 
   api.createPages(({ createPage }) => {

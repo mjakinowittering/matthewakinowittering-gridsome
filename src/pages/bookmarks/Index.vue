@@ -37,13 +37,9 @@
               node {
                 ... on Bookmark {
                   createdAt(format: "YYYY-MM-DD")
-                  domain
                   url
-                  og {
-                    ogTitle
-                    ogDescription
-                    favicon
-                  }
+                  domain
+                  title
                 }
               }
             }

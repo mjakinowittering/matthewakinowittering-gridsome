@@ -8,8 +8,8 @@ figure:
   img: ./img/2021-09-24-are-you-abusing-the-term-minimum-viable-product.jpg
   alt: Skateboard
   url: https://unsplash.com/photos/Vbbn4xNBfnM
-published: 1632438000
 publishedAt: 2021-09-24T00:00:00.000Z
+publishedMonth: 1632438000
 ---
 If you've worked in a software team, you'll have heard the term Minimal Viable Product and everyday vocabulary. Unfortunately, in my experience, the idea of an MVP is frequently misunderstood and abused to deliver a project within a time box. After which, the product development team would pivot to another project. Not before making some very minor changes based upon user feedback.
 

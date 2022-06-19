@@ -8,8 +8,8 @@ figure:
   img: ./img/2021-04-23-working-backwards-from-a-fake-press-release.jpg
   alt: Designed sketching wireframes
   url: https://unsplash.com/photos/s9CC2SKySJM
-published: 1619132400
 publishedAt: 2021-04-23T00:00:00.000Z
+publishedMonth: 1619132400
 ---
 I've recently become involved with figuring out the vision for a major new product capability. This idea has excited many colleagues with the possibilities our successful experiment. However, as there are many competing ideas and overlapping viewpoints, it's become obvious that arriving early at a conscious will be crucial.
 

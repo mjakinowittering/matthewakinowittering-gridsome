@@ -10,7 +10,7 @@ figure:
   url: https://www.youtube.com/watch?v=e0KJlYe2Rjk
 youtube:
   src: https://www.youtube.com/embed/e0KJlYe2Rjk
-published: 1527807600
 publishedAt: 2018-06-07T00:00:00.000Z
+publishedMonth: 1527807600
 ---
 In the opening keynote at this year’s London MTPCon, Silicon Valley Product Group’s Marty Cagan shared his latest thoughts on what makes a great product manager by looking at the history of some great products.

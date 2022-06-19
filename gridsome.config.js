@@ -65,10 +65,23 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        typeName: 'Bookmark',
+        path: './content/bookmarks/*/*.yml',
+        refs: {
+          publishedMonth: {
+            typeName: 'BookmarkPublished',
+            create: true
+          }
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         typeName: 'Post',
         path: './content/posts/*.md',
         refs: {
-          published: {
+          publishedMonth: {
             typeName: 'PostPublished',
             create: true
           }
