@@ -12,8 +12,8 @@
         </div>
         <div class="columns">
           <div class="column is-flex" v-for="skill in $static.skills.edges" :key="skill.node.id">
-            <div class="m-skill">
-              <img class="m-skill-icon" :src="skill.node.images.card.img.src" :height="skills.skill.img.height" :width="skills.skill.img.width" />
+            <div class="m-what-i-do__skill">
+              <img class="m-what-i-do__skill__icon" :src="skill.node.images.card.img.src" :height="skills.skill.img.height" :width="skills.skill.img.width" />
               <h3>{{ skill.node.title }}</h3>
               <div class="is-flex-direction-row">
                 <div class="content is-flex-grow-1" v-html="skill.node.content"></div>
@@ -77,10 +77,10 @@
       font-size: 32px;
       font-weight: 500;
       line-height: 32px;
-      margin: 0 0 1rem;
+      margin: 0 0 1.5rem;
     }
 
-    .m-skill {
+    &__skill {
       background: #f2fbfa;
       display: inline-block;
       position: relative;
@@ -91,7 +91,7 @@
       padding-bottom: 2rem;
       padding-right: 2rem;
 
-      .m-skill-icon {
+      &__icon {
         margin: 0 0 2rem;
       }
 
@@ -105,7 +105,7 @@
       }
     }
 
-    .m-skill::before {
+    &__skill::before {
       border: 0.25rem solid #2a898f;
       position: absolute;
       top: 1rem;

@@ -4,11 +4,17 @@
       <div class="container">
         <div class="columns">
           <div class="column is-flex is-justify-content-center is-flex-direction-column">
-            <h1 class="title">Hello, I am a Matthew!</h1>
-            <p class="subtitle">I am a Product Manager with over <time v-bind:title="timeSinceBecomingProductManagerTitle()" v-bind:datetime="productManager.dateSince">{{ timeSinceBecomingProductManager() }}</time> of experience.</p>
+            <h1>Hello, I am a Matthew!</h1>
+            <div class="content">
+              <p>I am a Lead Product Manager with over <time v-bind:title="timeSinceBecomingProductManagerTitle()" v-bind:datetime="productManager.dateSince">{{ timeSinceBecomingProductManager() }}</time> of experience. I build data-driven products that support businesses by integrating Advertising and eCommerce technologies in innovative ways to create competitive advantages.</p>
+            </div>
+            <div class="buttons">
+              <a href="mailto:matthew.akinowittering@outlook.com" class="button m-headline__is-primary">Get in Touch</a>
+              <g-link to="/resume/" class="button m-headline__is-link">My Resume</g-link>
+            </div>
           </div>
-          <div class="column is-flex is-justify-content-right is-hidden-mobile">
-            <g-image src="~/assets/img/photos/MatthewAkinoWittering-BW-Alpha.png" alt="Photo of Matthew Akino-Wittering" />
+          <div class="column is-flex is-justify-content-center is-hidden-mobile">
+            <g-image src="~/assets/img/icons/typist.svg" alt="Photo of Matthew Akino-Wittering" />
           </div>
         </div>
       </div>
@@ -38,7 +44,7 @@
         return this.productManager.dateSince.toLocaleString('default', { year: 'numeric' })
       },
       timeSinceBecomingProductManagerTitle() {
-        return `Product Manager since ${this.monthBecameProductManager()} ${this.yearBecameProductManager()}`
+        return `I've worked in Product Management roles since ${this.monthBecameProductManager()} ${this.yearBecameProductManager()}`
       }
     }
   }
@@ -46,7 +52,50 @@
 
 
 <style lang="scss" scoped>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
   .m-headline {
-    background: orange;
+    padding: 5rem 0;
+
+    h1 {
+      color: #1e2425;
+      font-family: 'Poppins', sans-serif;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 36px;
+      margin: 0 0 1.5rem;
+    }
+
+    &__is-primary{
+      background: #2a898f;
+      border: 0.25rem solid #2a898f;
+      border-radius: 0;
+      color: #ffffff;
+      font-family: 'Rubik', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      margin: 0;
+      padding: 1.25rem 1.25rem !important;
+      text-transform: uppercase;
+    }
+
+    &__is-link {
+      background: #f2fbfa;
+      border: 0.25rem solid #2a898f;
+      border-radius: 0;
+      color: #2a898f;
+      font-family: 'Rubik', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      margin: 0;
+      padding: 1.25rem 1.25rem !important;
+      text-transform: uppercase;
+    }
+
+    .buttons {
+      margin: 0;
+    }
   }
 </style>
