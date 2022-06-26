@@ -1,36 +1,34 @@
 <template>
-  <layout>
-    <div class="m-milestones">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-two-thirds-desktop">
-            <h2>Milestones</h2>
-          </div>
+  <div class="m-milestones">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-two-thirds-desktop">
+          <h2>Milestones</h2>
         </div>
-        <div class="columns">
-          <div class="column is-flex" v-for="event in $static.milestones.edges" :key="event.node.id">
-            <div class="m-event">
-              <span class="m-event__header">
-                <div class="m-event__header__year">
-                  {{ event.node.eventDate }}
-                </div>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="columns">
-          <div class="column is-flex" v-for="milestone in $static.milestones.edges" :key="milestone.node.id">
-            <div class="m-milestone">
-              <h3>{{ milestone.node.title }}</h3>
-              <div class="is-flex-direction-row">
-                <div class="content is-flex-grow-1" v-html="milestone.node.content"></div>
+      </div>
+      <div class="columns">
+        <div class="column is-flex" v-for="event in $static.milestones.edges" :key="event.node.id">
+          <div class="m-event">
+            <span class="m-event__header">
+              <div class="m-event__header__year">
+                {{ event.node.eventDate }}
               </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-flex" v-for="milestone in $static.milestones.edges" :key="milestone.node.id">
+          <div class="m-milestone">
+            <h3>{{ milestone.node.title }}</h3>
+            <div class="is-flex-direction-row">
+              <div class="content is-flex-grow-1" v-html="milestone.node.content"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </layout>
+  </div>
 </template>
 
 

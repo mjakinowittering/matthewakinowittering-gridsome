@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Rubik&display=swap');
 
 
+// Override Bulma Variables ---------------------------------------------------
+// TODO
+
+// Content --------------------------------------------------------------------
 .content {
   p {
     color: #1e2425;
@@ -14,7 +18,20 @@
     margin: 0 0 1rem;
   }
 
-  :last-child {
+  p:last-child {
     margin: 0;
+  }
+
+  ul, ol {
+    margin: 0 0 0 2.5rem;
+  }
+
+  li {
+    color: #1e2425;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 0 0.5rem;
   }
 }

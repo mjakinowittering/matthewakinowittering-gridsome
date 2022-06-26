@@ -1,25 +1,23 @@
 <template>
-  <layout>
-    <div class="m-headline">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-flex is-justify-content-center is-flex-direction-column">
-            <h1>Hello, I am a Matthew!</h1>
-            <div class="content">
-              <p>I am a Lead Product Manager with over <time v-bind:title="timeSinceBecomingProductManagerTitle()" v-bind:datetime="productManager.dateSince">{{ timeSinceBecomingProductManager() }}</time> of experience. I build data-driven products that support businesses by integrating Advertising and eCommerce technologies in innovative ways to create competitive advantages.</p>
-            </div>
-            <div class="buttons">
-              <a href="mailto:matthew.akinowittering@outlook.com" class="button m-headline__is-primary">Get in Touch</a>
-              <g-link to="/resume/" class="button m-headline__is-link">My Resume</g-link>
-            </div>
+  <div class="m-headline">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-two-thirds-desktop is-flex is-justify-content-center is-flex-direction-column">
+          <h1>Hello, I am a Matthew!</h1>
+          <div class="content">
+            <p>I am a Lead Product Manager with over <time v-bind:title="timeSinceBecomingProductManagerTitle()" v-bind:datetime="productManager.dateSince">{{ timeSinceBecomingProductManager() }}</time> of experience. I build data-driven products that support businesses by integrating Advertising and eCommerce technologies in innovative ways to create competitive advantages.</p>
           </div>
-          <div class="column is-flex is-justify-content-center is-hidden-mobile">
-            <g-image src="~/assets/img/icons/typist.svg" alt="Photo of Matthew Akino-Wittering" />
+          <div class="buttons">
+            <a class="button m-headline__is-primary" href="https://www.linkedin.com/in/matthewwittering/" target="_blank">Get in Touch</a>
+            <g-link to="/resume/" class="button m-headline__is-link">My Resume</g-link>
           </div>
+        </div>
+        <div class="column is-one-third-desktop is-flex is-justify-content-center is-hidden">
+          <g-image class="m-headline__avatar" src="~/assets/img/icons/typist.svg" alt="Photo of Matthew Akino-Wittering" />
         </div>
       </div>
     </div>
-  </layout>
+  </div>
 </template>
 
 
@@ -96,6 +94,10 @@
 
     .buttons {
       margin: 0;
+    }
+
+    &__avatar {
+      fill: #94d31b;
     }
   }
 </style>

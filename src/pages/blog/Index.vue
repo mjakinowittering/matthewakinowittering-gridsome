@@ -1,13 +1,6 @@
 <template>
   <Layout>
-    <div class="container">
-      <div class="columns is-multiline">
-        <div class="column is-one-third-desktop is-flex" v-for="post in $page.posts.edges" :key="post.node.id">
-          <Card :post="post" />
-        </div>
-      </div>
-      <Pager :info="$page.posts.pageInfo"/>
-    </div>
+    <Posts :posts="$page.posts" />
   </Layout>
 </template>
 
@@ -41,8 +34,7 @@
 
 
 <script>
-  import { Pager } from 'gridsome'
-  import Card from '~/components/Blog/Card.vue'
+  import Posts from '~/components/Blog/Posts.vue'
   export default {
     metaInfo() {
       return {
@@ -50,8 +42,7 @@
       }
     },
     components: {
-      Pager,
-      Card
+      Posts
     },
     methods: {
       breadcrumbFactory() {

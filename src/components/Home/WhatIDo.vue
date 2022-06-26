@@ -1,29 +1,27 @@
 <template>
-  <layout>
-    <div class="m-what-i-do">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-two-thirds-desktop">
-            <h2>What I do</h2>
-            <div class="content">
-              <p>As a Product Manager, I am the voice of the customer on my Product Development team and work with design, engineering and quality assurance specialists to help them produce valuable solutions for our customers. In addition, I meet our clients regularly to evangelise our product.</p>
-            </div>
+  <div class="m-what-i-do">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-two-thirds-desktop">
+          <h2>What I do</h2>
+          <div class="content">
+            <p>As a Product Manager, I am the voice of the customer on my Product Development team and work with design, engineering and quality assurance specialists to help them produce valuable solutions for our customers. In addition, I meet our clients regularly to evangelise our product.</p>
           </div>
         </div>
-        <div class="columns">
-          <div class="column is-flex" v-for="skill in $static.skills.edges" :key="skill.node.id">
-            <div class="m-what-i-do__skill">
-              <img class="m-what-i-do__skill__icon" :src="skill.node.images.card.img.src" :height="skills.skill.img.height" :width="skills.skill.img.width" />
-              <h3>{{ skill.node.title }}</h3>
-              <div class="is-flex-direction-row">
-                <div class="content is-flex-grow-1" v-html="skill.node.content"></div>
-              </div>
+      </div>
+      <div class="columns">
+        <div class="column is-flex" v-for="skill in $static.skills.edges" :key="skill.node.id">
+          <div class="m-what-i-do__skill">
+            <img class="m-what-i-do__skill__icon" :src="skill.node.images.card.img.src" :height="skills.skill.img.height" :width="skills.skill.img.width" />
+            <h3>{{ skill.node.title }}</h3>
+            <div class="is-flex-direction-row">
+              <div class="content is-flex-grow-1" v-html="skill.node.content"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </layout>
+  </div>
 </template>
 
 

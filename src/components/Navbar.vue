@@ -14,18 +14,11 @@
       <div class="navbar-end">
         <g-link class="navbar-item" to="/" active-class="is-active">Home</g-link>
         <g-link class="navbar-item" to="/blog/" active-class="is-active">Blog</g-link>
-        <g-link class="navbar-item" to="/bookmarks/" active-class="is-active">Bookmarks</g-link>
         <g-link class="navbar-item" to="/resume/" active-class="is-active">Resume</g-link>
       </div>
     </div>
   </nav>
 </template>
-
-
-<script>
-  export default {
-  }
-</script>
 
 
 <static-query>
@@ -40,3 +33,56 @@
     }
   }
 </static-query>
+
+
+<script>
+  export default {
+  }
+</script>
+
+
+<style lang="scss" scoped>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+  nav {
+    .navbar-brand {
+      .navbar-item {
+        border-bottom: 0.125rem solid #ffffff;
+        color: #1e2425;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 18px;
+        margin: 0 1rem;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+  .navbar-menu {
+    .navbar-end {
+      .navbar-item {
+        border-bottom: 0.125rem solid #ffffff;
+        color: #1e2425;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 18px;
+        margin: 0 1rem;
+        padding: 0.5rem 0;
+      }
+
+      .navbar-item.active--exact {
+        color: #2a898f;
+        border-bottom: 0.125rem solid #2a898f;
+      }
+
+      .navbar-item:hover {
+        background: none;
+        border-bottom: 0.125rem solid #2a898f;
+        color: #2a898f;
+      }
+    }
+  }
+
+</style>
