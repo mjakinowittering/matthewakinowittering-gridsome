@@ -1,11 +1,14 @@
+// Override Bulma Variables ---------------------------------------------------
+// TODO
+$primary: #2a898f;
+$link: #2a898f;
+
+
 // Importing 3rd Party Libraries ----------------------------------------------
 @import '../../../node_modules/bulma/bulma.sass';
 @import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
-
-// Override Bulma Variables ---------------------------------------------------
-// TODO
 
 // Content --------------------------------------------------------------------
 .content {
@@ -33,5 +36,10 @@
     font-weight: 400;
     line-height: 28px;
     margin: 0 0 0.5rem;
+  }
+
+  a {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
   }
 }
