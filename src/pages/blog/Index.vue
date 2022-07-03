@@ -21,9 +21,6 @@
           figure {
             img
           }
-          youtube {
-            src
-          }
           publishedAt(format: "YYYY-MM-DD")
           excerpt
         }

@@ -39,7 +39,7 @@
       font-family: 'Poppins', sans-serif;
       font-weight: 500;
       line-height: 24px;
-      margin: 1rem 1.5rem;
+      margin: 1rem;
     }
   }
 </style>
