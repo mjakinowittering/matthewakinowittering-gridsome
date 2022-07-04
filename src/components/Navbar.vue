@@ -10,8 +10,9 @@
     </div>
     <div id="navbarLinks" class="navbar-menu">
       <div class="navbar-end">
-        <g-link class="navbar-item" to="/blog/" exact-active-class="is-active">Blog</g-link>
-        <g-link class="navbar-item" to="/resume/" exact-active-class="is-active">Resume</g-link>
+        <g-link class="navbar-item" to="/" exact-active-class="is-exact">Home</g-link>
+        <g-link class="navbar-item" to="/blog/" active-class="is-active" exact-active-class="is-exact">Blog</g-link>
+        <g-link class="navbar-item" to="/resume/" exact-active-class="is-exact">Resume</g-link>
       </div>
     </div>
   </nav>
@@ -73,7 +74,7 @@
       border-bottom: 0.125rem solid #2a898f;
     }
 
-    .navbar-item.active {
+    .navbar-item.is-exact {
       color: #2a898f;
       border-bottom: 0.125rem solid #2a898f;
     }
