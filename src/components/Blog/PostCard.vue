@@ -1,10 +1,16 @@
 <template>
   <div class="m-post-card is-flex is-flex-direction-column">
-    <figure class="image">
-      <g-link :to="path">
-        <img :alt="artwork.img.alt" :src="artwork.img.src" />
-      </g-link>
-      <figcaption>{{ artwork.caption }}</figcaption>
+    <figure>
+      <div class="image is-16by9">
+        <g-link :to="path">
+          <img :alt="artwork.img.alt" :src="artwork.img.src" />
+        </g-link>
+      </div>
+      <figcaption>
+        <a :href="artwork.url" target="_blank">
+          {{ artwork.caption }}
+        </a>
+      </figcaption>
     </figure>
     <div class="is-flex is-flex-direction-column is-flex-grow-1">
       <h3 class="title is-5">
@@ -33,6 +39,25 @@
 
   .m-post-card {
     background: #f2fbfa;
+    width: 100%;
+
+    figure {
+      position: relative;
+
+      figcaption {
+        background: #2a898f;
+        bottom: 0;
+        color: #ffffff;
+        left: 0;
+        padding: 0.25rem 0.5rem;
+        position: absolute;
+        width: auto;
+
+        a {
+          color: #ffffff;
+        }
+      }
+    }
 
     h3 {
       color: #1e2425;

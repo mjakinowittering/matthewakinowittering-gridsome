@@ -12,6 +12,16 @@ $link: #2a898f;
 
 // Content --------------------------------------------------------------------
 .content {
+  a {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+  }
+
+  blockquote {
+    background: #f2fbfa;
+    border-left: 0.25rem solid #2a898f;
+  }
+
   p {
     color: #1e2425;
     font-family: 'Rubik', sans-serif;
@@ -27,19 +37,21 @@ $link: #2a898f;
 
   ul, ol {
     margin: 0 0 0 2.5rem;
+
+    li {
+      color: #1e2425;
+      font-family: 'Rubik', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      margin: 0 0 0.5rem;
+    }
   }
 
-  li {
-    color: #1e2425;
-    font-family: 'Rubik', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0 0 0.5rem;
-  }
-
-  a {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
+  .twitter-embed {
+    background: #f2fbfa;
+    border-left: 0.25rem solid #2a898f;
+    margin-bottom: 1em;
+    padding: 1.25em 1.5em;
   }
 }

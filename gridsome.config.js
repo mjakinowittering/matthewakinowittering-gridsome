@@ -105,6 +105,6 @@ module.exports = {
     }
   ],
   templates: {
-    Post: '/blog/:title',
+    Post: '/blog/:title/',
   }
 }

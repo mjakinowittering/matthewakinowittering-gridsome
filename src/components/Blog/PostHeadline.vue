@@ -1,11 +1,17 @@
 <template>
   <div class="m-post-headline columns is-gapless">
     <div class="column is-two-thirds-desktop">
-      <figure class="image">
-        <g-link :to="path">
-          <img :alt="artwork.img.alt" :src="artwork.img.src" />
-        </g-link>
-        <figcaption>{{ artwork.caption }}</figcaption>
+      <figure>
+        <div class="image is-16by9">
+          <g-link :to="path">
+            <img :alt="artwork.img.alt" :src="artwork.img.src" />
+          </g-link>
+        </div>
+        <figcaption>
+          <a :href="artwork.url" target="_blank">
+            {{ artwork.caption }}
+          </a>
+        </figcaption>
       </figure>
     </div>
     <div class="column is-one-third-desktop">
@@ -52,6 +58,24 @@
 
   .m-post-headline {
     background: #f2fbfa;
+
+    .column {
+      figure {
+        position: relative;
+
+        figcaption {
+          background: #2a898f;
+          bottom: 0;
+          padding: 0.25rem 0.5rem;
+          position: absolute;
+          width: auto;
+
+          a {
+            color: #ffffff;
+          }
+        }
+      }
+    }
 
     .column:nth-child(2) {
       h3 {

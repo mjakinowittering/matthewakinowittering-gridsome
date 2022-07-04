@@ -19,7 +19,10 @@
           subtype
           authors
           figure {
+            caption
             img
+            alt
+            url
           }
           publishedAt(format: "YYYY-MM-DD")
           excerpt
