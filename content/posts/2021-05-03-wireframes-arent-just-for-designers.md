@@ -1,14 +1,15 @@
 ---
 title: Wireframes Aren’t Just for Designers
 subtype: post
+authors:
+  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
-  img:
-    src: /img/posts/2021-05-03-wireframes-arent-just-for-designers.jpg
-    alt: Wireframe drawn ben pen
+  img: ./img/2021-05-03-wireframes-arent-just-for-designers.jpg
+  alt: Wireframe drawn ben pen
   url: https://unsplash.com/photos/4UGmm3WRUoQ
-published: 1619996400
 publishedAt: 2021-05-03T00:00:00.000Z
+publishedMonth: 1619996400
 ---
 I was only just getting started in product management, working as a junior at Ask Jeeves, when I first came across wireframes. With a bit of artistic flair, I found one can easily layout screen controls in [Balsamiq](https://balsamiq.com/) to draw enough to show what a webpage could or should do. Just like this 'Mind the Product' article says, "[Wireframes Aren’t Just for Designers](https://www.mindtheproduct.com/wireframes-arent-just-for-designers/)". They're a thinking and communication tool for Product Managers.
 

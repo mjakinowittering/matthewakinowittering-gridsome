@@ -20,10 +20,7 @@ module.exports = {
         typeName: 'Role',
         path: './content/companies/roles/*/*.md',
         refs: {
-          company: {
-            typeName: 'Company',
-            create: false
-          }
+          company: 'Company'
         }
       }
     },
@@ -40,11 +37,22 @@ module.exports = {
         typeName: 'Course',
         path: './content/universities/courses/*.md',
         refs: {
-          university: {
-            typeName: 'University',
-            create: false
-          }
+          university: 'University'
         }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'ExternalLink',
+        path: './content/external-links/*.yml'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Milestone',
+        path: './content/milestones/*/*.md'
       }
     },
     {
@@ -57,10 +65,23 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        typeName: 'Bookmark',
+        path: './content/bookmarks/*/*.yml',
+        refs: {
+          publishedMonth: {
+            typeName: 'BookmarkPublished',
+            create: true
+          }
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         typeName: 'Post',
         path: './content/posts/*.md',
         refs: {
-          published: {
+          publishedMonth: {
             typeName: 'PostPublished',
             create: true
           }
@@ -81,16 +102,9 @@ module.exports = {
           ]
         }
       }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'ExternalLink',
-        path: './content/external-links/*.yml'
-      }
     }
   ],
   templates: {
-    Post: '/blog/:title',
+    Post: '/blog/:title/',
   }
 }

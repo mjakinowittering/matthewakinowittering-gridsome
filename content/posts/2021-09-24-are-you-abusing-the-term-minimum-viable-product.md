@@ -1,14 +1,15 @@
 ---
 title: Are you abusing the term, Minimum Viable Product?
 subtype: post
+authors:
+  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
-  img:
-    src: /img/posts/2021-09-24-are-you-abusing-the-term-minimum-viable-product.jpg
-    alt: Skateboard
+  img: ./img/2021-09-24-are-you-abusing-the-term-minimum-viable-product.jpg
+  alt: Skateboard
   url: https://unsplash.com/photos/Vbbn4xNBfnM
-published: 1632438000
 publishedAt: 2021-09-24T00:00:00.000Z
+publishedMonth: 1632438000
 ---
 If you've worked in a software team, you'll have heard the term Minimal Viable Product and everyday vocabulary. Unfortunately, in my experience, the idea of an MVP is frequently misunderstood and abused to deliver a project within a time box. After which, the product development team would pivot to another project. Not before making some very minor changes based upon user feedback.
 
@@ -24,7 +25,7 @@ These behaviours are the antithesis of modern software development and prevent o
 
 While the metaphors present in Henrik Kniberg article "[Making sense of MVP (Minimum Viable Product) – and why I prefer Earliest Testable/Usable/Lovable](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp)" are perhaps a little confused. If you intended to build a car, I think you'd start with a simple automobile.
 
-![Skateboard, Scooter, Bicycle, Motorcycle and Car]({{ '/assets/img/posts/2021-09-24-iterations.png' | relative_url }}){: .img-fluid .mt-5 .mb-4}
+![Skateboard, Scooter, Bicycle, Motorcycle and Car]({{ '/assets/img/posts/2021-09-24-iterations.png' | relative_url }})
 
 But, the concept does highlight the need for deliberate iterations and pragmatism, which evolves the software complexity to delight customers.
 
@@ -54,7 +55,7 @@ As the product development team includes ideas postponed from the skateboard rel
 
 The following diagram tweeted by Jussi Pasanen epitomises the anatomy of a great MVP. Our products are so much more than a collection of features. They must be usable, reliable and well designed for our customers to have a positive experience.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Minimum Viable Product: Build a slice across, instead of one layer at a time. <a href="https://twitter.com/hashtag/mvp?src=hash&amp;ref_src=twsrc%5Etfw">#mvp</a> /cc <a href="https://twitter.com/aarron?ref_src=twsrc%5Etfw">@aarron</a> <a href="https://twitter.com/benhyphenrowe?ref_src=twsrc%5Etfw">@benhyphenrowe</a> <a href="http://t.co/0koefYMrpf">pic.twitter.com/0koefYMrpf</a></p>&mdash; Jussi Pasanen (@jopas) <a href="https://twitter.com/jopas/status/515301088660959233?ref_src=twsrc%5Etfw">September 26, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/jopas/status/515301088660959233
 
 So, I hope the above was helpful. To close out this short essay, I'd like to leave you with a few closing thoughts which might help you in future.
 

@@ -1,14 +1,15 @@
 ---
 title: Why I use a theme-based roadmap
 subtype: post
+authors:
+  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
-  img:
-    src: /img/posts/2021-06-05-why-i-use-a-theme-based-roadmap.jpg
-    alt: Winnats Pass, Hope Valley, United Kingdom
+  img: ./img/2021-06-05-why-i-use-a-theme-based-roadmap.jpg
+  alt: Winnats Pass, Hope Valley, United Kingdom
   url: https://unsplash.com/photos/x1w_Q78xNEY
-published: 1622847600
 publishedAt: 2021-06-05T00:00:00.000Z
+publishedMonth: 1622847600
 ---
 If you're a Product Manager, you've likely had requests to display your roadmap as a Gantt chart and forecast delivery dates. These requests will come from managers and stakeholders who wish to track the planned outputs against deadlines or due to legacy Project Management Office behaviours.
 
