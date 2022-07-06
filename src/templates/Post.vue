@@ -4,7 +4,10 @@
       <div class="container">
         <div class="columns">
           <div class="column is-two-thirds-desktop">
-            <figure v-if="$page.post.subtype === 'post'">
+            <figure class="image is-16by9" v-if="$page.post.subtype === 'youtube'">
+              <iframe class="has-ratio" width="640" height="360" :src="$page.post.youtube.src" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+            <figure v-else>
               <div class="image is-16by9">
                 <img class="responsive" :alt="$page.post.figure.img.alt" :src="$page.post.figure.img.src" />
               </div>
@@ -52,6 +55,9 @@
         img
         alt
         url
+      }
+      youtube {
+        src
       }
       publishedAt(format: "YYYY-MM-DD")
       content
