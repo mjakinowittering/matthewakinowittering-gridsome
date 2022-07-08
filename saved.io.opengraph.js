@@ -1,7 +1,8 @@
 // ----------------------------------------------------------------------------
 // 3rd Party Modules.
 const fs = require('fs')
-const yaml = require('js-yaml');
+const ogs = require('open-graph-scraper')
+const yaml = require('js-yaml')
 
 
 // ----------------------------------------------------------------------------
@@ -13,16 +14,40 @@ function crawlFileSystem() {
     const filesInDirectory = getFilesInDirectory(directories[dirIndex])
 
     for (const fileIndex in filesInDirectory) {
-      console.log(`Reading: ${pathBase}/content/bookmarks/${directories[dirIndex]}/${filesInDirectory[fileIndex]}`)
+      let bookmarkPath = `${pathBase}/content/bookmarks/${directories[dirIndex]}/${filesInDirectory[fileIndex]}`
+
+      // console.log(`Reading: ${bookmarkPath}`)
+
       let bookmarkObj = yaml.load(
         fs.readFileSync(
-          `${pathBase}/content/bookmarks/${directories[dirIndex]}/${filesInDirectory[fileIndex]}`,
+          bookmarkPath,
           'utf8'
         )
       )
 
-      if (bookmarkObj.openGraph !== undefined) {
-        console.log(bookmarkObj)
+      if (bookmarkObj.openGraph === undefined) {
+        let ogsPayload = {
+          onlyGetOpenGraphInfo: true,
+          url: bookmarkObj.url
+        }
+
+        bookmarkObj.openGraph = ogs(ogsPayload)
+
+        ogs(ogsPayload).then((data) => {
+          const { result } = data;
+
+          bookmarkObj.openGraph = Object.fromEntries(
+            Object.entries(result).filter(([key]) => key.startsWith('og'))
+          )
+
+          fs.writeFileSync(
+            bookmarkPath,
+            yaml.dump(bookmarkObj),
+            'utf8'
+          )
+
+          console.log(`Updated: ${bookmarkPath}`)
+        })
       }
     }
   }
@@ -59,7 +84,6 @@ function getFilesInDirectory(directoryName) {
     }
   )
   .sort()
-  .reverse()
 }
 
 
