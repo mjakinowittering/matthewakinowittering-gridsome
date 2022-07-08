@@ -26,10 +26,18 @@
               <div class="level-left">
                 <div class="level-item">
                   <span class="icon-text">
-                    <span class="icon">
+                    <span class="icon mr-1">
                       <i class="fa-solid fa-calendar-day"></i>
                     </span>
                     <time :datetime="$page.post.publishedAt">{{ $page.post.publishedAt }}</time>
+                  </span>
+                </div>
+                <div class="level-item" v-for="(author, index) in $page.post.authors" :key="index">
+                  <span class="icon-text">
+                    <span class="icon mr-1">
+                      <i class="fa-solid fa-user"></i>
+                    </span>
+                    {{ author }}
                   </span>
                 </div>
               </div>
