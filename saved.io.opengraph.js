@@ -1,6 +1,7 @@
 // ----------------------------------------------------------------------------
 // 3rd Party Modules.
 const fs = require('fs')
+const yaml = require('js-yaml');
 
 
 // ----------------------------------------------------------------------------
@@ -12,11 +13,19 @@ function crawlFileSystem() {
     const filesInDirectory = getFilesInDirectory(directories[dirIndex])
 
     for (const fileIndex in filesInDirectory) {
-      console.log(`${pathBase}/content/bookmarks/${directories[dirIndex]}/${filesInDirectory[fileIndex]}`)
+      console.log(`Reading: ${pathBase}/content/bookmarks/${directories[dirIndex]}/${filesInDirectory[fileIndex]}`)
+      let bookmarkObj = yaml.load(
+        fs.readFileSync(
+          `${pathBase}/content/bookmarks/${directories[dirIndex]}/${filesInDirectory[fileIndex]}`,
+          'utf8'
+        )
+      )
+
+      if (bookmarkObj.openGraph !== undefined) {
+        console.log(bookmarkObj)
+      }
     }
-
   }
-
 }
 
 
