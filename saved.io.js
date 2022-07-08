@@ -44,7 +44,6 @@ async function crawlSavedio(page, limit, totalCount, numOfResults) {
           id: rawBookmarkObj.bk_id,
           url: rawBookmarkObj.bk_url,
           title: rawBookmarkObj.bk_title,
-          note: rawBookmarkObj.bk_note,
           createdAt: bookmarkPublishedDateObj.toISOString(),
           publishedMonth: bookmarkPublishedId
         }
