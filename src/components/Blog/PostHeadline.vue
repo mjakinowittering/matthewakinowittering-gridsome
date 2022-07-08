@@ -23,18 +23,6 @@
       <div class="content">
         <p v-html="excerpt"></p>
       </div>
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <span class="icon-text">
-              <span class="icon">
-                <i class="fa-solid fa-calendar-day"></i>
-              </span>
-              <time :datetime="publishedAt">{{ publishedAt }}</time>
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
