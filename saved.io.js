@@ -8,30 +8,6 @@ const yaml = require('js-yaml');
 
 // ----------------------------------------------------------------------------
 // Useful functions.
-function getFirstDayOfMonthUnixtime(dateObj) {
-  let firstDayCurrentMonth = new Date(
-    dateObj.getFullYear(),
-    dateObj.getMonth(),
-    1
-  )
-  return unixtime = firstDayCurrentMonth.getTime() / 1000
-}
-
-
-function pathExists(pathStr) {
-  if (fs.existsSync(pathStr)) {
-    return true
-  } else {
-    return false
-  }
-}
-
-
-function padString(num) {
-  return String("00" + num).slice(-2);
-}
-
-
 async function crawlSavedio(page, limit, totalCount, numOfResults) {
   try {
     do {
@@ -68,7 +44,6 @@ async function crawlSavedio(page, limit, totalCount, numOfResults) {
           id: rawBookmarkObj.bk_id,
           url: rawBookmarkObj.bk_url,
           title: rawBookmarkObj.bk_title,
-          note: rawBookmarkObj.bk_note,
           createdAt: bookmarkPublishedDateObj.toISOString(),
           publishedMonth: bookmarkPublishedId
         }
@@ -92,6 +67,30 @@ async function crawlSavedio(page, limit, totalCount, numOfResults) {
 }
 
 
+function getFirstDayOfMonthUnixtime(dateObj) {
+  let firstDayCurrentMonth = new Date(
+    dateObj.getFullYear(),
+    dateObj.getMonth(),
+    1
+  )
+  return unixtime = firstDayCurrentMonth.getTime() / 1000
+}
+
+
+function padString(num) {
+  return String("00" + num).slice(-2);
+}
+
+
+function pathExists(pathStr) {
+  if (fs.existsSync(pathStr)) {
+    return true
+  } else {
+    return false
+  }
+}
+
+
 // ----------------------------------------------------------------------------
 // Variables required for writing to file system.
 dotenv.config()
@@ -105,6 +104,9 @@ let limit = 10
 let totalCount = 0
 let numOfResults = 0
 
+
+// ----------------------------------------------------------------------------
+// Run crawler for Bookmarks stored in Saved.io.
 console.log(`Working in: ${pathBase}`)
 
 crawlSavedio(page, limit, totalCount, numOfResults)
