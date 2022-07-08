@@ -3,3 +3,22 @@ url: https://www.youtube.com/watch?v=pbfQ-SN2oLA
 title: Product Tank London - How to create product-centric organisations
 createdAt: '2022-05-26T00:13:48.000Z'
 publishedMonth: 1651359600
+openGraph:
+  ogSiteName: YouTube
+  ogUrl: https://www.youtube.com/watch?v=pbfQ-SN2oLA
+  ogTitle: Product Tank London - How to create product-centric organisations
+  ogDescription: >-
+    We all want to have product thinking at the heart of where we work. But what
+    practical changes can we make to ourselves, our teams and our processes to
+    make ...
+  ogType: video.other
+  ogImage:
+    url: https://i.ytimg.com/vi/pbfQ-SN2oLA/hqdefault.jpg
+    width: '480'
+    height: '360'
+    type: null
+  ogVideo:
+    url: https://www.youtube.com/embed/pbfQ-SN2oLA
+    width: '1280'
+    height: '720'
+    type: text/html

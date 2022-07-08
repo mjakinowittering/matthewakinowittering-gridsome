@@ -3,3 +3,22 @@ url: https://www.youtube.com/watch?v=sXWt4fYrvJg
 title: Product in large enterprises - ProductTank London, March
 createdAt: '2022-04-27T09:21:39.000Z'
 publishedMonth: 1648767600
+openGraph:
+  ogSiteName: YouTube
+  ogUrl: https://www.youtube.com/watch?v=sXWt4fYrvJg
+  ogTitle: Product in large enterprises - ProductTank London, March
+  ogDescription: >-
+    Enterprise products are hard to build, maintain and scale. This month's
+    ProductTank is focusing on the skills it takes to build a successful product
+    in an en...
+  ogType: video.other
+  ogImage:
+    url: https://i.ytimg.com/vi/sXWt4fYrvJg/hqdefault.jpg
+    width: '480'
+    height: '360'
+    type: null
+  ogVideo:
+    url: https://www.youtube.com/embed/sXWt4fYrvJg
+    width: '1280'
+    height: '720'
+    type: text/html

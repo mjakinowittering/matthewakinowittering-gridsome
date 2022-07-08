@@ -3,3 +3,22 @@ url: https://www.youtube.com/watch?v=Uxmzb-sn3mc
 title: How to Set Effective & Outcome-led OKRs with Tim Herbig
 createdAt: '2022-06-12T07:33:54.000Z'
 publishedMonth: 1654038000
+openGraph:
+  ogSiteName: YouTube
+  ogUrl: https://www.youtube.com/watch?v=Uxmzb-sn3mc
+  ogTitle: How to Set Effective & Outcome-led OKRs with Tim Herbig
+  ogDescription: >-
+    How do you measure the progress of OKRs in product management? How do you
+    shift from Feature to Outcome focus? What is the secret to setting strong,
+    effectiv...
+  ogType: video.other
+  ogImage:
+    url: https://i.ytimg.com/vi/Uxmzb-sn3mc/hqdefault.jpg
+    width: '480'
+    height: '360'
+    type: null
+  ogVideo:
+    url: https://www.youtube.com/embed/Uxmzb-sn3mc
+    width: '1280'
+    height: '720'
+    type: text/html

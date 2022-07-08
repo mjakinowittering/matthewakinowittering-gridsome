@@ -3,3 +3,15 @@ url: https://svpg.com/best-vs-rest-explained/
 title: Best vs. Rest Explained - Silicon Valley Product Group
 createdAt: '2022-04-13T03:33:20.000Z'
 publishedMonth: 1648767600
+openGraph:
+  ogTitle: Best vs. Rest Explained - Silicon Valley Product Group
+  ogSiteName: Silicon Valley Product Group
+  ogDescription: "In my last article, I shared with you some of the key learnings from The Lost Interview with Steve Jobs.\_ But there is so much gold in that 70 minute interview, that I wanted to highlight a different topic in this article. If you read much SVPG content, you know that we’re all about the..."
+  ogUrl: https://www.svpg.com/best-vs-rest-explained/
+  ogLocale: en_US
+  ogType: article
+  ogImage:
+    url: https://www.svpg.com/wp-content/themes/svpg2022/app/img/svpg-social.png
+    width: null
+    height: null
+    type: null

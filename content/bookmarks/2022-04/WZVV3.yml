@@ -3,3 +3,17 @@ url: https://medium.com/@noahrobi/feature-toggles-give-you-superpowers-78fdeb7ab
 title: Feature Toggles Give You Superpowers | by Noah Robison-Cox | Medium
 createdAt: '2022-05-30T02:33:17.000Z'
 publishedMonth: 1651359600
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: Feature Toggles Give You Superpowers
+  ogDescription: >-
+    Feature toggles (or feature flags) are a technique in software development
+    for adding functionality in such a way that it can be turned on…
+  ogUrl: >-
+    https://medium.com/@noahrobi/feature-toggles-give-you-superpowers-78fdeb7ab5e8
+  ogImage:
+    url: https://miro.medium.com/max/1200/1*D-1ZseTgyDMJ29C82ZBinQ.png
+    width: null
+    height: null
+    type: null

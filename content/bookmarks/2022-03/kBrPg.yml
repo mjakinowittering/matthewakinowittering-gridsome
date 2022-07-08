@@ -3,3 +3,15 @@ url: https://www.mindtheproduct.com/brian-crofts-innovation-requires-insights/
 title: Brian Crofts - Innovation Requires Insights
 createdAt: '2022-04-27T10:10:28.000Z'
 publishedMonth: 1648767600
+openGraph:
+  ogLocale: en_GB
+  ogType: article
+  ogTitle: Brian Crofts - Innovation Requires Insights
+  ogDescription: "Brian Crofts, Chief Product Officer at Pendo, believes uncovering and understanding client pain points allows him to build products that truly resonate. Brian joined Pendo from Namely, and formerly from Intuit, where he started his career in finance before finding his passion for product. He worked on new businesses for TurboTax and later led global [...] Read\_more\_»"
+  ogUrl: https://www.mindtheproduct.com/brian-crofts-innovation-requires-insights/
+  ogSiteName: Mind the Product
+  ogImage:
+    url: https://www.mindtheproduct.com/wp-content/uploads/2017/08/Brian-Crofts.png
+    width: '1678'
+    height: '942'
+    type: null

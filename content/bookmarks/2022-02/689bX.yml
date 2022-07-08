@@ -3,3 +3,15 @@ url: https://svpg.com/four-big-risks/
 title: The Four Big Risks - Silicon Valley Product Group
 createdAt: '2022-03-28T11:23:39.000Z'
 publishedMonth: 1646092800
+openGraph:
+  ogTitle: The Four Big Risks - Silicon Valley Product Group
+  ogSiteName: Silicon Valley Product Group
+  ogDescription: "In the first edition of my book,\_INSPIRED, I discussed how successful products are valuable, usable and feasible, where I defined “feasible” as both technically feasible and business feasible. While it’s easy to remember these three attributes, over the years I’ve come to believe that it was obscuring some pretty serious risks and challenges, and making..."
+  ogUrl: https://www.svpg.com/four-big-risks/
+  ogLocale: en_US
+  ogType: article
+  ogImage:
+    url: https://www.svpg.com/wp-content/themes/svpg2022/app/img/svpg-social.png
+    width: null
+    height: null
+    type: null

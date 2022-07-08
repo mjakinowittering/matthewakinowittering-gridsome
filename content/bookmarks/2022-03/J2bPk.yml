@@ -4,3 +4,17 @@ url: >-
 title: Don’t convince. Inspire! - Lessons on storytelling by Petra Wille
 createdAt: '2022-04-04T02:21:10.000Z'
 publishedMonth: 1648767600
+openGraph:
+  ogLocale: en_GB
+  ogType: article
+  ogTitle: Don’t convince. Inspire! - Lessons on storytelling by Petra Wille
+  ogDescription: "Product Leadership Coach Petra Wille provides tips and frameworks for product managers to improve their storytelling capabilities.\_"
+  ogUrl: >-
+    https://www.mindtheproduct.com/dont-convince-inspire-lessons-on-storytelling-by-petra-wille/
+  ogSiteName: Mind the Product
+  ogImage:
+    url: >-
+      https://www.mindtheproduct.com/wp-content/uploads/2022/03/Dont-convince.-Inspire-Lessons-on-story-telling-and-product-evangelizing-by-Petra-Wille-low.gif
+    width: '640'
+    height: '360'
+    type: null

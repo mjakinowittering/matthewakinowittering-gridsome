@@ -6,3 +6,23 @@ title: >-
   corporations
 createdAt: '2022-04-24T02:51:38.000Z'
 publishedMonth: 1648767600
+openGraph:
+  ogLocale: en_GB
+  ogType: article
+  ogTitle: >-
+    A product managers' dilemma in pursuing a career in startups versus large
+    corporations
+  ogDescription: >-
+    One of the most typical difficulties that a Product Manager faces is
+    deciding whether to work for a startup or a larger organisation in order to
+    advance their career. Let's go over the characteristics of a Product
+    Management function in both startups and larger businesses.
+  ogUrl: >-
+    https://www.mindtheproduct.com/a-product-managers-dilemma-in-pursuing-a-career-in-startups-versus-large-corporations/
+  ogSiteName: Mind the Product
+  ogImage:
+    url: >-
+      https://www.mindtheproduct.com/wp-content/uploads/2022/04/shutterstock_2059630586-scaled.jpg
+    width: '2560'
+    height: '1707'
+    type: null

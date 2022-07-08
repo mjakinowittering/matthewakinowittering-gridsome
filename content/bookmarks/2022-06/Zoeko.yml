@@ -1,0 +1,24 @@
+id: Zoeko
+url: https://www.youtube.com/watch?v=zxuHNnGcXw0
+title: Webinar   Product Ops   Melissa Perri
+createdAt: '2022-07-05T00:20:45.000Z'
+publishedMonth: 1656630000
+openGraph:
+  ogSiteName: YouTube
+  ogUrl: https://www.youtube.com/watch?v=zxuHNnGcXw0
+  ogTitle: Webinar   Product Ops   Melissa Perri
+  ogDescription: >-
+    If you want to learn and get to grips with Product Ops, we’ve got the
+    Bootcamp for you!Join Melissa Perri and host, Janna Bastow as they explore
+    and dive int...
+  ogType: video.other
+  ogImage:
+    url: https://i.ytimg.com/vi/zxuHNnGcXw0/hqdefault.jpg
+    width: '480'
+    height: '360'
+    type: null
+  ogVideo:
+    url: https://www.youtube.com/embed/zxuHNnGcXw0
+    width: '1280'
+    height: '720'
+    type: text/html

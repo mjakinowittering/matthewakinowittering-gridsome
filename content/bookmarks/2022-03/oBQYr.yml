@@ -3,3 +3,22 @@ url: https://www.youtube.com/watch?v=zrfiDZ-Us8A
 title: ProductTank London - Uncovering problems whoever your customer might be
 createdAt: '2022-04-27T13:32:42.000Z'
 publishedMonth: 1648767600
+openGraph:
+  ogSiteName: YouTube
+  ogUrl: https://www.youtube.com/watch?v=zrfiDZ-Us8A
+  ogTitle: ProductTank London - Uncovering problems whoever your customer might be
+  ogDescription: >-
+    Deeply understanding your customers and their pain points is at the very
+    core of building great products. But how do you relate to your customers if
+    they and...
+  ogType: video.other
+  ogImage:
+    url: https://i.ytimg.com/vi/zrfiDZ-Us8A/hqdefault.jpg
+    width: '480'
+    height: '360'
+    type: null
+  ogVideo:
+    url: https://www.youtube.com/embed/zrfiDZ-Us8A
+    width: '1280'
+    height: '720'
+    type: text/html

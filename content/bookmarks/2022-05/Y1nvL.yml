@@ -6,3 +6,17 @@ title: >-
   by andrea saez | Bootcamp
 createdAt: '2022-06-05T04:42:57.000Z'
 publishedMonth: 1654038000
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: Opportunities, Features, Epics and Stories — What Is the Difference Anyway?
+  ogDescription: >-
+    Navigating vocabulary in the product world can be tricky. There is no
+    standardization in terminology, which makes communicating with…
+  ogUrl: >-
+    https://bootcamp.uxdesign.cc/opportunities-features-epics-and-stories-what-is-the-difference-anyway-6ec24e6bef76
+  ogImage:
+    url: https://miro.medium.com/max/1002/1*5LhROp3t1xmOZFjfTRAhpA.png
+    width: null
+    height: null
+    type: null

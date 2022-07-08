@@ -3,3 +3,20 @@ url: https://svpg.com/the-nature-of-product/
 title: The Nature of Product - Silicon Valley Product Group
 createdAt: '2022-04-13T03:33:14.000Z'
 publishedMonth: 1648767600
+openGraph:
+  ogTitle: The Nature of Product - Silicon Valley Product Group
+  ogSiteName: Silicon Valley Product Group
+  ogDescription: >-
+    I spend so much of my time coaching, writing, and talking about how
+    different it is to build products at strong product companies versus the
+    rest. When a product person, or especially a product coach, has not yet had
+    the good fortune to work on a strong product team at a strong product
+    company, then...
+  ogUrl: https://www.svpg.com/the-nature-of-product/
+  ogLocale: en_US
+  ogType: article
+  ogImage:
+    url: https://www.svpg.com/wp-content/themes/svpg2022/app/img/svpg-social.png
+    width: null
+    height: null
+    type: null

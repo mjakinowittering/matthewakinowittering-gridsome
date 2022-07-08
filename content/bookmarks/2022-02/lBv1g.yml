@@ -4,3 +4,15 @@ url: >-
 title: Adventures in Centralized Prototyping
 createdAt: '2022-03-28T11:36:24.000Z'
 publishedMonth: 1646092800
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: Adventures in Centralized Prototyping
+  ogDescription: Lessons learned as Product Owner to XING’s Prototyping Team
+  ogUrl: >-
+    https://medium.com/@lisa.radel/adventures-in-centralized-prototyping-f0f03df64d21
+  ogImage:
+    url: https://miro.medium.com/max/1200/1*0IMesYEwxPA_PJD0Oc7buA.jpeg
+    width: null
+    height: null
+    type: null

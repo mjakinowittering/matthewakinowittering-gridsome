@@ -3,3 +3,17 @@ url: https://articles.uie.com/themes/
 title: 'Themes: A Small Change to Product Roadmaps with Large Effects'
 createdAt: '2022-03-29T01:29:15.000Z'
 publishedMonth: 1646092800
+openGraph:
+  ogLocale: en_US
+  ogSiteName: UX Articles by UIE
+  ogTitle: 'Themes: A Small Change to Product Roadmaps with Large Effects'
+  ogUrl: https://articles.uie.com/themes/
+  ogType: article
+  ogDescription: >-
+    Jared Spool investigates Themes, in which instead of promising to build a
+    specific feature, the team commits to solving a specific customer problem.
+  ogImage:
+    url: https://articles.uie.com/wp-content/uploads/2016/02/open-graph.png
+    width: null
+    height: null
+    type: null

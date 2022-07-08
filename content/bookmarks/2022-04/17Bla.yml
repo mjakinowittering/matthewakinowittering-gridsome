@@ -3,3 +3,17 @@ url: https://www.prodpad.com/blog/customer-feedback-product-process-1/
 title: 'Customer Feedback: The secret sauce in your product process'
 createdAt: '2022-05-07T09:51:29.000Z'
 publishedMonth: 1651359600
+openGraph:
+  ogLocale: en_US
+  ogType: article
+  ogTitle: 'Customer Feedback: The secret sauce in your product process'
+  ogDescription: >-
+    Find out how customer feedback loops help us build the right thing,
+    introduce psychological safety, and to ensure we resonate with the market.
+  ogUrl: https://www.prodpad.com/blog/customer-feedback-product-process-1/
+  ogSiteName: Product Management Software | ProdPad
+  ogImage:
+    url: https://www.prodpad.com/wp-content/uploads/2021/12/user-testing.png
+    width: '600'
+    height: '344'
+    type: image/png

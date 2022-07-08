@@ -3,3 +3,19 @@ url: https://www.prodpad.com/blog/experimenting-with-the-opportunity-solution-tr
 title: Experimenting with the Opportunity Solution Tree
 createdAt: '2022-05-30T02:21:35.000Z'
 publishedMonth: 1651359600
+openGraph:
+  ogLocale: en_US
+  ogType: article
+  ogTitle: Experimenting with the Opportunity Solution Tree
+  ogDescription: >-
+    It’s your job as a product manager to prioritize ideas. How do you actually
+    decide which ones to work on? How do you sort the good ideas from the bad
+    ideas?
+  ogUrl: >-
+    https://www.prodpad.com/blog/experimenting-with-the-opportunity-solution-tree/
+  ogSiteName: Product Management Software | ProdPad
+  ogImage:
+    url: https://www.prodpad.com/wp-content/uploads/2020/01/Facebook-CFP-1.png
+    width: '1200'
+    height: '630'
+    type: image/png

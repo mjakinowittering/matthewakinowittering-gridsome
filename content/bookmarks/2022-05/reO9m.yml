@@ -4,3 +4,17 @@ url: >-
 title: How to align your business with a product concept
 createdAt: '2022-06-20T02:14:52.000Z'
 publishedMonth: 1654038000
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: How to align your business with a product concept
+  ogDescription: >-
+    We all know what a business vision is and the importance behind it, but did
+    you know you also need a product concept and vision to support…
+  ogUrl: >-
+    https://bootcamp.uxdesign.cc/how-to-align-your-business-with-a-product-concept-893a28828a9
+  ogImage:
+    url: https://miro.medium.com/max/1200/1*TV_M5urEY0fMK_TfMm82Ug.png
+    width: null
+    height: null
+    type: null

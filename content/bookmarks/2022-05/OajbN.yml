@@ -4,3 +4,17 @@ url: >-
 title: How to Create a Customer-Facing Roadmap
 createdAt: '2022-06-24T09:30:13.000Z'
 publishedMonth: 1654038000
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: How to Create a Customer-Facing Roadmap
+  ogDescription: >-
+    One of the biggest debates I see internally in product management teams is
+    whether or not they should have a customer-facing roadmap. There…
+  ogUrl: >-
+    https://bootcamp.uxdesign.cc/how-to-create-a-customer-facing-roadmap-b8a7e15d516b
+  ogImage:
+    url: https://miro.medium.com/max/1200/1*dX3tn37xbSe7hsdpcS9toQ.png
+    width: null
+    height: null
+    type: null

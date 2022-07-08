@@ -4,3 +4,19 @@ url: >-
 title: Why I started writing Product Narratives
 createdAt: '2022-03-28T11:31:56.000Z'
 publishedMonth: 1646092800
+openGraph:
+  ogTitle: Why I started writing Product Narratives
+  ogDescription: >-
+    I have recently started writing Product Narratives. These are structured in
+    prose form, describing the end to end user experience of my product in a
+    very conversational tone (you won't see sentences starting with with "The
+    system shall.
+  ogType: article
+  ogUrl: >-
+    https://www.linkedin.com/pulse/why-i-started-writing-product-narratives-karthik-raman
+  ogImage:
+    url: >-
+      https://media-exp1.licdn.com/media/AAYQAgQLAAkAAQAAAAAAAA196XghfnplQFCx7y__C0e55w.png
+    width: null
+    height: null
+    type: null

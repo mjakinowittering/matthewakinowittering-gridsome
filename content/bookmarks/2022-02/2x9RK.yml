@@ -3,3 +3,17 @@ url: https://www.mindtheproduct.com/the-importance-of-narrative/
 title: The Importance Of Narrative
 createdAt: '2022-03-28T11:32:23.000Z'
 publishedMonth: 1646092800
+openGraph:
+  ogLocale: en_GB
+  ogType: article
+  ogTitle: The Importance Of Narrative
+  ogDescription: >-
+    A look at how narrative and story telling is crucial to product
+    management,and how good product managers need to be master storytellers.
+  ogUrl: https://www.mindtheproduct.com/the-importance-of-narrative/
+  ogSiteName: Mind the Product
+  ogImage:
+    url: https://www.mindtheproduct.com/wp-content/uploads/2013/08/narrative.jpg
+    width: '1024'
+    height: '683'
+    type: null

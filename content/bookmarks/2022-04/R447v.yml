@@ -3,3 +3,18 @@ url: https://www.mindtheproduct.com/product-managers-not-ceo-anything/
 title: Product managers — you are not the CEO of anything
 createdAt: '2022-05-02T08:18:52.000Z'
 publishedMonth: 1651359600
+openGraph:
+  ogLocale: en_GB
+  ogType: article
+  ogTitle: Product managers — you are not the CEO of anything
+  ogDescription: >-
+    Martin Eriksson argues that unless you’re the founder and the product
+    manager at the same time, you are not the CEO of anything.
+  ogUrl: https://www.mindtheproduct.com/product-managers-not-ceo-anything/
+  ogSiteName: Mind the Product
+  ogImage:
+    url: >-
+      https://www.mindtheproduct.com/wp-content/uploads/2017/03/shutterstock_535148437-scaled.jpg
+    width: '2560'
+    height: '1920'
+    type: null

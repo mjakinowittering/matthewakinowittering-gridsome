@@ -5,3 +5,20 @@ title: >-
   Testable/Usable/Lovable
 createdAt: '2022-03-28T11:30:44.000Z'
 publishedMonth: 1646092800
+openGraph:
+  ogLocale: en_US
+  ogType: article
+  ogTitle: >-
+    Making sense of MVP (Minimum Viable Product) - and why I prefer Earliest
+    Testable/Usable/Lovable - Crisp's Blog
+  ogDescription: >-
+    (French translation, Spanish translation, Japanese translation) A couple of
+    years ago I drew this picture and started using it in various presentations
+    about agile and lean development: Since then the…
+  ogUrl: https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp
+  ogSiteName: Crisp's Blog
+  ogImage:
+    url: https://blog.crisp.se/wp-content/uploads/2016/01/Making-sense-of-MVP-.jpg
+    width: null
+    height: null
+    type: null

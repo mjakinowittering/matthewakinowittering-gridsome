@@ -5,3 +5,16 @@ title: >-
   Weiss | Medium
 createdAt: '2022-05-08T11:56:32.000Z'
 publishedMonth: 1651359600
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: Chief Question Officer
+  ogDescription: >-
+    "Chief Question Officer" is the unofficial role of many great product,
+    design, and engineering leaders. 5 tips for asking better questions.
+  ogUrl: https://medium.com/@noah_weiss/chief-question-officer-444de1793dda
+  ogImage:
+    url: https://miro.medium.com/max/859/1*8UKGvGfuSOrczltscmHhUw.jpeg
+    width: null
+    height: null
+    type: null

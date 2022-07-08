@@ -3,3 +3,18 @@ url: https://www.romanpichler.com/blog/the-product-strategy-cycle/
 title: The Product Strategy Cycle
 createdAt: '2022-06-06T08:34:20.000Z'
 publishedMonth: 1654038000
+openGraph:
+  ogLocale: en_GB
+  ogType: article
+  ogTitle: The Product Strategy Cycle
+  ogDescription: >-
+    This article explains how you can systematically link product strategy and
+    execution by using the product strategy cycle.
+  ogUrl: https://www.romanpichler.com/blog/the-product-strategy-cycle/
+  ogSiteName: Roman Pichler
+  ogImage:
+    url: >-
+      https://www.romanpichler.com/wp-content/uploads/2020/10/reid-zura-rSrK-P0Wips-unsplash.jpg
+    width: '1920'
+    height: '1440'
+    type: image/jpeg

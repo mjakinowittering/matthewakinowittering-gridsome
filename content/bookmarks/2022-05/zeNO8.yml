@@ -3,3 +3,18 @@ url: https://www.romanpichler.com/blog/a-brief-guide-to-product-discovery/
 title: A Brief Guide to Product Discovery
 createdAt: '2022-06-18T00:47:24.000Z'
 publishedMonth: 1654038000
+openGraph:
+  ogLocale: en_GB
+  ogType: article
+  ogTitle: A Brief Guide to Product Discovery
+  ogDescription: >-
+    Find out why product discovery matters; which questions it should address;
+    and when, how and by whom it should be carried out.
+  ogUrl: https://www.romanpichler.com/blog/a-brief-guide-to-product-discovery/
+  ogSiteName: Roman Pichler
+  ogImage:
+    url: >-
+      https://www.romanpichler.com/wp-content/uploads/2020/09/clark-tibbs-oqStl2L5oxI-unsplash.jpg
+    width: null
+    height: null
+    type: null

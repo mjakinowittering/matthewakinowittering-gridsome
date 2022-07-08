@@ -4,3 +4,22 @@ url: >-
 title: 'Working Backwards Press Release : A Product Development Framework — MATTYFORD'
 createdAt: '2022-03-29T01:28:35.000Z'
 publishedMonth: 1646092800
+openGraph:
+  ogSiteName: MATTYFORD
+  ogTitle: >-
+    Working Backwards Press Release : A Product Development Framework —
+    MATTYFORD
+  ogUrl: >-
+    https://mattyford.com/blog/2014/3/12/working-backwards-press-release-a-product-development-framework
+  ogType: article
+  ogDescription: >-
+    Amazon &nbsp;are by far one of the strongest leaders in product development,
+    which is why any advice or frameworks they speak about are worth paying
+    attention to. I really liked the following model outlined by General
+    Manager&nbsp; Ian McAllister &nbsp;on how they achieve success in thei
+  ogImage:
+    url: >-
+      http://static1.squarespace.com/static/51ca7a23e4b0ff1650b3c726/51ca7a23e4b0ff1650b3c732/531f73fde4b0d6566000b8ea/1414978707717/amazon-logo-10.png?format=1500w
+    width: '1500'
+    height: '1000'
+    type: null

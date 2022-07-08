@@ -3,3 +3,21 @@ url: https://melissaperri.com/blog/2016/07/14/what-is-good-product-strategy
 title: What is Good Product Strategy? — Melissa Perri
 createdAt: '2022-06-06T09:01:56.000Z'
 publishedMonth: 1654038000
+openGraph:
+  ogSiteName: Melissa Perri
+  ogTitle: What is Good Product Strategy? — Melissa Perri
+  ogUrl: https://melissaperri.com/blog/2016/07/14/what-is-good-product-strategy
+  ogType: article
+  ogDescription: >-
+    “What is your Product Strategy? YOU NEED A STRATEGY.”
+
+    When I replay this scene in my head, I can hear the CTO very audibly yelling
+    (slash pleading) with our product team. He was on edge. We had been
+    experimenting towards a very concrete goal for two months, and had made a
+    lot of progress. We had lea
+  ogImage:
+    url: >-
+      http://static1.squarespace.com/static/59984dede6f2e14f9adb608f/599ae1c0d441947340dc921e/599ae1e9d441947340dc9dbc/1503325892291/product-strategy.png?format=1500w
+    width: '960'
+    height: '720'
+    type: null

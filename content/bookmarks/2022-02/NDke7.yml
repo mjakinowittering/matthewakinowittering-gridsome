@@ -4,3 +4,17 @@ url: >-
 title: How to Build a Minimum Lovable Product (MLP)
 createdAt: '2022-03-29T01:29:46.000Z'
 publishedMonth: 1646092800
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: How to Build a Minimum Lovable Product (MLP)
+  ogDescription: >-
+    We’ve all heard of MVPs. With its build fast and fail fast approach, it
+    helped many adapt to constant feedback loops and quick iterations.
+  ogUrl: >-
+    https://bootcamp.uxdesign.cc/how-to-build-a-minimum-lovable-product-mlp-1b71a59ee271
+  ogImage:
+    url: https://miro.medium.com/max/990/1*9F7qir9CIXtTTorOmD3TRw.png
+    width: null
+    height: null
+    type: null

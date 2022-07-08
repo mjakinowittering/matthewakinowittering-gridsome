@@ -5,3 +5,14 @@ title: >-
   Medium
 createdAt: '2022-06-04T07:53:11.000Z'
 publishedMonth: 1654038000
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: '#1 The DHM Model'
+  ogDescription: Delighting customers in hard-to-copy, margin-enhancing ways.
+  ogUrl: https://gibsonbiddle.medium.com/2-the-dhm-model-6ea5dfd80792
+  ogImage:
+    url: https://miro.medium.com/max/1200/0*Z05yuej9Tc3_7XEB
+    width: null
+    height: null
+    type: null
