@@ -15,9 +15,6 @@ function crawlFileSystem() {
 
     for (const fileIndex in filesInDirectory) {
       let bookmarkPath = `${pathBase}/content/bookmarks/${directories[dirIndex]}/${filesInDirectory[fileIndex]}`
-
-      // console.log(`Reading: ${bookmarkPath}`)
-
       let bookmarkObj = yaml.load(
         fs.readFileSync(
           bookmarkPath,
