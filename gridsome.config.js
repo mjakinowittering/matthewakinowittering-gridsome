@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Matthew Akino-Wittering',
+  siteUrl: 'https://matthew.akinowittering.com',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -101,6 +102,47 @@ module.exports = {
             ]
           ]
         }
+      }
+    },
+    {
+      use: 'gridsome-plugin-robots-txt',
+      options: {
+        host: 'https://matthew.akinowittering.com',
+        sitemap: 'https://matthew.akinowittering.com/sitemap.xml',
+        policy: [
+          {
+            userAgent: "*",
+            allow: [
+              "/"
+            ],
+            disallow: [],
+            crawlDelay: 10,
+          }
+        ]
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        config: {
+          '/': {
+            changefreq: 'monthly',
+            priority: 0.5
+          },
+          '/blog/': {
+            changefreq: 'monthly',
+            priority: 0.5
+          },
+          '/blog/**': {
+            changefreq: 'monthly',
+            priority: 0.5
+          },
+          '/resume/': {
+            changefreq: 'monthly',
+            priority: 0.5
+          }
+        },
+        exclude: []
       }
     }
   ],
