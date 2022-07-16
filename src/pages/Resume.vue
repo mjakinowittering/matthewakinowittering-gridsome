@@ -136,16 +136,18 @@
       }
 
       hr {
-        background: #f2fbfa;
+        background: #2a898f;
         margin: 3rem auto;
-        width: 50%;
+        opacity: 0.2;
+        width: 33%;
       }
     }
 
     .m-topic + hr {
-      background: #f2fbfa;
+      background: #2a898f;
       margin: 3rem auto;
-      width: 75%;
+      opacity: 0.2;
+      width: 33%;
     }
   }
 </style>

@@ -25,8 +25,9 @@
   .m-history {
     .m-timeline {
       hr {
-        background: #f2fbfa;
+        background: #2a898f;
         margin: 3rem auto 3rem;
+        opacity: 0.2;
         width: 33%;
       }
     }
