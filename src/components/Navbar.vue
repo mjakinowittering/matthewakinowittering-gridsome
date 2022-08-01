@@ -2,13 +2,13 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <g-link class="navbar-item" to="/">Matthew Akino-Wittering</g-link>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarLinks">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarLinks" @click="toggleMenu()">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div id="navbarLinks" class="navbar-menu">
+    <div id="navbarLinks" class="navbar-menu" v-bind:class="{ 'is-active': isActive }">
       <div class="navbar-end">
         <g-link class="navbar-item" to="/" exact-active-class="is-exact">Home</g-link>
         <g-link class="navbar-item" to="/blog/" active-class="is-active" exact-active-class="is-exact">Blog</g-link>
@@ -35,6 +35,16 @@
 
 <script>
   export default {
+    data() {
+      return {
+        isActive: false
+      }
+    },
+    methods: {
+      toggleMenu() {
+        this.isActive = !this.isActive
+      }
+    }
   }
 </script>
 
