@@ -3,25 +3,28 @@
     <div class="column is-two-thirds-desktop">
       <figure>
         <div class="image is-16by9">
-          <g-link :to="path">
-            <img :alt="artwork.img.alt" :src="artwork.img.src" />
+          <g-link :to="post.node.path">
+            <img :alt="post.node.figure.img.alt" :src="post.node.figure.img.src" />
           </g-link>
         </div>
         <figcaption>
-          <a :href="artwork.url" target="_blank">
-            {{ artwork.caption }}
+          <a :href="post.node.figure.url" target="_blank">
+            {{ post.node.figure.caption }}
           </a>
         </figcaption>
       </figure>
     </div>
     <div class="column is-one-third-desktop">
       <h3 class="title is-3">
-        <g-link :to="path">
-          {{ title }}
+        <g-link :to="post.node.path">
+          {{ post.node.title }}
         </g-link>
       </h3>
       <div class="content">
-        <p v-html="excerpt"></p>
+        <p>
+          <span v-html="getSnippet(post)"></span>
+          <g-link class="continue-reading" :to="post.node.path" v-if="hasMoreContent(post) === true">continue reading</g-link>
+        </p>
       </div>
     </div>
   </div>
@@ -31,12 +34,27 @@
 <script>
   export default {
     props: [
-      "path",
-      "artwork",
-      "title",
-      "excerpt",
-      "publishedAt"
-    ]
+      "post"
+    ],
+    methods: {
+      getPlainText(htmlString) {
+        return htmlString.replace(/<\/?[^>]+(>|$)/gi, '').trim()
+      },
+      getSnippet(post) {
+        if (this.hasMoreContent(post) === true && !!post.node.excerpt.trim().match(/[.,:!?]$/) === false) {
+          return `${post.node.excerpt.trim()} ...`
+        } else {
+          return post.node.excerpt.trim()
+        }
+      },
+      hasMoreContent(post) {
+        if(this.getPlainText(post.node.content).length > this.getPlainText(post.node.excerpt).length) {
+          return true
+        } else {
+          return false
+        }
+      }
+    }
   }
 </script>
 
@@ -77,15 +95,11 @@
 
       .content {
         margin: 1.5rem;
-      }
 
-      .level {
-        color: #1e2425;
-        font-family: 'Rubik', sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 28px;
-        margin: 1.5rem;
+        .continue-reading {
+          margin: 0 0 0 0.33rem;
+          text-decoration: underline;
+        }
       }
     }
   }
