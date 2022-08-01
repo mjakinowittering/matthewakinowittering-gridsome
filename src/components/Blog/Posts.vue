@@ -1,24 +1,10 @@
 <template>
   <div class="m-posts">
     <div class="container">
-      <div class="columns" v-for="(row, index) in chunks" :key="index">
-        <div class="column is-flex" v-for="post in row" :key="post.node.id">
-          <PostHeadline
-            :path="post.node.path"
-            :artwork="post.node.figure"
-            :title="post.node.title"
-            :excerpt="post.node.excerpt"
-            :publishedAt="post.node.publishedAt"
-            :key="post.node.id"
-            v-if="index === 0"
-          />
-          <PostCard
-            :path="post.node.path"
-            :artwork="post.node.figure"
-            :title="post.node.title"
-            :publishedAt="post.node.publishedAt"
-            v-else
-          />
+      <div class="columns" v-for="(chuck, index) in chunks" :key="index">
+        <div class="column is-flex" v-for="post in chuck" :key="post.node.id">
+          <PostHeadline :post="post" v-if="index === 0" />
+          <PostCard :post="post" v-else />
         </div>
       </div>
       <Pager :info="posts.pageInfo"/>

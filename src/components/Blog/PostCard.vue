@@ -2,20 +2,20 @@
   <div class="m-post-card is-flex is-flex-direction-column">
     <figure>
       <div class="image is-16by9">
-        <g-link :to="path">
-          <img :alt="artwork.img.alt" :src="artwork.img.src" />
+        <g-link :to="post.node.path">
+          <img :alt="post.node.figure.img.alt" :src="post.node.figure.img.src" />
         </g-link>
       </div>
       <figcaption>
-        <a :href="artwork.url" target="_blank">
-          {{ artwork.caption }}
+        <a :href="post.node.figure.url" target="_blank">
+          {{ post.node.figure.caption }}
         </a>
       </figcaption>
     </figure>
     <div class="is-flex is-flex-direction-column is-flex-grow-1">
       <h3 class="title is-5">
-        <g-link :to="path">
-          {{ title }}
+        <g-link :to="post.node.path">
+          {{ post.node.title }}
         </g-link>
       </h3>
     </div>
@@ -26,9 +26,7 @@
 <script>
   export default {
     props: [
-      "path",
-      "artwork",
-      "title"
+      "post"
     ]
   }
 </script>

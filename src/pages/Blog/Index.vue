@@ -26,6 +26,7 @@
           }
           publishedAt(format: "YYYY-MM-DD")
           excerpt
+          content
         }
       }
     }
