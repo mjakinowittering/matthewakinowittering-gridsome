@@ -7,7 +7,9 @@
             <h1>Resume</h1>
             <h2>Education</h2>
             <div class="m-topic" v-for="(university, index) in $page.allUniversity.edges" :key="university.node.id">
-              <h3>{{ university.node.name }}</h3>
+              <h3>
+                <g-link :to="university.node.address">{{ university.node.name }}</g-link>
+              </h3>
               <Timeframe :dateFrom="university.node.dateFrom" :dateTo="university.node.dateTo" v-if="university.node.courses.edges.length > 1" />
               <History :events="university.node.courses.edges" />
               <hr v-if="index != $page.allUniversity.edges.length - 1">
@@ -15,7 +17,9 @@
             <hr />
             <h2>Employment</h2>
             <div class="m-topic" v-for="(company, index) in $page.allCompany.edges" :key="company.node.id" :id="index">
-              <h3>{{ company.node.name }}</h3>
+              <h3>
+                <g-link :to="company.node.address">{{ company.node.name }}</g-link>
+              </h3>
               <Timeframe :dateFrom="company.node.dateFrom" :dateTo="company.node.dateTo" v-if="company.node.roles.edges.length > 1" />
               <History :events="company.node.roles.edges" />
               <hr v-if="index != $page.allCompany.edges.length - 1">
@@ -35,6 +39,7 @@
         node {
           id
           name
+          address
           dateFrom(format: "YYYY-MM-DD")
           dateTo(format: "YYYY-MM-DD")
           courses: belongsTo(sortBy: "dateFrom", order: DESC) {
@@ -55,7 +60,9 @@
     allCompany(sortBy: "dateFrom", order: DESC) {
       edges {
         node {
+          id
           name
+          address
           dateFrom(format: "YYYY-MM-DD")
           dateTo(format: "YYYY-MM-DD")
           roles: belongsTo(sortBy: "dateFrom", order: DESC) {

@@ -24,7 +24,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
   .m-event {
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 3.5rem;
 
     h4 {
       color: #1e2425;
@@ -38,5 +38,9 @@
     .content {
       margin: 1rem 0 0;
     }
+  }
+
+  .m-event:last-of-type {
+    margin: 1.5rem 0;
   }
 </style>

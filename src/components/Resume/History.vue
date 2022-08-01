@@ -1,8 +1,7 @@
 <template>
   <div class="m-history">
-    <div class="m-timeline" v-for="(event, index) in events" :key="event.node.id">
-      <Event :event="event" />
-      <hr v-if="index != events.length - 1">
+    <div class="m-timeline">
+      <Event :event="event" v-for="event in events" :key="event.node.id" />
     </div>
   </div>
 </template>
