@@ -7,6 +7,7 @@
 module.exports = {
   siteName: 'Matthew Akino-Wittering',
   siteUrl: 'https://matthew.akinowittering.com',
+  icon: './src/assets/img/icons/dot.svg',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
