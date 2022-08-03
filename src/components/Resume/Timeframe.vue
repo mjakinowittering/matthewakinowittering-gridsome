@@ -61,7 +61,11 @@
         // Cast suffix for Year unit.
         const yearSuffix   = (diffInYears > 1) ? 'yrs' : 'yr'
         // Return length of service.
-        return `${diffInYears} ${yearSuffix} ${diffInMonths} ${monthSuffix}`
+        if (diffInMonths !== 0) {
+          return `${diffInYears} ${yearSuffix} ${diffInMonths} ${monthSuffix}`
+        } else {
+          return `${diffInYears} ${yearSuffix}`
+        }
       }
     }
   }
