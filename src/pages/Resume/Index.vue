@@ -5,25 +5,15 @@
         <div class="columns">
           <div class="column is-two-thirds-desktop">
             <h1>Resume</h1>
-            <h2>Education</h2>
-            <div class="m-topic" v-for="(university, index) in $page.allUniversity.edges" :key="university.node.id">
-              <h3>
-                <g-link :to="university.node.address">{{ university.node.name }}</g-link>
-              </h3>
-              <Timeframe :dateFrom="university.node.dateFrom" :dateTo="university.node.dateTo" v-if="university.node.courses.edges.length > 1" />
-              <History :events="university.node.courses.edges" />
-              <hr v-if="index != $page.allUniversity.edges.length - 1">
+            <div class="m-story">
+              <div class="content">
+                <p>I am Matthew Akino-Wittering, a Lead Product Manager with over <time v-bind:title="timeSinceBecomingProductManagerTitle()" v-bind:datetime="productManager.dateSince">{{ timeSinceBecomingProductManager() }}</time> of experience. I build data-driven products that support businesses by integrating Advertising and eCommerce technologies in innovative ways to create competitive advantages within the MarTech space.</p>
+              </div>
             </div>
             <hr />
-            <h2>Employment</h2>
-            <div class="m-topic" v-for="(company, index) in $page.allCompany.edges" :key="company.node.id" :id="index">
-              <h3>
-                <g-link :to="company.node.address">{{ company.node.name }}</g-link>
-              </h3>
-              <Timeframe :dateFrom="company.node.dateFrom" :dateTo="company.node.dateTo" v-if="company.node.roles.edges.length > 1" />
-              <History :events="company.node.roles.edges" />
-              <hr v-if="index != $page.allCompany.edges.length - 1">
-            </div>
+            <Topic title="Education" :organisations="$page.universities.edges" />
+            <hr />
+            <Topic title="Employment" :organisations="$page.companies.edges" />
           </div>
         </div>
       </div>
@@ -34,7 +24,7 @@
 
 <page-query>
   query {
-    allUniversity(sortBy: "dateFrom", order: DESC) {
+    universities: allUniversity(sortBy: "dateFrom", order: DESC) {
       edges {
         node {
           id
@@ -42,7 +32,7 @@
           address
           dateFrom(format: "YYYY-MM-DD")
           dateTo(format: "YYYY-MM-DD")
-          courses: belongsTo(sortBy: "dateFrom", order: DESC) {
+          events: belongsTo(sortBy: "dateFrom", order: DESC) {
             edges {
               node {
                 ... on Course {
@@ -57,7 +47,7 @@
         }
       }
     }
-    allCompany(sortBy: "dateFrom", order: DESC) {
+    companies: allCompany(sortBy: "dateFrom", order: DESC) {
       edges {
         node {
           id
@@ -65,7 +55,7 @@
           address
           dateFrom(format: "YYYY-MM-DD")
           dateTo(format: "YYYY-MM-DD")
-          roles: belongsTo(sortBy: "dateFrom", order: DESC) {
+          events: belongsTo(sortBy: "dateFrom", order: DESC) {
             edges {
               node {
                 ... on Role {
@@ -85,8 +75,8 @@
 
 
 <script>
-  import Timeframe from '~/components/Resume/Timeframe.vue'
-  import History from  '~/components/Resume/History.vue'
+  import moment from 'moment';
+  import Topic from '~/components/Resume/Topic.vue'
   export default {
     metaInfo() {
       return {
@@ -94,8 +84,28 @@
       }
     },
     components: {
-      Timeframe,
-      History
+      Topic
+    },
+    data() {
+      return {
+        productManager: {
+          dateSince: new Date('2010-06-01T00:00:00+0000')
+        }
+      }
+    },
+    methods: {
+      timeSinceBecomingProductManager() {
+        return moment(this.productManager.dateSince).fromNow('y')
+      },
+      monthBecameProductManager() {
+        return this.productManager.dateSince.toLocaleString('default', { month: 'long' })
+      },
+      yearBecameProductManager() {
+        return this.productManager.dateSince.toLocaleString('default', { year: 'numeric' })
+      },
+      timeSinceBecomingProductManagerTitle() {
+        return `I've worked in Product Management roles since ${this.monthBecameProductManager()} ${this.yearBecameProductManager()}`
+      }
     }
   }
 </script>
@@ -116,42 +126,13 @@
       margin: 0;
     }
 
-    h2 {
-      color: #1e2425;
-      font-family: 'Poppins', sans-serif;
-      font-size: 32px;
-      font-weight: 500;
-      line-height: 32px;
-      margin: 3rem 0 0;
-    }
-
-    h2 + div {
+    .m-story {
       margin: 1.5rem 0 0;
     }
 
-    .m-topic {
-      margin: 0;
-
-      h3 {
-        color: #1e2425;
-        color: #2a898f;
-        font-family: 'Poppins', sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 24px;
-        margin: 1rem 0 0;
-      }
-
-      hr {
-        background: #2a898f;
-        margin: 3rem auto;
-        opacity: 0.2;
-        width: 33%;
-      }
-    }
-
-    .m-topic + hr {
-      background: #2a898f;
+    hr {
+      background: none;
+      border-top: 0.15rem solid #2a898f;
       margin: 3rem auto;
       opacity: 0.2;
       width: 33%;

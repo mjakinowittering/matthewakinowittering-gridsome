@@ -5,7 +5,7 @@
         <div class="column is-two-thirds-desktop is-flex is-justify-content-center is-flex-direction-column">
           <h1>Hello, I am a Matthew!</h1>
           <div class="content">
-            <p>I am a Lead Product Manager with over <time v-bind:title="timeSinceBecomingProductManagerTitle()" v-bind:datetime="productManager.dateSince">{{ timeSinceBecomingProductManager() }}</time> of experience. I build data-driven products that support businesses by integrating Advertising and eCommerce technologies in innovative ways to create competitive advantages.</p>
+            <p>I am a Lead Product Manager with over <time v-bind:title="timeSinceBecomingProductManagerTitle()" v-bind:datetime="productManager.dateSince">{{ timeSinceBecomingProductManager() }}</time> of experience. I build data-driven products that support businesses by integrating Advertising and eCommerce technologies in innovative ways to create competitive advantages within the MarTech space.</p>
           </div>
           <div class="buttons">
             <a class="button m-headline__is-primary" href="https://www.linkedin.com/in/matthewwittering/" target="_blank">Get in Touch</a>

@@ -46,6 +46,19 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        typeName: 'Bookmark',
+        path: './content/bookmarks/*/*.yml',
+        refs: {
+          publishedMonth: {
+            typeName: 'BookmarkPublished',
+            create: true
+          }
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         typeName: 'ExternalLink',
         path: './content/external-links/*.yml'
       }
@@ -55,26 +68,6 @@ module.exports = {
       options: {
         typeName: 'Milestone',
         path: './content/milestones/*/*.md'
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'Skill',
-        path: './content/skills/*.md'
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'Bookmark',
-        path: './content/bookmarks/*/*.yml',
-        refs: {
-          publishedMonth: {
-            typeName: 'BookmarkPublished',
-            create: true
-          }
-        }
       }
     },
     {
@@ -103,6 +96,13 @@ module.exports = {
             ]
           ]
         }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Skill',
+        path: './content/skills/*.md'
       }
     },
     {
