@@ -7,7 +7,7 @@
             <h1>Resume</h1>
             <div class="m-story">
               <div class="content">
-                <p>I am Matthew Akino-Wittering, a Lead Product Manager with over <time v-bind:title="timeSinceBecomingProductManagerTitle()" v-bind:datetime="productManager.dateSince">{{ timeSinceBecomingProductManager() }}</time> of experience. I build data-driven products that support businesses by integrating Advertising and eCommerce technologies in innovative ways to create competitive advantages within the MarTech space.</p>
+                <p>I am Matthew Akino-Wittering, a Lead Product Manager with over <time v-bind:title="timeSinceBecomingProductManagerTitle()" v-bind:datetime="productManager.dateSince">{{ timeSinceBecomingProductManager() }}</time> of experience and Dyslexic. My Dyslexia helps me spot patterns, analyse data, simplify information and empathise with customers. I build data-driven products by integrating Advertising and eCommerce technologies in innovative ways to create competitive advantages for brands within the MarTech space.</p>
               </div>
             </div>
             <hr />
