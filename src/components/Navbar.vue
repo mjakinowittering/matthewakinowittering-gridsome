@@ -55,7 +55,6 @@
   nav {
     .navbar-brand {
       .navbar-item {
-        border-bottom: 0.125rem solid #ffffff;
         color: #1e2425;
         font-family: 'Poppins', sans-serif;
         font-size: 18px;
@@ -69,7 +68,6 @@
 
   .navbar-menu {
     .navbar-item {
-      border-bottom: 0.125rem solid #ffffff;
       color: #1e2425;
       font-family: 'Poppins', sans-serif;
       font-size: 18px;
@@ -81,18 +79,44 @@
 
     .navbar-item.is-active {
       color: #2a898f;
-      border-bottom: 0.125rem solid #2a898f;
     }
 
     .navbar-item.is-exact {
       color: #2a898f;
-      border-bottom: 0.125rem solid #2a898f;
     }
 
     .navbar-item:hover {
       background: none;
-      border-bottom: 0.125rem solid #2a898f;
       color: #2a898f;
+    }
+
+  }
+
+  @media screen and (min-width: 1024px) {
+    nav {
+      .navbar-brand {
+        .navbar-item {
+          border-bottom: 0.125rem solid #ffffff;
+        }
+      }
+
+      .navbar-menu {
+        .navbar-item {
+          border-bottom: 0.125rem solid #ffffff;
+        }
+
+        .navbar-item.is-active {
+          border-bottom: 0.125rem solid #2a898f;
+        }
+
+        .navbar-item.is-exact {
+          border-bottom: 0.125rem solid #2a898f;
+        }
+
+        .navbar-item:hover {
+          border-bottom: 0.125rem solid #2a898f;
+        }
+      }
     }
   }
 </style>
