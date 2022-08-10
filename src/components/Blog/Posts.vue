@@ -55,10 +55,3 @@
     }
   }
 </script>
-
-
-<style lang="scss" scoped>
-  .m-posts {
-    padding: 5rem 0;
-  }
-</style>

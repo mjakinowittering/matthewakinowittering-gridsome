@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <Posts :posts="$page.posts" />
+    <div class="m-blog">
+      <Posts :posts="$page.posts" />
+    </div>
   </Layout>
 </template>
 
@@ -78,3 +80,18 @@
     }
   }
 </script>
+
+
+<style lang="scss" scoped>
+  .m-blog {
+    margin: 0 1rem;
+    padding: 2.5rem 0;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .m-blog {
+      margin: 0;
+      padding: 5rem 0;
+    }
+  }
+</style>

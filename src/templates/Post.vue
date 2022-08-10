@@ -92,6 +92,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
   .m-post {
+    margin: 0 1rem;
     padding: 5rem 0;
 
     h1 {
@@ -128,6 +129,13 @@
       font-weight: 400;
       line-height: 28px;
       margin: 1.5rem 0;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .m-post {
+      margin: 0;
+      padding: 5rem 0;
     }
   }
 </style>
