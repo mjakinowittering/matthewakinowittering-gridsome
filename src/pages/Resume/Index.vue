@@ -115,7 +115,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
   .m-resume {
-    padding: 5rem 0;
+    margin: 0 1rem;
+    padding: 2.5rem 0;
 
     h1 {
       color: #1e2425;
@@ -136,6 +137,13 @@
       margin: 3rem auto;
       opacity: 0.2;
       width: 33%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .m-resume {
+      margin: 0;
+      padding: 5rem 0;
     }
   }
 </style>
