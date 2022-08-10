@@ -93,7 +93,7 @@
 
   .m-post {
     margin: 0 1rem;
-    padding: 5rem 0;
+    padding: 2.5rem 0;
 
     h1 {
       color: #1e2425;
