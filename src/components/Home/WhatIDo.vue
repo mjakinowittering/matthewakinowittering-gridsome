@@ -67,7 +67,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
   .m-what-i-do {
-    padding: 5rem 0;
+    margin: 0 1rem;
+    padding: 2.5rem 0;
 
     h2 {
       color: #1e2425;
@@ -111,6 +112,13 @@
       height: 100%;
       width: 100%;
       content: '';
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .m-what-i-do {
+      margin: 0;
+      padding: 5rem 0;
     }
   }
 </style>

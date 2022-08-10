@@ -27,7 +27,7 @@
 
   .m-about-me {
     background: #f2fbfa;
-    padding: 5rem 0;
+    padding: 2.5rem 1rem;
 
     h2 {
       color: #1e2425;
@@ -36,6 +36,12 @@
       font-weight: 500;
       line-height: 32px;
       margin: 0 0 1rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .m-about-me {
+      padding: 5rem 0;
     }
   }
 </style>

@@ -53,7 +53,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
   .m-headline {
-    padding: 5rem 0;
+    margin: 0 1rem;
+    padding: 2.5rem 0;
 
     h1 {
       color: #1e2425;
@@ -98,6 +99,13 @@
 
     &__avatar {
       fill: #94d31b;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .m-headline {
+      margin: 0;
+      padding: 5rem 0;
     }
   }
 </style>
