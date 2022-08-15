@@ -10,7 +10,7 @@
           </div>
         </div>
         <article class="media" v-for="bookmark in month.bookmarks" :key="bookmark.node.id">
-          <figure class="media-left">
+          <figure class="media-left is-hidden-touch">
             <p class="image is-32x32">
               <g-image src="~/assets/img/icons/youtube.svg" v-if="bookmark.node.openGraph.ogType == 'video.other'" />
               <g-image src="~/assets/img/icons/bookmark.svg" v-else />
@@ -67,7 +67,8 @@
 
 <style lang="scss" scoped>
   .m-bookmarks {
-    padding: 5rem 0;
+    margin: 0 1rem;
+    padding: 2.5rem 0;
   }
 
   .m-pagination {
@@ -87,6 +88,13 @@
 
     a:hover {
       color: black;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .m-bookmarks {
+      margin: 0;
+      padding: 5rem 0;
     }
   }
 </style>
