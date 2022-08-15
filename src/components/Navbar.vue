@@ -12,6 +12,7 @@
       <div class="navbar-end">
         <g-link class="navbar-item" to="/" exact-active-class="is-exact">Home</g-link>
         <g-link class="navbar-item" to="/blog/" active-class="is-active" exact-active-class="is-exact">Blog</g-link>
+        <g-link class="navbar-item" to="/bookmarks/" active-class="is-active" exact-active-class="is-exact">Bookmarks</g-link>
         <g-link class="navbar-item" to="/resume/" exact-active-class="is-exact">Resume</g-link>
       </div>
     </div>
