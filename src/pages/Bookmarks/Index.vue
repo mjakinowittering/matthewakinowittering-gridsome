@@ -21,6 +21,7 @@
           }
           openGraph {
             ogTitle
+            ogType
             ogDescription
           }
         }
