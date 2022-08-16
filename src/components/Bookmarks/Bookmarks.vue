@@ -12,8 +12,8 @@
         <article class="media" v-for="bookmark in month.bookmarks" :key="bookmark.node.id">
           <figure class="media-left is-hidden-touch">
             <p class="image is-32x32">
-              <g-image src="~/assets/img/icons/youtube.svg" v-if="bookmark.node.openGraph.ogType == 'video.other'" />
-              <g-image src="~/assets/img/icons/bookmark.svg" v-else />
+              <g-image src="~/assets/img/icons/bookmark-video.svg" v-if="bookmark.node.openGraph.ogType == 'video.other'" />
+              <g-image src="~/assets/img/icons/bookmark-article.svg" v-else />
             </p>
           </figure>
           <div class="media-content">
