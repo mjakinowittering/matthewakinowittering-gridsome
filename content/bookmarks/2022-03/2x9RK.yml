@@ -16,4 +16,4 @@ openGraph:
     url: https://www.mindtheproduct.com/wp-content/uploads/2013/08/narrative.jpg
     width: '1024'
     height: '683'
-    type: null
+    type: image/jpeg

@@ -29,9 +29,9 @@ async function crawlSavedio(page, limit, totalCount, numOfResults) {
       console.log(`Retrieved page ${page} of ${Math.ceil(totalCount / limit)}`)
 
       for (let rawBookmarkObj of axiosResponse.data) {
-        let bookmarkPublishedDateObj = new Date(rawBookmarkObj.bk_date)
-        let bookmarkPublishedId = getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj)
-        let bookmarkSubDirectory = `${pathBase}/content/bookmarks/${bookmarkPublishedDateObj.getFullYear()}-${padString(bookmarkPublishedDateObj.getMonth())}`
+        let bookmarkPublishedDateObj = getDatetimeInTimezone(rawBookmarkObj.bk_date, 'Europe/London')
+        let bookmarkPublishedId = getFirstDayOfMonthUnixtime(bookmarkPublishedDateObj, 'Europe/London')
+        let bookmarkSubDirectory = `${pathBase}/content/bookmarks/${bookmarkPublishedDateObj.getFullYear()}-${padString(bookmarkPublishedDateObj.getMonth() + 1)}`
         let bookmarkPath = `${bookmarkSubDirectory}/${rawBookmarkObj.bk_id}.yml`
 
         if (pathExists(bookmarkSubDirectory) === false) {
@@ -67,13 +67,37 @@ async function crawlSavedio(page, limit, totalCount, numOfResults) {
 }
 
 
-function getFirstDayOfMonthUnixtime(dateObj) {
+function getDatetimeInTimezone(date, timeZone) {
+  if (typeof date === 'string') {
+    return new Date(
+      new Date(date).toLocaleString('en-US', {
+        timeZone,
+      }),
+    )
+  }
+
+  return new Date(
+    date.toLocaleString('en-US', {
+      timeZone,
+    }),
+  )
+}
+
+
+function getFirstDayOfMonthUnixtime(dateObj, timeZone) {
   let firstDayCurrentMonth = new Date(
     dateObj.getFullYear(),
     dateObj.getMonth(),
     1
   )
-  return unixtime = firstDayCurrentMonth.getTime() / 1000
+
+  let firstDayCurrentMonthInTimezone = new Date(
+    firstDayCurrentMonth.toLocaleString('en-US', {
+      timeZone,
+    }),
+  )
+
+  return unixtime = firstDayCurrentMonthInTimezone.getTime() / 1000
 }
 
 

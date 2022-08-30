@@ -13,9 +13,9 @@ openGraph:
     effectiv...
   ogType: video.other
   ogImage:
-    url: https://i.ytimg.com/vi/Uxmzb-sn3mc/hqdefault.jpg
-    width: '480'
-    height: '360'
+    url: https://i.ytimg.com/vi/Uxmzb-sn3mc/maxresdefault.jpg
+    width: '1280'
+    height: '720'
     type: null
   ogVideo:
     url: https://www.youtube.com/embed/Uxmzb-sn3mc

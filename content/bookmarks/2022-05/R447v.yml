@@ -17,4 +17,4 @@ openGraph:
       https://www.mindtheproduct.com/wp-content/uploads/2017/03/shutterstock_535148437-scaled.jpg
     width: '2560'
     height: '1920'
-    type: null
+    type: image/jpeg

@@ -13,9 +13,9 @@ openGraph:
     could ru...
   ogType: video.other
   ogImage:
-    url: https://i.ytimg.com/vi/o0l9-EGCHm0/hqdefault.jpg
-    width: '480'
-    height: '360'
+    url: https://i.ytimg.com/vi/o0l9-EGCHm0/maxresdefault.jpg
+    width: '1280'
+    height: '720'
     type: null
   ogVideo:
     url: https://www.youtube.com/embed/o0l9-EGCHm0
