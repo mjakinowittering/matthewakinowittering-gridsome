@@ -116,12 +116,12 @@ function pathExists(pathStr) {
 
 
 // ----------------------------------------------------------------------------
-// Variables required for writing to file system.
+// Load environment variables.
 dotenv.config()
+
+// Variables required for writing to file system.
 const pathBase = process.cwd()
 
-
-// ----------------------------------------------------------------------------
 // Variables required for Saved.io.
 let page = 1
 let limit = 10
