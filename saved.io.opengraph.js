@@ -1,5 +1,6 @@
 // ----------------------------------------------------------------------------
 // 3rd Party Modules.
+const dotenv = require('dotenv')
 const fs = require('fs')
 const ogs = require('open-graph-scraper')
 const yaml = require('js-yaml')
@@ -25,26 +26,36 @@ function crawlFileSystem() {
       if (bookmarkObj.openGraph === undefined) {
         let ogsPayload = {
           onlyGetOpenGraphInfo: true,
-          url: bookmarkObj.url
+          url: bookmarkObj.url,
+          headers: {
+            "user-agent": process.env.OPENGRAPHSCRAPER_USERAGENT
+          }
         }
 
-        bookmarkObj.openGraph = ogs(ogsPayload)
+        ogs(ogsPayload)
+          .then((data) => {
+            const { error, result } = data;
 
-        ogs(ogsPayload).then((data) => {
-          const { result } = data;
+            if (error === false) {
+              bookmarkObj.openGraph = Object.fromEntries(
+                Object.entries(result).filter(([key]) => key.startsWith('og'))
+              )
 
-          bookmarkObj.openGraph = Object.fromEntries(
-            Object.entries(result).filter(([key]) => key.startsWith('og'))
-          )
+              fs.writeFileSync(
+                bookmarkPath,
+                yaml.dump(bookmarkObj),
+                'utf8'
+              )
 
-          fs.writeFileSync(
-            bookmarkPath,
-            yaml.dump(bookmarkObj),
-            'utf8'
-          )
-
-          console.log(`Updated: ${bookmarkPath}`)
-        })
+              console.log(`Updated: ${bookmarkPath}`)
+            }
+          })
+          .catch(error => {
+            console.error({
+              'file': bookmarkPath,
+              'error': error
+            })
+          })
       }
     }
   }
@@ -85,6 +96,10 @@ function getFilesInDirectory(directoryName) {
 
 
 // ----------------------------------------------------------------------------
+// Load environment variables.
+dotenv.config()
+
+
 // Variables required for writing to file system.
 const pathBase = process.cwd()
 
