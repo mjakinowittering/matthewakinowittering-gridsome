@@ -9,7 +9,6 @@ figure:
   alt: Open book
   url: https://unsplash.com/photos/q_gjDWf9ths
 publishedAt: 2021-11-06T00:00:00.000Z
-publishedMonth: 1636156800
 ---
 I have found listening to Roman Pichler's book "[How to Lead in Product Management](https://www.audible.co.uk/pd/How-to-Lead-in-Product-Management-Audiobook/B08FCWFLZM)" a great help. From my perspective, I believe the vast majority of books and training materials that I'd found to date for product management had too narrow a focus on the product vision, discovery, requirements, planning and execution.
 

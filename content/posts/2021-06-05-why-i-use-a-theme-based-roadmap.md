@@ -9,7 +9,6 @@ figure:
   alt: Winnats Pass, Hope Valley, United Kingdom
   url: https://unsplash.com/photos/x1w_Q78xNEY
 publishedAt: 2021-06-05T00:00:00.000Z
-publishedMonth: 1622847600
 ---
 If you're a Product Manager, you've likely had requests to display your roadmap as a Gantt chart and forecast delivery dates. These requests will come from managers and stakeholders who wish to track the planned outputs against deadlines or due to legacy Project Management Office behaviours.
 

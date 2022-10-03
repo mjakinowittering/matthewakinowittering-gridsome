@@ -75,12 +75,6 @@ module.exports = {
       options: {
         typeName: 'Post',
         path: './content/posts/*.md',
-        refs: {
-          publishedMonth: {
-            typeName: 'PostPublished',
-            create: true
-          }
-        },
         remark: {
           plugins: [
             [

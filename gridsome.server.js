@@ -40,13 +40,6 @@ const publishedAtResolver = {
 module.exports = function (api) {
   api.loadSource(async actions => {
     actions.addSchemaResolvers({
-      PostPublished: {
-        publishedAt: publishedAtResolver
-      }
-    })
-
-
-    actions.addSchemaResolvers({
       BookmarkPublished: {
         publishedAt: publishedAtResolver
       }
