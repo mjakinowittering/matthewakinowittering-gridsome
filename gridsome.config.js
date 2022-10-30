@@ -80,7 +80,8 @@ module.exports = {
             [
               '@noxify/gridsome-plugin-remark-embed', {
                 'enabledProviders': [
-                  'Twitter'
+                  'Twitter',
+                  'Youtube'
                 ],
                 'Twitter': {
                     align: 'center',
