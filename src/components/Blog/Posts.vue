@@ -7,7 +7,7 @@
           <PostCard :post="post" v-else />
         </div>
       </div>
-      <Pager :info="posts.pageInfo"/>
+      <Pager class="m-pagination" :info="posts.pageInfo"/>
     </div>
   </div>
 </template>
@@ -55,3 +55,27 @@
     }
   }
 </script>
+
+
+<style lang="scss" scoped>
+  .m-pagination {
+    display: inline-flex;
+    margin: 2rem 0 0;
+    padding: 0;
+
+    a {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0;
+      padding: 0.75rem;
+    }
+
+    a.active--exact {
+      color: black;
+    }
+
+    a:hover {
+      color: black;
+    }
+  }
+</style>
