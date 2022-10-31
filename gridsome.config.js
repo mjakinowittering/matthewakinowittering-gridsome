@@ -87,6 +87,9 @@ module.exports = {
                     hideConversation: true
                 }
               }
+            ],
+            [
+              'gridsome-plugin-remark-youtube'
             ]
           ]
         }
