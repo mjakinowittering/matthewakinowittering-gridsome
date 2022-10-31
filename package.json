@@ -17,7 +17,6 @@
     "axios": "^0.27.2",
     "bulma": "^0.9.4",
     "gridsome": "^0.7.23",
-    "gridsome-plugin-remark-youtube": "^1.0.1",
     "gridsome-plugin-robots-txt": "^1.0.2",
     "js-yaml": "^4.1.0",
     "moment-timezone": "^0.5.34",
