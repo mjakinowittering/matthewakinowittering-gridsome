@@ -3,6 +3,7 @@
     <Headline />
     <AboutMe />
     <WhatIDo />
+    <ExternalLinks />
   </Layout>
 </template>
 
@@ -11,6 +12,7 @@
   import Headline from '~/components/Home/Headline.vue'
   import AboutMe from '~/components/Home/AboutMe.vue'
   import WhatIDo from '~/components/Home/WhatIDo.vue'
+  import ExternalLinks from '~/components/Home/ExternalLinks.vue'
   export default {
     metaInfo() {
       return {
@@ -20,7 +22,8 @@
     components: {
       Headline,
       AboutMe,
-      WhatIDo
+      WhatIDo,
+      ExternalLinks
     }
   }
 </script>
