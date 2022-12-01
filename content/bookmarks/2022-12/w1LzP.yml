@@ -1,0 +1,36 @@
+id: w1LzP
+url: https://www.youtube.com/watch?v=lJfU4l6A_-M
+title: Product Management in Practice with Matt LeMay
+createdAt: '2022-12-01T06:12:33.000Z'
+publishedMonth: 1669852800
+openGraph:
+  - - '0'
+    - - ogSiteName
+      - YouTube
+  - - '1'
+    - - ogUrl
+      - https://www.youtube.com/watch?v=lJfU4l6A_-M
+  - - '2'
+    - - ogTitle
+      - Product Management in Practice with Matt LeMay
+  - - '3'
+    - - ogDescription
+      - >-
+        What does the day-to-day life of a successful product manager look like?
+        How do you avoid burnout? What does the role now look like in the era of
+        remote and ...
+  - - '4'
+    - - ogType
+      - video.other
+  - - '5'
+    - - ogImage
+      - url: https://i.ytimg.com/vi/lJfU4l6A_-M/maxresdefault.jpg
+        width: '1280'
+        height: '720'
+        type: null
+  - - '6'
+    - - ogVideo
+      - url: https://www.youtube.com/embed/lJfU4l6A_-M
+        width: '1280'
+        height: '720'
+        type: text/html
