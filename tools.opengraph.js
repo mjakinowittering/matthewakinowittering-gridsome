@@ -37,7 +37,7 @@ function crawlFileSystem() {
             const { error, result } = data;
 
             if (error === false) {
-              bookmarkObj.openGraph = Object.fromEntries(
+              bookmarkObj.openGraph = Object.entries(
                 Object.entries(result).filter(([key]) => key.startsWith('og'))
               )
 
