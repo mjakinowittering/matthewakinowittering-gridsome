@@ -1,0 +1,24 @@
+id: YLJBL
+url: https://www.youtube.com/watch?v=Et4H4Ty1qhQ
+title: What is Jobs-to-be-Done?
+createdAt: '2023-01-22T03:08:02.000Z'
+publishedMonth: 1672531200
+openGraph:
+  ogSiteName: YouTube
+  ogUrl: https://www.youtube.com/watch?v=Et4H4Ty1qhQ
+  ogTitle: What is Jobs-to-be-Done?
+  ogDescription: >-
+    Jobs-to-be-Done (JTBD) is best defined as a perspective — a powerful lens
+    through which companies can observe markets, customer needs, competitors,
+    and marke...
+  ogType: video.other
+  ogImage:
+    url: https://i.ytimg.com/vi/Et4H4Ty1qhQ/maxresdefault.jpg
+    width: '1280'
+    height: '720'
+    type: null
+  ogVideo:
+    url: https://www.youtube.com/embed/Et4H4Ty1qhQ
+    width: '1280'
+    height: '720'
+    type: text/html
