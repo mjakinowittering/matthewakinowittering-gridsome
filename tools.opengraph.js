@@ -29,7 +29,8 @@ function crawlFileSystem() {
           url: bookmarkObj.url,
           headers: {
             "user-agent": process.env.OPENGRAPHSCRAPER_USERAGENT
-          }
+          },
+          downloadLimit: parseInt(process.env.OPENGRAPHSCRAPER_DOWNLOADLIMIT)
         }
 
         ogs(ogsPayload)
