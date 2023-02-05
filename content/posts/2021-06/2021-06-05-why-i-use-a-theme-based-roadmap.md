@@ -1,8 +1,6 @@
 ---
 title: Why I use a theme-based roadmap
 subtype: post
-authors:
-  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
   img: ./img/2021-06-05-why-i-use-a-theme-based-roadmap.jpg

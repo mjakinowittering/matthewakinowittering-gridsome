@@ -1,8 +1,6 @@
 ---
 title: Product Managers aren't simply interested in outputs but positive outcomes for their customers
 subtype: post
-authors:
-  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
   img: ./img/2022-10-28-product-managers-arent-simply-interested-in-outputs-but-positive-outcomes-for-their-customers.jpg

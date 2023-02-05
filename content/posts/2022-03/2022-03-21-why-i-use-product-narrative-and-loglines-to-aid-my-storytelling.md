@@ -1,8 +1,6 @@
 ---
 title: Why I use Product Narrative and Loglines to aid my storytelling
 subtype: post
-authors:
-  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
   img: ./img/2022-03-21-why-i-use-product-narrative-and-loglines-to-aid-my-storytelling.jpg

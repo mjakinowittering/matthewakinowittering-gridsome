@@ -1,8 +1,6 @@
 ---
 title: Working Backwards From A Fake Press Release
 subtype: post
-authors:
-  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
   img: ./img/2021-04-23-working-backwards-from-a-fake-press-release.jpg

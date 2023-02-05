@@ -1,8 +1,6 @@
 ---
 title: Are you abusing the term, Minimum Viable Product?
 subtype: post
-authors:
-  - Matthew Akino-Wittering
 figure:
   caption: Unsplash
   img: ./img/2021-09-24-are-you-abusing-the-term-minimum-viable-product.jpg
