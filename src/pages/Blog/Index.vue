@@ -19,7 +19,6 @@
           path
           title
           subtype
-          authors
           figure {
             caption
             img
