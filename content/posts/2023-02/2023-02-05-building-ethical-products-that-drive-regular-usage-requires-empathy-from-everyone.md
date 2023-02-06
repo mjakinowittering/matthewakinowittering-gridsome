@@ -4,8 +4,8 @@ subtype: post
 figure:
   caption: Unsplash
   img: ./img/2023-02-05-building-ethical-products-that-drive-regular-usage-requires-empathy-from-everyone.jpg
-  alt:
-  url:
+  alt: Morning coffee in coffee shop
+  url: https://unsplash.com/photos/4FZr7coEb4E
 publishedAt: 2023-02-05T00:00:00.000Z
 ---
 To continue the theme of trying to open up Product Management to a broad audience, I thought it worth exploring why I believe collaboration, empathy, and honesty are the hallmarks of organisations that create products with highly engaged users.
@@ -22,4 +22,6 @@ https://twitter.com/gbufremsays/status/1605973420864180227
 
 If we're all working in concert, we can get under the skin of the problems that matter. We can then move forward and explore how we'll solve them. That requires a two-way conversation with both disciplines sharing crucial information to develop a shared understanding and begin the journey to a [Product-led organisation](https://www.pendo.io/product-led/). Additionally, it will need collaboration with the customer to support further problem discovery and confirmation. It is challenging, but we need to cut through this cacophony of noise to extract the necessary information to solve the problems that resonate with our users. The objective must be to create a delightful experience that triggers habitual usage by our users.
 
-Lastly, if we identify what's truly important to our customers, we'll see the results in our data. So we're looking to build new capabilities that create an ethical mental trigger that results in the user returning to our product once we've had that 'Aha' moment—for example, checking their daily sales revenue via several online stores and the quantity attributed to advertising, promotions and subscriptions. We should then be able to monitor feature adoption via product dashboards, Weekly Active Users, Monthly Active Users and changes to Annual Recurring Revenue. If you want to learn more, I highly recommend reading [Hooked by Nir Eyal](https://amzn.to/3YIql7J) to explore how you may build habit-forming products.
+Lastly, if we identify what's truly important to our customers, we'll see the results in our data. So we're looking to build new capabilities that create an ethical mental trigger that results in the user returning to our product once we've had that 'Aha' moment—for example, checking their daily sales revenue via several online stores and the quantity attributed to advertising, promotions and subscriptions. We should then be able to monitor feature adoption via product dashboards highlighting Weekly Active Users, Monthly Active Users and changes to Annual Recurring Revenue. If you want to learn more, I highly recommend reading [Hooked by Nir Eyal](https://amzn.to/3YIql7J) to explore how you may build habit-forming products.
+
+I hope the above was insightful and that you'll consider leaning in further to share your perspective with a Product Manager in your company over a cup of coffee.
