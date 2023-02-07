@@ -20,14 +20,23 @@ $link: #2a898f;
   blockquote {
     background: #f2fbfa;
     border-left: 0.25rem solid #2a898f;
+    margin: 1.25rem 0;
   }
 
   figure:not(:first-child) {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   figure:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  figure {
+    figcaption {
+      color: #1e2425;
+      margin: 0.5rem 0 0;
+      width: auto;
+    }
   }
 
   hr {
@@ -70,8 +79,8 @@ $link: #2a898f;
   .twitter-embed {
     background: #f2fbfa;
     border-left: 0.25rem solid #2a898f;
-    margin-bottom: 1em;
-    padding: 1.25em 1.5em;
+    margin: 1.25rem 0;
+    padding: 1.25rem 1.5rem;
 
     blockquote {
       border: none;

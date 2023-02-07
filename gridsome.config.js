@@ -78,6 +78,9 @@ module.exports = {
         remark: {
           plugins: [
             [
+              "gridsome-remark-figure-caption"
+            ],
+            [
               '@noxify/gridsome-plugin-remark-embed', {
                 'enabledProviders': [
                   'Twitter'
@@ -106,9 +109,9 @@ module.exports = {
         sitemap: 'https://matthew.akinowittering.com/sitemap.xml',
         policy: [
           {
-            userAgent: "*",
+            userAgent: '*',
             allow: [
-              "/"
+              '/'
             ],
             disallow: [],
             crawlDelay: 10,
