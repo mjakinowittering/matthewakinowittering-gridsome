@@ -18,7 +18,7 @@ It will be challenging. Company leadership and the Sales team will push us to "B
 
 Increasingly, I view Sales and Customer Success as an extension to the core Product team—an intelligence network allowing us to draw on the broadest insight as they're speaking to customers more regularly than anyone from the Product team. As a result, you're more likely to be aware of changes in the market sooner, and various unmet customer needs they're confident we can fulfil. But, as Gabrielle says below, it's our job, Product Managers, to work with Sales.
 
-https://twitter.com/gbufremsays/status/1605973420864180227
+[https://twitter.com/gbufremsays/status/1605973420864180227](https://twitter.com/gbufremsays/status/1605973420864180227)
 
 If we're all working in concert, we can get under the skin of the problems that matter. We can then move forward and explore how we'll solve them. That requires a two-way conversation with both disciplines sharing crucial information to develop a shared understanding and begin the journey to a [Product-led organisation](https://www.pendo.io/product-led/). Additionally, it will need collaboration with the customer to support further problem discovery and confirmation. It is challenging, but we need to cut through this cacophony of noise to extract the necessary information to solve the problems that resonate with our users. The objective must be to create a delightful experience and ethical triggers that drive our users' regular usage.
 

@@ -22,7 +22,7 @@ In contrast, the role of a product manager is to provide information that ensure
 
 [Steve Jobs: The Lost Interview](https://youtu.be/rDqQcmVqAm4?t=2088) has a fantastic description of taking ideas, comments and feedback through a process where a team has the space to explore and polish those initial thoughts to become Usable, Valuable and Feasible products that customers love.
 
-That said, the team's output wouldn't always be new features. Instead, it could be better documentation, scaling to improve stability or bug fixing. Unfortunately, where an output-focused culture prevails, the product development teams are stuck "Building for the Sake of Building". Melissa Perri calls this situation [The Build Trap](https://melissaperri.com/blog/2014/08/05/the-build-trap).
+That said, the team's output wouldn’t always be new features. Instead, it could be better documentation, scaling to improve stability or bug fixing. Unfortunately, where an output-focused culture prevails, the product development teams are stuck "Building for the Sake of Building". Melissa Perri calls this situation [The Build Trap](https://melissaperri.com/blog/2014/08/05/the-build-trap).
 
 ![It's a Trap](./img/2022-10-28-its-a-trap.jpg)
 
