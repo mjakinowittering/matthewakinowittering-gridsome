@@ -12,8 +12,15 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        typeName: 'Block',
+        path: './content/blocks/*/*.md',
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         typeName: 'Company',
-        path: './content/companies/*.yml'
+        path: './content/companies/*.md'
       }
     },
     {

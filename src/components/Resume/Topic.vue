@@ -6,6 +6,7 @@
         <g-link :to="organisation.node.address">{{ organisation.node.name }}</g-link>
       </h3>
       <Timeframe :dateFrom="organisation.node.dateFrom" :dateTo="organisation.node.dateTo" v-if="organisation.node.events.edges.length > 1" />
+      <div class="m-topic__intro content" v-html="organisation.node.content"></div>
       <Timeline :events="organisation.node.events.edges" />
       <hr v-if="index != organisations.length - 1">
     </div>
@@ -59,6 +60,10 @@
         opacity: 0.2;
         width: 33%;
       }
+    }
+
+    &__intro {
+      margin: 1rem 0 0;
     }
   }
 </style>
