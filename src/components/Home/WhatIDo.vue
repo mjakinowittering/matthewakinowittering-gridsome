@@ -3,10 +3,8 @@
     <div class="container">
       <div class="columns">
         <div class="column is-two-thirds-desktop">
-          <h2>What I do</h2>
-          <div class="content">
-            <p>As a Product Manager, I am the voice of the customer on my Product Development team and work with design, engineering and quality assurance specialists to help them produce valuable solutions for our customers. In addition, I meet our clients regularly to evangelise our product.</p>
-          </div>
+          <h2>{{ $static.introduction.title }}</h2>
+          <div class="content" v-html="$static.introduction.content"></div>
         </div>
       </div>
       <div class="columns">
@@ -27,6 +25,10 @@
 
 <static-query>
   query {
+    introduction: block(id: "what-i-do") {
+      title
+      content
+    }
     skills: allSkill(sortBy: "index", order: ASC) {
       edges {
         node {

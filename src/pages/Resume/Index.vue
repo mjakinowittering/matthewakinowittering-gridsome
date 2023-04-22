@@ -4,9 +4,9 @@
       <div class="container">
         <div class="columns">
           <div class="column is-two-thirds-desktop">
-            <h1>{{ $page.resume.title }}</h1>
+            <h1>{{ $page.introduction.title }}</h1>
             <div class="m-story">
-              <div class="content" v-html="$page.resume.content"></div>
+              <div class="content" v-html="$page.introduction.content"></div>
             </div>
             <hr />
             <Topic title="Education" :organisations="$page.universities.edges" />
@@ -22,7 +22,7 @@
 
 <page-query>
   query {
-    resume: block(id: "resume") {
+    introduction: block(id: "resume") {
       title
       content
     }

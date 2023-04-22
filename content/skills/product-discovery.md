@@ -5,4 +5,4 @@ images:
   card:
     img: ./img/card/product-discovery-outline.svg
 ---
-I work with founders, customers, and colleagues to uncover and validate new opportunities. Whether they're unmet needs, pain points or desires. I then identify those worth pursuing beyond experimentation to realise a positive outcome via our product.
+I work with founders, customers, and colleagues to uncover the motivations behind apparent unmet needs, pain points or desires to become more knowledgeable about the problem space. Once armed with this information, I identify those worth pursuing beyond experimentation to realise a positive outcome via our product.
