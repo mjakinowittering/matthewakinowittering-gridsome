@@ -1,0 +1,24 @@
+id: QBjON
+url: https://www.youtube.com/watch?v=dxuS2ndsoNE
+title: Growing products during a recession - ProductTank London
+createdAt: '2023-03-31T07:50:59.000Z'
+publishedMonth: 1677628800
+openGraph:
+  ogSiteName: YouTube
+  ogUrl: https://www.youtube.com/watch?v=dxuS2ndsoNE
+  ogTitle: Growing products during a recession - ProductTank London
+  ogDescription: >-
+    We all know that times are tough right now - we're in a recession. But what
+    if there's a silver lining? Maybe this downturn is actually a chance for us
+    to su...
+  ogType: video.other
+  ogImage:
+    url: https://i.ytimg.com/vi/dxuS2ndsoNE/hqdefault.jpg
+    width: '480'
+    height: '360'
+    type: null
+  ogVideo:
+    url: https://www.youtube.com/embed/dxuS2ndsoNE
+    width: '1280'
+    height: '720'
+    type: text/html

@@ -1,0 +1,24 @@
+id: DoMjB
+url: https://www.youtube.com/watch?v=1Gs6PbgeU7o
+title: How to Prioritize Customer Needs with Dan Olsen
+createdAt: '2023-03-31T07:50:52.000Z'
+publishedMonth: 1677628800
+openGraph:
+  ogSiteName: YouTube
+  ogUrl: https://www.youtube.com/watch?v=1Gs6PbgeU7o
+  ogTitle: How to Prioritize Customer Needs with Dan Olsen
+  ogDescription: >-
+    We all know that most new product initiatives fail. A big reason for this is
+    that teams are often too focused on the solution they are building and
+    aren’t as...
+  ogType: video.other
+  ogImage:
+    url: https://i.ytimg.com/vi/1Gs6PbgeU7o/maxresdefault.jpg
+    width: '1280'
+    height: '720'
+    type: null
+  ogVideo:
+    url: https://www.youtube.com/embed/1Gs6PbgeU7o
+    width: '1280'
+    height: '720'
+    type: text/html
