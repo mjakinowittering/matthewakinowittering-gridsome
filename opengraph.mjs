@@ -1,9 +1,9 @@
 // ----------------------------------------------------------------------------
 // 3rd Party Modules.
-const dotenv = require('dotenv')
-const fs = require('fs')
-const ogs = require('open-graph-scraper')
-const yaml = require('js-yaml')
+import dotenv from 'dotenv'
+import fs from 'fs'
+import ogs from 'open-graph-scraper'
+import yaml from 'js-yaml'
 
 
 // ----------------------------------------------------------------------------
