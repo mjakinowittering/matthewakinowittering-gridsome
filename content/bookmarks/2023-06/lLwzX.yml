@@ -3,3 +3,16 @@ url: https://medium.com/on-human-centric-systems/one-page-one-hour-c064e27009ee
 title: One Page / One Hour
 createdAt: '2023-06-06T15:33:06.000Z'
 publishedMonth: 1685574000
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: One Page / One Hour
+  ogDescription: >-
+    A pledge to reduce busywork, increase collaboration, and drive better
+    outcomes
+  ogUrl: https://medium.com/on-human-centric-systems/one-page-one-hour-c064e27009ee
+  ogImage:
+    url: https://miro.medium.com/v2/resize:fit:1200/1*ZfBp7tGTsTb_q2iFvnW84Q.png
+    width: null
+    height: null
+    type: null

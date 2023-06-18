@@ -3,3 +3,17 @@ url: https://www.prodpad.com/blog/product-management-best-practices/
 title: 8 Lean Product Management Best Practices Inspired by Experts
 createdAt: '2023-06-12T07:50:00.000Z'
 publishedMonth: 1685574000
+openGraph:
+  ogLocale: en_US
+  ogType: article
+  ogTitle: 8 Lean Product Management Best Practices Inspired by Experts
+  ogDescription: >-
+    Implement these product management best practices into your product
+    strategy.
+  ogUrl: https://www.prodpad.com/blog/product-management-best-practices/
+  ogSiteName: ProdPad
+  ogImage:
+    url: https://www.prodpad.com/wp-content/uploads/2020/12/Best-practices.png
+    width: '2040'
+    height: '1100'
+    type: image/png

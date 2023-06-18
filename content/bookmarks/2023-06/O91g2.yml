@@ -4,3 +4,17 @@ url: >-
 title: Why Product Managers Should NEVER Divide by Effort When Prioritising
 createdAt: '2023-06-16T12:39:45.000Z'
 publishedMonth: 1685574000
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: Why Product Managers Should NEVER Divide by Effort When Prioritising
+  ogDescription: >-
+    I was recently chatting to a product leader about the perennial topic of
+    product prioritisation. Prioritisation is, of course, one of the…
+  ogUrl: >-
+    https://json-knight.medium.com/why-product-managers-should-never-divide-by-effort-when-prioritising-509c5fd97c20
+  ogImage:
+    url: https://miro.medium.com/v2/resize:fit:687/0*YZuTS2Rc41cgUdHJ.png
+    width: null
+    height: null
+    type: null

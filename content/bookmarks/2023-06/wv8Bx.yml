@@ -4,3 +4,17 @@ url: >-
 title: 'Gherkins: A better way of writing user stories'
 createdAt: '2023-06-12T07:48:21.000Z'
 publishedMonth: 1685574000
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: 'Gherkins: A better way of writing user stories'
+  ogDescription: >-
+    User stories are an Agile technique of defining product functionality and
+    requirements. They focus on telling a story for an action a user…
+  ogUrl: >-
+    https://bootcamp.uxdesign.cc/gherkins-a-better-way-of-writing-stories-336375c22195
+  ogImage:
+    url: https://miro.medium.com/v2/resize:fit:1200/1*bMJptIivOKdOjuHQs2OOQQ.jpeg
+    width: null
+    height: null
+    type: null

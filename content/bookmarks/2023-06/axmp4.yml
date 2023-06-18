@@ -3,3 +3,19 @@ url: https://fs.blog/remember-books/
 title: How to Remember What You Read
 createdAt: '2023-06-12T07:50:54.000Z'
 publishedMonth: 1685574000
+openGraph:
+  ogLocale: en_US
+  ogType: article
+  ogTitle: How to Remember What You Read
+  ogDescription: >-
+    The benefits of reading are negated if you forget remember what you read.
+    This article discusses a tested system to increase retention. Learn how to
+    use active reading to remember more from books.
+  ogUrl: https://fs.blog/remember-books/
+  ogSiteName: Farnam Street
+  ogImage:
+    url: >-
+      https://149664534.v2.pressablecdn.com/wp-content/uploads/2021/10/How-to-Remember-What-You-Read.png
+    width: '2000'
+    height: '2000'
+    type: image/png

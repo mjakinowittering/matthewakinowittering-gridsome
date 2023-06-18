@@ -4,3 +4,17 @@ url: >-
 title: Three Mindsets that Can Cripple Product Managers
 createdAt: '2023-06-12T07:48:59.000Z'
 publishedMonth: 1685574000
+openGraph:
+  ogSiteName: Medium
+  ogType: article
+  ogTitle: Three Mindsets that Can Cripple Product Managers
+  ogDescription: >-
+    One thing I touched on in a recent talk, and has come up a few times
+    recently, is the concept of the mindsets that product managers and…
+  ogUrl: >-
+    https://json-knight.medium.com/three-mindsets-that-can-cripple-product-managers-7b343b279d6d
+  ogImage:
+    url: https://miro.medium.com/v2/resize:fit:1069/0*exOJccCvbcMlL1fw.png
+    width: null
+    height: null
+    type: null
