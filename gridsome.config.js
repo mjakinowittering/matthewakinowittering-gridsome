@@ -13,7 +13,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Block',
-        path: './content/blocks/*/*.md',
+        path: './content/blocks/*/*.md'
       }
     },
     {
@@ -84,17 +84,14 @@ module.exports = {
         path: './content/posts/*/*.md',
         remark: {
           plugins: [
+            ['gridsome-remark-figure-caption'],
             [
-              "gridsome-remark-figure-caption"
-            ],
-            [
-              '@noxify/gridsome-plugin-remark-embed', {
-                'enabledProviders': [
-                  'Twitter'
-                ],
-                'Twitter': {
-                    align: 'center',
-                    hideConversation: true
+              '@noxify/gridsome-plugin-remark-embed',
+              {
+                enabledProviders: ['Twitter'],
+                Twitter: {
+                  align: 'center',
+                  hideConversation: true
                 }
               }
             ]
@@ -117,11 +114,9 @@ module.exports = {
         policy: [
           {
             userAgent: '*',
-            allow: [
-              '/'
-            ],
+            allow: ['/'],
             disallow: [],
-            crawlDelay: 10,
+            crawlDelay: 10
           }
         ]
       }
@@ -152,6 +147,6 @@ module.exports = {
     }
   ],
   templates: {
-    Post: '/blog/:title/',
+    Post: '/blog/:title/'
   }
 }

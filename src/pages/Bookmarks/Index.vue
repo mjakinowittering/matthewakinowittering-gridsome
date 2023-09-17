@@ -4,7 +4,6 @@
   </Layout>
 </template>
 
-
 <page-query>
   query($page: Int) {
     bookmarks: allBookmark(filter: {}, sortBy: "createdAt", order: DESC, perPage: 10, page: $page) @paginate {
@@ -30,17 +29,16 @@
   }
 </page-query>
 
-
 <script>
-  import Bookmarks from '~/components/Bookmarks/Bookmarks.vue'
-  export default {
-    metaInfo() {
-      return {
-        title: 'Bookmarks',
-      }
-    },
-    components: {
-      Bookmarks
+import Bookmarks from '~/components/Bookmarks/Bookmarks.vue'
+export default {
+  metaInfo() {
+    return {
+      title: 'Bookmarks'
     }
+  },
+  components: {
+    Bookmarks
   }
+}
 </script>

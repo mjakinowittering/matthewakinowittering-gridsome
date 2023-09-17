@@ -4,15 +4,12 @@
   </div>
 </template>
 
-
 <script>
-  import Event from '~/components/Resume/Event.vue'
-  export default {
-    props: [
-      'events'
-    ],
-    components: {
-      Event
-    }
+import Event from '~/components/Resume/Event.vue'
+export default {
+  props: ['events'],
+  components: {
+    Event
   }
+}
 </script>

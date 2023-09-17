@@ -6,41 +6,37 @@
   </div>
 </template>
 
-
 <script>
-  import Timeframe from '~/components/Resume/Timeframe.vue'
-  export default {
-    props: [
-      "event"
-    ],
-    components: {
-      Timeframe
-    }
+import Timeframe from '~/components/Resume/Timeframe.vue'
+export default {
+  props: ['event'],
+  components: {
+    Timeframe
   }
+}
 </script>
 
-
 <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-  .m-event {
-    margin: 0 0 1.5rem;
+.m-event {
+  margin: 0 0 1.5rem;
 
-    h4 {
-      color: #1e2425;
-      font-family: 'Poppins', sans-serif;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 24px;
-      margin: 0;
-    }
-
-    .content {
-      margin: 1rem 0 0;
-    }
+  h4 {
+    color: #1e2425;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0;
   }
 
-  .m-event:first-child {
-    margin: 1.5rem 0 1.5rem;
+  .content {
+    margin: 1rem 0 0;
   }
+}
+
+.m-event:first-child {
+  margin: 1.5rem 0 1.5rem;
+}
 </style>

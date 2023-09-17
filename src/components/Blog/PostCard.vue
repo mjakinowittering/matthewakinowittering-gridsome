@@ -22,47 +22,43 @@
   </div>
 </template>
 
-
 <script>
-  export default {
-    props: [
-      "post"
-    ]
-  }
+export default {
+  props: ['post']
+}
 </script>
 
-
 <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-  .m-post-card {
-    background: #f2fbfa;
-    width: 100%;
+.m-post-card {
+  background: #f2fbfa;
+  width: 100%;
 
-    figure {
-      position: relative;
+  figure {
+    position: relative;
 
-      figcaption {
-        background: #2a898f;
-        bottom: 0;
+    figcaption {
+      background: #2a898f;
+      bottom: 0;
+      color: #ffffff;
+      left: 0;
+      padding: 0.25rem 0.5rem;
+      position: absolute;
+      width: auto;
+
+      a {
         color: #ffffff;
-        left: 0;
-        padding: 0.25rem 0.5rem;
-        position: absolute;
-        width: auto;
-
-        a {
-          color: #ffffff;
-        }
       }
     }
-
-    h3 {
-      color: #1e2425;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-      line-height: 24px;
-      margin: 1rem;
-    }
   }
+
+  h3 {
+    color: #1e2425;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 1rem;
+  }
+}
 </style>

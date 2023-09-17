@@ -10,7 +10,11 @@
                 <span class="icon">
                   <i :class="externalLink.node.icon"></i>
                 </span>
-                <span><a :href="externalLink.node.url" target="_blank">{{ externalLink.node.title }}</a></span>
+                <span
+                  ><a :href="externalLink.node.url" target="_blank">{{
+                    externalLink.node.title
+                  }}</a></span
+                >
               </span>
             </li>
           </ol>
@@ -19,7 +23,6 @@
     </div>
   </div>
 </template>
-
 
 <static-query>
   query {
@@ -35,55 +38,51 @@
   }
 </static-query>
 
-
 <script>
-  export default {
-  }
+export default {}
 </script>
 
-
-
 <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-  .m-external-links {
-    background: #f2fbfa;
-    padding: 2.5rem 1rem;
+.m-external-links {
+  background: #f2fbfa;
+  padding: 2.5rem 1rem;
 
-    h2 {
+  h2 {
+    color: #1e2425;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin: 0 0 1.5rem;
+  }
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
       color: #1e2425;
       font-family: 'Poppins', sans-serif;
-      font-size: 32px;
+      font-size: 20px;
       font-weight: 500;
-      line-height: 32px;
-      margin: 0 0 1.5rem;
-    }
+      line-height: 20px;
+      margin: 2rem 0 0;
 
-    ol {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      li {
-        color: #1e2425;
-        font-family: 'Poppins', sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 20px;
-        margin: 2rem 0 0;
-
-        span.icon-text {
-          span.icon {
-            margin: 0 0.5rem 0 0;
-          }
+      span.icon-text {
+        span.icon {
+          margin: 0 0.5rem 0 0;
         }
       }
     }
   }
+}
 
-  @media screen and (min-width: 1024px) {
-    .m-about-me {
-      padding: 5rem 0;
-    }
+@media screen and (min-width: 1024px) {
+  .m-about-me {
+    padding: 5rem 0;
   }
+}
 </style>

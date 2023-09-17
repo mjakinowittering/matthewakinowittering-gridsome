@@ -3,12 +3,10 @@
 $primary: #2a898f;
 $link: #2a898f;
 
-
 // Importing 3rd Party Libraries ----------------------------------------------
 @import '../../../node_modules/bulma/bulma.sass';
 @import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
-
 
 // Content --------------------------------------------------------------------
 .content {
@@ -59,7 +57,8 @@ $link: #2a898f;
     margin: 0;
   }
 
-  ul, ol {
+  ul,
+  ol {
     margin: 0 0 0 2.5rem;
 
     li {

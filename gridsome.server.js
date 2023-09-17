@@ -6,7 +6,6 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 const moment = require('moment-timezone')
 
-
 const domainResolver = {
   type: 'String',
   resolve(obj) {
@@ -15,7 +14,6 @@ const domainResolver = {
     return urlObj.hostname.replace('www.', '')
   }
 }
-
 
 const publishedAtResolver = {
   type: 'Date',
@@ -29,22 +27,26 @@ const publishedAtResolver = {
     const dateFormat = 'YYYY-MM-DDTHH:mm:ssZ'
 
     if (args.format) {
-      return moment.unix(obj.id).tz(tzFormat).format(args.format)
+      return moment
+        .unix(obj.id)
+        .tz(tzFormat)
+        .format(args.format)
     } else {
-      return moment.unix(obj.id).tz(tzFormat).format(dateFormat)
+      return moment
+        .unix(obj.id)
+        .tz(tzFormat)
+        .format(dateFormat)
     }
   }
 }
 
-
-module.exports = function (api) {
+module.exports = function(api) {
   api.loadSource(async actions => {
     actions.addSchemaResolvers({
       BookmarkPublished: {
         publishedAt: publishedAtResolver
       }
     })
-
 
     actions.addSchemaResolvers({
       Bookmark: {

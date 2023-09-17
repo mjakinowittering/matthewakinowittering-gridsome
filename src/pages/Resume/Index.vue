@@ -19,7 +19,6 @@
   </Layout>
 </template>
 
-
 <page-query>
   query {
     introduction: block(id: "resume") {
@@ -76,77 +75,75 @@
   }
 </page-query>
 
-
 <script>
-  import moment from 'moment';
-  import Topic from '~/components/Resume/Topic.vue'
-  export default {
-    metaInfo() {
-      return {
-        title: 'Resume',
-      }
-    },
-    components: {
-      Topic
-    },
-    data() {
-      return {
-        productManager: {
-          dateSince: new Date('2010-06-01T00:00:00+0000')
-        }
-      }
-    },
-    methods: {
-      timeSinceBecomingProductManager() {
-        return moment(this.productManager.dateSince).fromNow('y')
-      },
-      monthBecameProductManager() {
-        return this.productManager.dateSince.toLocaleString('default', { month: 'long' })
-      },
-      yearBecameProductManager() {
-        return this.productManager.dateSince.toLocaleString('default', { year: 'numeric' })
-      },
-      timeSinceBecomingProductManagerTitle() {
-        return `I've worked in Product Management roles since ${this.monthBecameProductManager()} ${this.yearBecameProductManager()}`
+import moment from 'moment'
+import Topic from '~/components/Resume/Topic.vue'
+export default {
+  metaInfo() {
+    return {
+      title: 'Resume'
+    }
+  },
+  components: {
+    Topic
+  },
+  data() {
+    return {
+      productManager: {
+        dateSince: new Date('2010-06-01T00:00:00+0000')
       }
     }
+  },
+  methods: {
+    timeSinceBecomingProductManager() {
+      return moment(this.productManager.dateSince).fromNow('y')
+    },
+    monthBecameProductManager() {
+      return this.productManager.dateSince.toLocaleString('default', { month: 'long' })
+    },
+    yearBecameProductManager() {
+      return this.productManager.dateSince.toLocaleString('default', { year: 'numeric' })
+    },
+    timeSinceBecomingProductManagerTitle() {
+      return `I've worked in Product Management roles since ${this.monthBecameProductManager()} ${this.yearBecameProductManager()}`
+    }
   }
+}
 </script>
 
-
 <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+.m-resume {
+  margin: 0 1rem;
+  padding: 2.5rem 0;
+
+  h1 {
+    color: #1e2425;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 36px;
+    margin: 0;
+  }
+
+  .m-story {
+    margin: 1.5rem 0 0;
+  }
+
+  hr {
+    background: none;
+    border-top: 0.15rem solid #2a898f;
+    margin: 3rem auto;
+    opacity: 0.2;
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .m-resume {
-    margin: 0 1rem;
-    padding: 2.5rem 0;
-
-    h1 {
-      color: #1e2425;
-      font-family: 'Poppins', sans-serif;
-      font-size: 36px;
-      font-weight: 500;
-      line-height: 36px;
-      margin: 0;
-    }
-
-    .m-story {
-      margin: 1.5rem 0 0;
-    }
-
-    hr {
-      background: none;
-      border-top: 0.15rem solid #2a898f;
-      margin: 3rem auto;
-      opacity: 0.2;
-      width: 33%;
-    }
+    margin: 0;
+    padding: 5rem 0;
   }
-
-  @media screen and (min-width: 1024px) {
-    .m-resume {
-      margin: 0;
-      padding: 5rem 0;
-    }
-  }
+}
 </style>

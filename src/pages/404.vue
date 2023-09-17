@@ -14,43 +14,40 @@
   </Layout>
 </template>
 
-
-
 <script>
-  export default {
-    metaInfo: {
-      title: 'Error 404'
-    }
+export default {
+  metaInfo: {
+    title: 'Error 404'
   }
+}
 </script>
 
-
 <style lang="scss" scoped>
-  .error {
-    text-align: center;
+.error {
+  text-align: center;
 
-    &__icon {
-      margin: 50px 0 0;
-      max-width: 256px;
-      min-width: 256px;
-    }
-
-    h2 {
-      color: #2a898f;
-      font-family: 'Poppins', sans-serif;
-      font-size: 32px;
-      font-weight: 500;
-      line-height: 32px;
-      margin: 2rem 0 1rem;
-    }
-
-    p {
-      color: #1e2425;
-      font-family: 'Rubik', sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 28px;
-      margin: 0 0 1rem;
-    }
+  &__icon {
+    margin: 50px 0 0;
+    max-width: 256px;
+    min-width: 256px;
   }
+
+  h2 {
+    color: #2a898f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin: 2rem 0 1rem;
+  }
+
+  p {
+    color: #1e2425;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 0 1rem;
+  }
+}
 </style>
