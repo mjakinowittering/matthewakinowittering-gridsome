@@ -9,9 +9,9 @@
               <div class="content" v-html="$page.introduction.content"></div>
             </div>
             <hr />
-            <Topic title="Education" :organisations="$page.universities.edges" />
-            <hr />
             <Topic title="Employment" :organisations="$page.companies.edges" />
+            <hr />
+            <Topic title="Education" :organisations="$page.universities.edges" />
           </div>
         </div>
       </div>
