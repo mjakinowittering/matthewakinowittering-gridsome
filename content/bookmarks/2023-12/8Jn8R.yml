@@ -3,3 +3,18 @@ url: https://www.pendo.io/cognitive-bias-in-product-management/
 title: Cognitive bias in product management and how to overcome it
 createdAt: '2023-12-14T07:37:33.000Z'
 publishedMonth: 1701388800
+openGraph:
+  ogLocale: en_US
+  ogType: article
+  ogTitle: Cognitive bias in product management and how to overcome it
+  ogDescription: >-
+    Explore ten common cognitive biases affecting product managers, and learn
+    strategies and tactics to break free from them.
+  ogUrl: https://www.pendo.io/cognitive-bias-in-product-management/
+  ogSiteName: Pendo.io
+  ogImage:
+    url: >-
+      https://www.pendo.io/wp-content/uploads/2023/03/CognitiveBias_social-image-1-1.png
+    width: '1200'
+    height: '628'
+    type: image/png

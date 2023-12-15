@@ -4,3 +4,17 @@ url: >-
 title: How to F.A.I.L. better in product by Marc Abraham
 createdAt: '2023-11-23T22:07:32.000Z'
 publishedMonth: 1698796800
+openGraph:
+  ogLocale: en_GB
+  ogType: article
+  ogTitle: How to F.A.I.L. better in product by Marc Abraham
+  ogDescription: conference talk about how to learn from product failure
+  ogUrl: >-
+    https://www.mindtheproduct.com/how-to-f-a-i-l-better-in-product-by-marc-abraham/
+  ogSiteName: Mind the Product
+  ogImage:
+    url: >-
+      https://www.mindtheproduct.com/wp-content/uploads/2023/11/53286627686_b3086acc30_o-scaled.jpg
+    width: '2560'
+    height: '1709'
+    type: image/jpeg

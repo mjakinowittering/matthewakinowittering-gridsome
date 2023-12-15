@@ -3,3 +3,21 @@ url: https://www.svpg.com/product-managers-vs-product-leaders/
 title: Product Managers vs Product Leaders - Silicon Valley Product Group
 createdAt: '2023-12-14T07:35:56.000Z'
 publishedMonth: 1701388800
+openGraph:
+  ogTitle: Product Managers vs Product Leaders - Silicon Valley Product Group
+  ogSiteName: Silicon Valley Product Group
+  ogDescription: >-
+    For those that have been following along, I recently wrote about
+    alternatives to product managers, and alternatives to product leaders as the
+    context to understand the debates in the industry around the different
+    styles of leadership (essentially empowerment vs command and control). One
+    of the consequences of these articles, and the resulting discussions, is
+    that...
+  ogUrl: https://www.svpg.com/product-managers-vs-product-leaders/
+  ogLocale: en_US
+  ogType: article
+  ogImage:
+    url: https://www.svpg.com/wp-content/themes/svpg2022/app/img/svpg-social.png
+    width: null
+    height: null
+    type: null

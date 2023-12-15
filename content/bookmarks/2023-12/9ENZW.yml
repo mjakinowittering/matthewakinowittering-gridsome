@@ -3,3 +3,15 @@ url: https://www.svpg.com/alternatives-to-product-leaders/
 title: Alternatives To Product Leaders - Silicon Valley Product Group
 createdAt: '2023-12-06T15:21:00.000Z'
 publishedMonth: 1701388800
+openGraph:
+  ogTitle: Alternatives To Product Leaders - Silicon Valley Product Group
+  ogSiteName: Silicon Valley Product Group
+  ogDescription: "This is the second of two related articles talking about the alternatives to product managers and product leaders.\_ In the first article, I discussed how the product manager’s responsibilities of value and viability can, under the right conditions, be covered by other approaches. In this article, I wanted to talk about alternatives to covering the..."
+  ogUrl: https://www.svpg.com/alternatives-to-product-leaders/
+  ogLocale: en_US
+  ogType: article
+  ogImage:
+    url: https://www.svpg.com/wp-content/themes/svpg2022/app/img/svpg-social.png
+    width: null
+    height: null
+    type: null

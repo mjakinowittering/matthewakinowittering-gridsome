@@ -3,3 +3,24 @@ url: https://www.youtube.com/watch?v=N17zx12AUWo
 title: 'Master the Art of Communication: Extreme Clarity for Product Managers ...'
 createdAt: '2023-12-04T15:29:59.000Z'
 publishedMonth: 1701388800
+openGraph:
+  ogSiteName: YouTube
+  ogUrl: https://www.youtube.com/watch?v=N17zx12AUWo
+  ogTitle: >-
+    Master the Art of Communication: Extreme Clarity for Product Managers with
+    Simon Cross
+  ogDescription: >-
+    Are you tired of communication pitfalls that lead to misunderstandings,
+    wasted time, and missed opportunities? Do you want to enhance your
+    professional skill...
+  ogType: video.other
+  ogImage:
+    url: https://i.ytimg.com/vi/N17zx12AUWo/maxresdefault.jpg
+    width: '1280'
+    height: '720'
+    type: null
+  ogVideo:
+    url: https://www.youtube.com/embed/N17zx12AUWo
+    width: '1280'
+    height: '720'
+    type: text/html

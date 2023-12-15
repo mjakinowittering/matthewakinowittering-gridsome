@@ -3,3 +3,15 @@ url: https://www.svpg.com/alternatives-to-product-managers/
 title: Alternatives To Product Managers - Silicon Valley Product Group
 createdAt: '2023-12-02T18:04:08.000Z'
 publishedMonth: 1701388800
+openGraph:
+  ogTitle: Alternatives To Product Managers - Silicon Valley Product Group
+  ogSiteName: Silicon Valley Product Group
+  ogDescription: "I doubt anyone is surprised to learn that many people have been asking me about Brian Chesky’s recent comments. I’ve been hesitant to write about this topic for two reasons:\_ First, I didn’t want to provide oxygen to this topic, as I consider this interview one that creates as many questions as it answers.\_ Second,..."
+  ogUrl: https://www.svpg.com/alternatives-to-product-managers/
+  ogLocale: en_US
+  ogType: article
+  ogImage:
+    url: https://www.svpg.com/wp-content/themes/svpg2022/app/img/svpg-social.png
+    width: null
+    height: null
+    type: null
