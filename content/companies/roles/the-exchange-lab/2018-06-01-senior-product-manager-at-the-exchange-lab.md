@@ -1,11 +1,10 @@
 ---
-company:  the-exchange-lab
-title:    Senior Product Manager
+company: the-exchange-lab
+title: Senior Product Manager
 dateFrom: 2018-06-01T00:00:00+0000
-dateTo:   2019-07-12T23:59:59+0000
+dateTo: 2019-07-12T23:59:59+0000
 ---
-I was the Senior Product Manager for the Vendor Integrations team in the Product and Engineering department developing software to retrieve and process data from our AdTech partners. The team and I were responsible for a portfolio of three products for performing our data collection and ingesting several terabytes of data from APIs, streams and flat files daily.
 
-I produced stories and technical documentation to share information with the engineering team. Typically, this included details from API documentation supplied by our vendors or definitions for their custom data feeds. During Feature Kick-off meetings, I presented these new requirements and solicited feedback to refine our solution based on their expertise.
+In my final 14 months at The Exchange Lab, I became the Senior Product Manager for the Vendor Integration team. I received the promotion because I became responsible for a Junior Product Manager, and our team actively managed a portfolio of applications that were responsible for moving between seven to ten terabytes of data daily, fueling campaign reporting and analytics workflows for our global customers.
 
-I was promoted in 2018 to reflect the change in my responsibilities, as I’d become responsible for a Junior Product Manager who’d joined the Vendor Integration team.
+Secondly, the organisation had begun collaborating with other GroupM agency teams that were deeply impressed with our bulk data collection and processing capabilities but wished to retain their brand identity in client reporting. I was increasingly involved in stakeholder management and delivering the technology needed to publish data for Client Data Lakes to facilitate the needs of their Data Analysts.
