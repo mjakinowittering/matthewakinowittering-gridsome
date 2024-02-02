@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       productManager: {
-        dateSince: new Date('2010-06-01T00:00:00+0000')
+        dateSince: new Date('2010-01-01T00:00:00+0000')
       }
     }
   },
